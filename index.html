@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+    <!-- AI Search & Local Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -39,6 +40,7 @@
       }
     </script>
 
+    <!-- 10 Detailed FAQ Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -61,6 +63,7 @@
     <style>
       /* --- ENERGETIC & PREMIUM THEME VARIABLES --- */
       :root {
+        /* Colors */
         --primary-color: #0d2f4b;
         --accent-color: #ffa500;
         --accent-glow: rgba(255, 165, 0, 0.4);
@@ -75,8 +78,8 @@
         /* Transparent Glassmorphism */
         --navbar-height: 65px;
         --glass-bg: rgba(15, 20, 30, 0.5); 
-        --glass-border: rgba(255, 255, 255, 0.04); 
-        --glass-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4); 
+        --glass-border: rgba(255, 255, 255, 0.04);
+        --glass-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
         --glass-blur: blur(20px);
         
         --about-glass-bg: linear-gradient(135deg, rgba(255, 87, 34, 0.1), rgba(0, 136, 204, 0.08));
@@ -118,12 +121,8 @@
         margin: 0; padding: 0;
         font-family: "Montserrat", sans-serif;
         background-color: var(--background-color); color: var(--text-color);
-        line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease;
+        line-height: 1.6; transition: background-color 0.4s ease, color 0.4s ease;
         position: relative; width: 100%; overflow-x: hidden;
-        /* Hardware Acceleration to Fix Mobile Lag */
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        will-change: background-color, color;
       }
       
       /* Vibrant Background Mesh Gradient & Grid */
@@ -167,7 +166,7 @@
         position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
         width: 92%; max-width: 1200px; 
         z-index: 1000; min-height: var(--navbar-height);
-        border-radius: 50px; transition: background-color 0.3s ease;
+        border-radius: 50px; transition: all 0.4s ease;
       }
 
       .nav-logo { color: var(--heading-color); font-weight: 800; font-size: 1.5rem; text-decoration: none; flex-shrink: 0; letter-spacing: -0.5px; }
@@ -201,8 +200,8 @@
         color: var(--heading-color); cursor: pointer;
         width: 40px; height: 40px; border-radius: 50%; display: flex;
         justify-content: center; align-items: center; transition: all 0.3s ease; font-size: 1.1rem;
-        -webkit-tap-highlight-color: transparent; touch-action: manipulation;
       }
+      /* Hover applied conditionally to prevent mobile stuck bug */
       @media (hover: hover) {
         .theme-toggle-btn:hover { background-color: var(--accent-color); color: #fff; transform: scale(1.05); border-color: var(--accent-color); box-shadow: 0 0 15px var(--accent-glow);}
       }
@@ -228,7 +227,7 @@
 
       /* Brand Colors */
       .icon-facebook { color: #1877F2; }
-      .icon-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .icon-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
       .icon-threads, .icon-x { color: var(--heading-color); }
       .icon-linkedin { color: #0A66C2; }
       .icon-pinterest { color: #E60023; }
@@ -236,9 +235,9 @@
 
       .mobile-controls { display: none; align-items: center; gap: 10px; }
       #nav-toggle { display: none; }
-      .nav-toggle-label { display: none; font-size: 1.4rem; color: var(--heading-color); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+      .nav-toggle-label { display: none; font-size: 1.4rem; color: var(--heading-color); cursor: pointer; }
 
-      /* --- TWINKLING STARS --- */
+      /* --- TWINKLING STARS (No Shooting Stars) --- */
       @keyframes animateStars { from { transform: translateY(0px); } to { transform: translateY(-2000px); } }
       @keyframes blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
 
@@ -252,6 +251,7 @@
       #stars1 { background-image: radial-gradient(1.5px 1.5px at 20px 30px, var(--star-2), transparent), radial-gradient(1px 1px at 40px 70px, var(--star-1), transparent), radial-gradient(2px 2px at 50px 160px, var(--star-3), transparent), radial-gradient(1px 1px at 90px 40px, var(--star-1), transparent), radial-gradient(2px 2px at 130px 80px, var(--star-2), transparent); background-size: 200px 200px; animation-duration: 120s, 4s; }
       #stars2 { background-image: radial-gradient(1.5px 1.5px at 10px 90px, var(--star-3), transparent), radial-gradient(2px 2px at 80px 30px, var(--star-1), transparent), radial-gradient(1px 1px at 100px 180px, var(--star-2), transparent), radial-gradient(1.5px 1.5px at 190px 60px, var(--star-1), transparent); background-size: 250px 250px; animation-duration: 90s, 6s; }
 
+      /* Animations */
       @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
       .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
       .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
@@ -259,7 +259,10 @@
       /* --- HERO SECTION --- */
       #home {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
-        text-align: center; padding: 12rem 1rem 0.5rem 1rem; position: relative; width: 100%;
+        text-align: center; 
+        /* 🚀 FIX: Reduced bottom padding here for "ittu sa" gap */
+        padding: 12rem 1rem 0.5rem 1rem; 
+        position: relative; width: 100%;
       }
       .hero-logo { animation: fadeIn 1s ease-out forwards; opacity: 0; margin-bottom: 2rem; }
       .hero-logo img { height: 200px; width: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 45px var(--accent-glow); border: 2px solid rgba(255,255,255,0.1); }
@@ -268,7 +271,7 @@
         font-weight: 800; color: var(--white-color); margin: 0 0 1rem 0; 
         animation: fadeIn 1s ease-out 0.2s forwards; opacity: 0; line-height: 1.1; 
         text-shadow: 0 4px 20px rgba(0,0,0,0.4);
-        font-size: clamp(2.2rem, 6vw, 4.8rem); 
+        font-size: clamp(2rem, 6vw, 4.8rem); 
         white-space: nowrap; 
       }
       body[data-theme="light"] .main-title { color: var(--heading-color); text-shadow: none; }
@@ -285,7 +288,7 @@
       .btn-circle {
         width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
         font-size: 1.8rem; color: #fff; text-decoration: none; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-        border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
       }
       .btn-wa { background-color: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
       .btn-tg { background-color: #0088cc; box-shadow: 0 8px 25px rgba(0, 136, 204, 0.3); }
@@ -305,6 +308,7 @@
       }
 
       /* --- SERVICES SECTION --- */
+      /* 🚀 FIX: Reduced top padding here for "ittu sa" gap */
       #services { padding-top: 0.5rem; } 
       .property-row-wrapper { margin-bottom: 2rem; position: relative; width: 100%; } 
       .category-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem; padding: 0 3rem; max-width: 1300px; margin-left: auto; margin-right: auto;}
@@ -319,7 +323,8 @@
       }
 
       .scroll-arrows { display: flex; gap: 0.8rem; }
-      .scroll-btn { background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); color: var(--heading-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; display: flex; justify-content: center; align-items: center; box-shadow: var(--glass-shadow);}
+      .scroll-btn { background: var(--glass-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); color: var(--heading-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; display: flex; justify-content: center; align-items: center; box-shadow: var(--glass-shadow);}
+      .scroll-btn { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
       @media (hover: hover) {
         .scroll-btn:hover { background-color: var(--accent-color); color: var(--white-color); border-color: var(--accent-color); transform: scale(1.05);}
       }
@@ -338,8 +343,7 @@
         display: flex; flex-direction: column; background-color: var(--surface-color);
       }
       @media (hover: hover) {
-        /* Removed Orange Border on Hover */
-        .property-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 10;}
+        .property-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); border-color: rgba(255,165,0,0.5); z-index: 10;}
       }
       
       .property-card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.8s ease; }
@@ -348,9 +352,11 @@
       }
 
       .card-content { 
-        position: relative; flex: 1; padding: 1.5rem 1.5rem 2rem 1.5rem; 
-        display: flex; flex-direction: column; justify-content: space-between; text-align: left; z-index: 2; 
-        background: var(--card-content-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+        position: relative; flex: 1; 
+        padding: 1.5rem 1.5rem 2rem 1.5rem; /* Clean bottom margin for buttons */
+        display: flex; flex-direction: column; 
+        justify-content: space-between; text-align: left; z-index: 2; 
+        background: var(--card-content-bg); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
         border-top: 1px solid rgba(255,255,255,0.02);
       }
       
@@ -369,9 +375,9 @@
 
       /* --- ABOUT SECTION --- */
       #about {
-        background: var(--about-glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+        background: var(--about-glass-bg); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
         border: 1px solid var(--glass-border); border-radius: 32px; margin: 2rem auto; padding: 5rem; 
-        position: relative; z-index: 1; max-width: 1200px; width: 94%; box-shadow: var(--glass-shadow);
+        position: relative; z-index: 1; max-width: 1200px; width: 92%; box-shadow: var(--glass-shadow);
       }
       .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
       .about-image img { width: 100%; border-radius: 20px; box-shadow: var(--glass-shadow); border: 1px solid var(--glass-border);}
@@ -382,27 +388,28 @@
       .why-choose-us i { color: var(--accent-color); font-size: 1.4rem; margin-right: 1.2rem; padding-top: 2px; width: 25px; text-align: center; text-shadow: 0 0 10px rgba(255,165,0,0.5);}
       .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.3rem; font-weight: 700;}
 
-      /* --- 🚀 FAQ SECTION --- */
-      #faq { padding: 5rem 0; width: 100%; }
-      .faq-title { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 2rem; text-align: center;}
+      /* --- 🚀 SLEEK FAQ SECTION --- */
+      #faq { max-width: 1000px; margin: 0 auto; padding: 5rem 1.5rem; width: 100%; }
+      .faq-title { white-space: nowrap; font-size: clamp(1.4rem, 5vw, 2.8rem); letter-spacing: -0.5px;}
 
       .faq-wrapper {
-        background: var(--about-glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-        border: 1px solid var(--glass-border); border-radius: 24px; padding: 2.5rem;
-        box-shadow: var(--glass-shadow); max-width: 1200px; width: 94%; margin: 0 auto;
+        background: var(--about-glass-bg); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+        border: 1px solid var(--glass-border); border-radius: 24px; padding: 2rem;
+        box-shadow: var(--glass-shadow);
       }
       .faq-accordion { 
-        display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; align-items: start;
+        display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem;
+        align-items: start;
       }
       
       .faq-item { 
         border-bottom: 1px solid var(--glass-border);
         overflow: hidden; transition: all 0.3s ease; 
       }
-      .faq-item:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+      .faq-item:last-child { border-bottom: none; }
       
       .faq-item summary { 
-        padding: 1.2rem 0; font-size: 1.1rem; font-weight: 700; color: var(--heading-color); 
+        padding: 1.2rem 0; font-size: 1.05rem; font-weight: 700; color: var(--heading-color); 
         cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
       }
       .faq-item summary::-webkit-details-marker { display: none; }
@@ -413,12 +420,14 @@
         font-size: 1rem; flex-shrink: 0; margin-left: 10px;
       }
       .faq-item[open] summary::after { transform: rotate(180deg); }
+      
       .faq-item p { padding: 0 0 1.2rem 0; margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-color);}
 
       /* --- ENERGETIC GLOW FOOTER --- */
       #contact { 
         margin-top: 3rem; padding: 5rem 2rem 2rem 2rem; border-top: 1px solid var(--glass-border); 
-        border-radius: 40px 40px 0 0; position: relative; overflow: hidden; background: var(--surface-color);
+        border-radius: 40px 40px 0 0; 
+        position: relative; overflow: hidden; background: var(--surface-color);
       }
       #contact::before {
         content: ''; position: absolute; bottom: -50%; left: 50%; transform: translateX(-50%);
@@ -441,7 +450,7 @@
       .footer-bottom { position: relative; z-index: 1; text-align: center; padding-top: 2rem; border-top: 1px solid var(--glass-border); font-size: 0.9rem; font-weight: 500;}
 
       /* =======================================================================
-         MOBILE RESPONSIVE RULES (100% BUG-FREE & MAX WIDTH)
+         MOBILE RESPONSIVE RULES 
          ======================================================================= */
       @media (max-width: 992px) {
         #about { padding: 4rem 2rem; }
@@ -452,37 +461,31 @@
       }
 
       @media (max-width: 767px) {
-        /* Boosted Background Colors for Mobile */
-        .blob-1 { width: 90vw; height: 90vw; top: -5%; right: -15%; background: radial-gradient(circle, rgba(255, 165, 0, 0.35) 0%, transparent 65%); opacity: 0.8;}
-        .blob-2 { width: 100vw; height: 100vw; bottom: 0%; left: -15%; background: radial-gradient(circle, rgba(0, 136, 204, 0.3) 0%, transparent 65%); opacity: 0.8;}
-        
         .navbar { width: 92%; top: 12px; border-radius: 40px; padding: 0.5rem 1rem; }
-        .nav-logo { font-size: 1.4rem; } 
+        .nav-logo { font-size: 1.3rem; } 
         
         .nav-actions-desktop { display: none; }
         
         .mobile-controls { display: flex; align-items: center; gap: 12px; }
-        .nav-toggle-label { display: block; font-size: 1.4rem; padding-right: 5px; cursor: pointer; -webkit-tap-highlight-color: transparent;}
+        .nav-toggle-label { display: block; font-size: 1.4rem; padding-right: 5px; cursor: pointer;}
         
         .btn-call-nav-mobile {
           background: #25D366; color: #fff; width: 38px; height: 38px; border-radius: 50%;
           display: flex; justify-content: center; align-items: center; text-decoration: none; font-size: 1.1rem;
           box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
         }
-        /* Tap Bug fix */
         .theme-toggle-btn.mobile-theme {
           display: flex; width: 38px; height: 38px; border-radius: 50%; margin: 0; padding: 0;
           pointer-events: auto; z-index: 1100; border: 1px solid var(--glass-border); background: transparent;
         }
         
-        /* 🔥 Transparent Glass Dropdown Menu */
         .nav-menu {
           display: none; flex-direction: column; width: 100%;
-          background: rgba(10, 15, 25, 0.7); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+          background: rgba(10, 10, 10, 0.98); -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px);
           position: absolute; top: calc(100% + 10px); left: 0; padding: 1.5rem 0; 
           border: 1px solid var(--glass-border); border-radius: 24px; order: 3; box-shadow: 0 10px 40px rgba(0,0,0,0.6);
         }
-        body[data-theme="light"] .nav-menu { background: rgba(255, 255, 255, 0.7); }
+        body[data-theme="light"] .nav-menu { background: rgba(255, 255, 255, 0.98); }
         
         #nav-toggle:checked ~ .nav-menu { display: flex; }
         .nav-links { flex-direction: column; width: 100%; text-align: center; }
@@ -491,8 +494,9 @@
         
         .nav-social { justify-content: center; margin: 1rem auto 0 auto; padding-top: 1rem; border-top: 1px solid var(--glass-border); width: 85%; flex-wrap: wrap; }
         
+        /* 🚀 FIX: Reduced padding for "ittu sa" gap in Mobile */
         #home { padding: 9rem 1rem 0.5rem 1rem; }
-        .hero-logo img { height: 180px; width: 180px; border-radius: 50%; } 
+        .hero-logo img { height: 160px; width: 160px; border-radius: 50%; } 
         #home h1 { margin-bottom: 0.8rem; }
         #home .tagline { font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.4; max-width: 90%; }
         
@@ -502,6 +506,7 @@
         .btn-pill { width: 100%; max-width: 300px; justify-content: center; padding: 0.9rem 1.5rem; }
         
         section { padding: 3rem 0; } 
+        /* 🚀 FIX: Services top padding to 0 in Mobile for tight gap */
         #services { padding-top: 0; }
 
         h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
@@ -520,18 +525,14 @@
         .card-content p { font-size: 0.85rem; margin-bottom: 1rem;}
         .card-buttons a { padding: 0.6rem; font-size: 0.85rem; }
 
-        /* 🔥 About Box Max Width */
-        #about { margin: 1rem auto; padding: 2.5rem 1.5rem; border-radius: 28px; width: 94%; max-width: 100%;}
+        #about { margin: 1rem; padding: 3rem 1.5rem; border-radius: 28px; width: auto;}
         .about-text h3 { font-size: 1.8rem; }
         .about-text p { font-size: 1rem; }
 
-        /* 🔥 FAQ Section Centered and Max Width matching About */
-        #faq { padding: 2.5rem 0; width: 100%; }
-        .faq-title { text-align: center; white-space: normal; line-height: 1.2; font-size: 2rem; margin-bottom: 1.5rem; padding: 0 1rem; }
-        .faq-wrapper { padding: 1.5rem 1rem; border-radius: 24px; width: 94%; max-width: 100%; margin: 0 auto; }
-        
+        #faq { padding: 2.5rem 1rem; }
+        .faq-wrapper { padding: 1.5rem 1rem; border-radius: 20px; }
         .faq-accordion { grid-template-columns: 1fr; gap: 0; }
-        .faq-item summary { font-size: 1.05rem; padding: 1rem 0; }
+        .faq-item summary { font-size: 1rem; padding: 1rem 0; }
         .faq-item p { padding: 0 0 1rem 0; font-size: 0.9rem; }
         .faq-item:last-child { border-bottom: none; }
 
@@ -546,23 +547,26 @@
         .main-title { font-size: clamp(1.8rem, 10vw, 2.4rem); }
         .property-card { height: 380px; }
         .property-card img { height: 160px; }
-        .faq-title { font-size: 1.8rem; }
       }
     </style>
   </head>
   <body>
+    <!-- Vibrant Ambient Orbs -->
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
 
+    <!-- Twinkling Stars Background -->
     <div class="stars">
       <div class="stars-bg" id="stars1"></div>
       <div class="stars-bg" id="stars2"></div>
     </div>
 
+    <!-- 🚀 BEAUTIFUL FLOATING NAVBAR -->
     <nav class="navbar glass-panel">
       <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
 
+      <!-- Mobile Right Controls -->
       <div class="mobile-controls">
         <a href="tel:+918168759184" class="btn-call-nav-mobile" aria-label="Call Us"><i class="fas fa-phone"></i></a>
         <button class="theme-toggle-btn mobile-theme" aria-label="Toggle mode" onclick="window.toggleThemeMode(event)">
@@ -583,6 +587,7 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         
+        <!-- Desktop Right Controls -->
         <div class="nav-actions-desktop">
           <button class="theme-toggle-btn desktop-theme" aria-label="Toggle mode" onclick="window.toggleThemeMode(event)">
             <i class="fas fa-sun icon-sun"></i>
@@ -591,6 +596,7 @@
           <a href="tel:+918168759184" class="btn-call-nav"><i class="fas fa-phone"></i> Call Now</a>
         </div>
 
+        <!-- COLORFUL SOCIAL ICONS FOR MOBILE MENU -->
         <div class="nav-social">
           <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f icon-facebook"></i></a>
           <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram icon-instagram"></i></a>
@@ -642,7 +648,7 @@
                 <p>Constructing large-scale, durable warehouses tailored for storage and logistics.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -654,7 +660,7 @@
                 <p>Specialized construction of robust industrial factories and manufacturing structures.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -666,7 +672,7 @@
                 <p>Premium commercial complexes perfectly designed for retail shops and modern offices.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -678,7 +684,7 @@
                 <p>Building modern, efficient, and inspiring office spaces for your business growth.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -690,7 +696,7 @@
                 <p>Expert construction for your dream residential home, from solid foundation to finish.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -715,7 +721,7 @@
                 <p>Complete design and decoration services to transform the look of your building inside and out.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -727,7 +733,7 @@
                 <p>Creating precise blueprints and realistic 3D models for perfect structural planning.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -739,7 +745,7 @@
                 <p>Ready-to-install, highly durable concrete boundary walls for quick security.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -751,7 +757,7 @@
                 <p>Strong and reliable wire fencing solutions for farms, plots, and commercial properties.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="https://wa.me/918168759184" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -788,9 +794,11 @@
         </div>
       </section>
 
+      <!-- 🚀 SLEEK GLASS FAQ -->
       <section id="faq" class="fade-in-section">
         <div class="container">
           <h2 class="faq-title">Frequently Asked Questions</h2>
+          
           <div class="faq-wrapper">
             <div class="faq-accordion">
               <details class="faq-item">
@@ -865,6 +873,7 @@
           </div>
           <div class="footer-column">
             <h4>Follow Us</h4>
+            <!-- COLORFUL SOCIAL ICONS FOR FOOTER -->
             <div class="social-icons">
               <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f icon-facebook"></i></a>
               <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram icon-instagram"></i></a>
@@ -883,27 +892,24 @@
     </footer>
 
     <script>
-      // 🚀 GLOBAL BUG-FREE THEME TOGGLE (Uses requestAnimationFrame for Instant Response)
+      // Global Bug-Free Theme Toggle Function
       window.toggleThemeMode = function(e) {
         if(e) { e.preventDefault(); e.stopPropagation(); }
+        const body = document.body;
+        const currentTheme = body.dataset.theme === 'light' ? 'light' : 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
-        requestAnimationFrame(() => {
-          const body = document.body;
-          const currentTheme = body.dataset.theme === 'light' ? 'light' : 'dark';
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          
-          body.dataset.theme = newTheme;
-          localStorage.setItem("kavachBuilderTheme", newTheme);
-          
-          document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
-            if (newTheme === "light") {
-              btn.querySelector(".icon-sun").style.display = "none";
-              btn.querySelector(".icon-moon").style.display = "inline-block";
-            } else {
-              btn.querySelector(".icon-sun").style.display = "inline-block";
-              btn.querySelector(".icon-moon").style.display = "none";
-            }
-          });
+        body.dataset.theme = newTheme;
+        localStorage.setItem("kavachBuilderTheme", newTheme);
+        
+        document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+          if (newTheme === "light") {
+            btn.querySelector(".icon-sun").style.display = "none";
+            btn.querySelector(".icon-moon").style.display = "inline-block";
+          } else {
+            btn.querySelector(".icon-sun").style.display = "inline-block";
+            btn.querySelector(".icon-moon").style.display = "none";
+          }
         });
       };
 
