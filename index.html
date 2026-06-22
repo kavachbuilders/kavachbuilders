@@ -5,26 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Kavach Builders | Construction & Renovation in Sonipat</title>
-    <meta
-      name="description"
-      content="Kavach Builders offers top-tier construction, renovation, and interior design services in Sonipat. Your trusted partner for residential, commercial, and industrial projects."
-    />
-    <meta
-      name="keywords"
-      content="construction company sonipat, kavach builders, home construction sonipat, commercial construction sonipat, renovation services sonipat, interior design sonipat, building contractors sonipat, MEP services sonipat"
-    />
+    <meta name="description" content="Kavach Builders offers top-tier construction, renovation, and interior design services in Sonipat. Your trusted partner for residential, commercial, and industrial projects." />
+    <meta name="keywords" content="construction company sonipat, kavach builders, home construction sonipat, commercial construction sonipat, renovation services sonipat, interior design sonipat, building contractors sonipat, MEP services sonipat" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+    <!-- Local Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -34,22 +23,12 @@
         "logo": "https://www.kavachbuilders.com/logo.PNG",
         "telephone": "+918168759184",
         "email": "kavachbuilders@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Sonipat",
-          "addressRegion": "HR",
-          "addressCountry": "IN"
-        },
-        "description": "Leading construction and renovation contractor in Sonipat, Haryana, specializing in residential, commercial, and industrial projects.",
-        "areaServed": {
-          "@type": "Place",
-          "name": "Sonipat"
-        },
-        "image": "https://www.kavachbuilders.com/logo.PNG",
-        "priceRange": "$$$"
+        "address": { "@type": "PostalAddress", "addressLocality": "Sonipat", "addressRegion": "HR", "addressCountry": "IN" },
+        "description": "Leading construction and renovation contractor in Sonipat, Haryana, specializing in residential, commercial, and industrial projects."
       }
     </script>
 
+    <!-- FAQ Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -57,24 +36,11 @@
         "mainEntity": [{
           "@type": "Question",
           "name": "What construction services does Kavach Builders offer in Sonipat?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer complete construction services including residential homes, commercial offices, factories, warehouses, land plotting, and 2D/3D architectural design."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "We offer complete construction services including residential homes, commercial offices, factories, warehouses, land plotting, and 2D/3D architectural design." }
         }, {
           "@type": "Question",
           "name": "Do you also supply building materials?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we provide premium building materials including Cement, TMT Bars (Saria), Red Bricks, Fly Ash Bricks, Construction Aggregates (Rodi), and Interlocking Tiles."
-          }
-        }, {
-          "@type": "Question",
-          "name": "How can I get a cost estimate for my construction project?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can easily get a cost estimate by calling us at +91 8168759184 or messaging us on WhatsApp to discuss your specific requirements."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, we provide premium building materials including Cement, TMT Bars (Saria), Red Bricks, Fly Ash Bricks, Construction Aggregates (Rodi), and Interlocking Tiles." }
         }]
       }
     </script>
@@ -90,11 +56,11 @@
         --text-color: #a8b2d1;
         --heading-color: #e6f1ff;
         --white-color: #ffffff;
-        --navbar-height: 50px;
+        --navbar-height: 60px;
 
-        --navbar-bg: rgba(10, 10, 10, 0.75);
+        --navbar-bg: rgba(10, 10, 10, 0.85);
         --mobile-menu-bg: rgba(10, 10, 10, 0.95);
-        --footer-bg: rgba(10, 10, 10, 0.75);
+        --footer-bg: rgba(10, 10, 10, 0.85);
         --about-bg: rgba(17, 34, 64, 0.6);
         --faq-bg: rgba(255, 255, 255, 0.05);
         --border-color: rgba(255, 255, 255, 0.1);
@@ -103,18 +69,27 @@
         --card-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
         --heading-gradient: linear-gradient(120deg, var(--heading-color), var(--white-color));
         --scroll-btn-bg: rgba(255, 255, 255, 0.1);
+
+        /* Stars Variables (Dark Mode) */
+        --star-1: #ffffff;
+        --star-2: #eeeeee;
+        --star-3: #dddddd;
+        --shooting-star-color: var(--accent-color);
+        
+        /* Social Media X/Threads Dynamic Color */
+        --dynamic-black-white: #ffffff;
       }
 
       body[data-theme="light"] {
         /* LIGHT MODE OVERRIDES */
         --background-color: #ffffff;
         --surface-color: #f4f4f4;
-        --text-color: #555555;
+        --text-color: #444444;
         --heading-color: #0d2f4b;
         --white-color: #111111;
 
-        --navbar-bg: rgba(255, 255, 255, 0.75);
-        --mobile-menu-bg: rgba(255, 255, 255, 0.95);
+        --navbar-bg: rgba(255, 255, 255, 0.85);
+        --mobile-menu-bg: rgba(255, 255, 255, 0.98);
         --footer-bg: #f9f9f9;
         --about-bg: #f0f4f8;
         --faq-bg: #ffffff;
@@ -124,12 +99,15 @@
         --card-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
         --heading-gradient: linear-gradient(120deg, var(--primary-color), var(--accent-color));
         --scroll-btn-bg: rgba(0, 0, 0, 0.05);
-      }
 
-      /* Hide starfield in light mode */
-      body[data-theme="light"] .stars,
-      body[data-theme="light"] .shooting-star {
-        display: none;
+        /* Stars Variables (Light Mode - Black/Grey Stars) */
+        --star-1: #111111;
+        --star-2: #333333;
+        --star-3: #555555;
+        --shooting-star-color: #111111;
+        
+        /* Social Media X/Threads Dynamic Color */
+        --dynamic-black-white: #000000;
       }
 
       html { scroll-behavior: smooth; font-size: 16px; }
@@ -139,11 +117,13 @@
         line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease;
       }
       * { box-sizing: border-box; }
-      section { padding: 4rem 0; }
+      
+      /* Reduced Section Padding for better spacing */
+      section { padding: 3rem 0; }
 
-      h1, h2, h3 { color: var(--heading-color); font-weight: 700; transition: color 0.3s ease; }
+      h1, h2, h3 { color: var(--heading-color); font-weight: 700; transition: color 0.3s ease; margin-top: 0; }
       h2 {
-        text-align: center; font-size: 2.5rem; margin-bottom: 3rem; padding: 0 1rem;
+        text-align: center; font-size: 2.2rem; margin-bottom: 2rem; padding: 0 1rem;
         background: var(--heading-gradient); -webkit-background-clip: text;
         background-clip: text; -webkit-text-fill-color: transparent;
       }
@@ -152,24 +132,24 @@
       /* --- Navigation Bar --- */
       .navbar {
         display: flex; justify-content: space-between; align-items: center;
-        background-color: var(--navbar-bg); -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color);
-        padding: 0.8rem 2rem; position: sticky; top: 0; width: 100%;
+        background-color: var(--navbar-bg); -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color);
+        padding: 0.5rem 2rem; position: sticky; top: 0; width: 100%;
         z-index: 1000; min-height: var(--navbar-height);
         transition: background-color 0.3s ease, border-bottom 0.3s ease;
       }
 
-      .nav-logo { color: var(--white-color); font-weight: 700; font-size: 1.5rem; text-decoration: none; flex-shrink: 0; }
+      .nav-logo { color: var(--white-color); font-weight: 700; font-size: 1.6rem; text-decoration: none; flex-shrink: 0; }
       .nav-logo span { color: var(--accent-color); transition: text-shadow 0.3s ease; }
       .nav-logo:hover span { text-shadow: 0 0 8px var(--accent-color); }
-      .nav-menu { display: flex; align-items: center; flex-grow: 1; }
+      .nav-menu { display: flex; align-items: center; flex-grow: 1; justify-content: flex-end; }
       .nav-links { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-grow: 1; }
-      .nav-links li { margin: 0 1.5rem; }
+      .nav-links li { margin: 0 1.2rem; }
 
-      /* --- SCROLL SPY ANIMATION (Active Link Highlight) --- */
+      /* --- SCROLL SPY ANIMATION --- */
       .nav-links a {
         color: var(--white-color); text-decoration: none; font-weight: 600;
-        transition: color 0.3s ease; position: relative; padding-bottom: 5px;
+        transition: color 0.3s ease; position: relative; padding-bottom: 5px; font-size: 0.95rem;
       }
       .nav-links a::after {
         content: ''; position: absolute; width: 0; height: 2px;
@@ -179,24 +159,37 @@
       .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
       .nav-links a.active { color: var(--accent-color); }
 
-      .nav-social { display: flex; align-items: center; gap: 1rem; margin-left: 1.5rem; }
-      .nav-social a { color: var(--white-color); font-size: 1rem; transition: all 0.3s ease; }
-      .nav-social a:hover { color: var(--accent-color); transform: translateY(-3px); }
-
-      .theme-toggle-btn {
-        background: none; border: none; color: var(--white-color); font-size: 1rem;
-        cursor: pointer; transition: all 0.3s ease; padding: 0; line-height: 1;
+      /* --- SOCIAL ICONS FIX (Flexbox + Gap) --- */
+      .nav-social { display: flex; align-items: center; gap: 12px; margin-left: 1rem; }
+      .nav-social a, .footer-column .social-icons a { 
+        font-size: 1.1rem; transition: transform 0.3s ease; display: flex; 
+        align-items: center; justify-content: center; text-decoration: none;
       }
-      .theme-toggle-btn:hover { color: var(--accent-color); transform: translateY(-3px); }
+      .nav-social a:hover, .footer-column .social-icons a:hover { transform: scale(1.2); }
+
+      /* --- REAL BRAND COLORS FOR ICONS --- */
+      .icon-facebook { color: #1877F2; }
+      .icon-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .icon-threads, .icon-x { color: var(--dynamic-black-white); }
+      .icon-linkedin { color: #0A66C2; }
+      .icon-pinterest { color: #E60023; }
+      .icon-youtube { color: #FF0000; }
+
+      /* --- THEME TOGGLE BUTTON UI POLISH --- */
+      .theme-toggle-btn {
+        background-color: var(--scroll-btn-bg); border: 1px solid var(--border-color);
+        color: var(--white-color); font-size: 1rem; cursor: pointer;
+        width: 38px; height: 38px; border-radius: 50%; display: flex;
+        justify-content: center; align-items: center; transition: all 0.3s ease;
+      }
+      .theme-toggle-btn:hover { background-color: var(--accent-color); color: #fff; border-color: var(--accent-color); transform: scale(1.05); }
 
       .mobile-controls { display: none; align-items: center; gap: 1rem; }
-      .mobile-controls .theme-toggle-btn { font-size: 1.2rem; }
-      .mobile-controls .theme-toggle-btn:hover { transform: none; }
       #nav-toggle { display: none; }
       .nav-toggle-label { display: none; font-size: 1.5rem; color: var(--white-color); cursor: pointer; z-index: 1001; }
 
-      /* --- Keyframe Animations --- */
-      @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      /* --- Animations --- */
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
       @keyframes animateStars { from { transform: translateY(0px); } to { transform: translateY(-2000px); } }
       @keyframes blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.8; } }
       @keyframes shooting-star-animation { 0% { transform: translate(0, 0); opacity: 1; } 100% { transform: translate(150vw, -150vh); opacity: 0; } }
@@ -204,7 +197,7 @@
       .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
       .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
-      /* --- Starfield Background Effect --- */
+      /* --- SMART STARFIELD (Works in Light & Dark Mode) --- */
       .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; overflow: hidden; }
       .stars-bg {
         position: absolute; top: 0; left: 0; width: 100%; height: 200%;
@@ -212,204 +205,154 @@
         animation-name: animateStars, blink; animation-timing-function: linear, ease-in-out;
         animation-iteration-count: infinite, infinite; animation-direction: normal, alternate;
       }
-      #stars1 { background-image: radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)), radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)), radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)), radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)), radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)), radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0)); background-size: 200px 200px; animation-duration: 150s, 5s; }
-      #stars2 { background-image: radial-gradient(1px 1px at 10px 90px, #eee, rgba(0,0,0,0)), radial-gradient(2px 2px at 80px 30px, #fff, rgba(0,0,0,0)), radial-gradient(2px 2px at 100px 180px, #ddd, rgba(0,0,0,0)), radial-gradient(1px 1px at 190px 60px, #fff, rgba(0,0,0,0)), radial-gradient(1px 1px at 140px 110px, #fff, rgba(0,0,0,0)), radial-gradient(2px 2px at 180px 150px, #ddd, rgba(0,0,0,0)); background-size: 250px 250px; animation-duration: 100s, 7s; }
-      #stars3 { background-image: radial-gradient(1px 1px at 5px 55px, #fff, rgba(0,0,0,0)), radial-gradient(1px 1px at 125px 95px, #eee, rgba(0,0,0,0)); background-size: 150px 150px; animation-duration: 200s, 3s; }
+      #stars1 { background-image: radial-gradient(1px 1px at 20px 30px, var(--star-2), transparent), radial-gradient(1px 1px at 40px 70px, var(--star-1), transparent), radial-gradient(1px 1px at 50px 160px, var(--star-3), transparent), radial-gradient(1px 1px at 90px 40px, var(--star-1), transparent), radial-gradient(2px 2px at 130px 80px, var(--star-1), transparent), radial-gradient(2px 2px at 160px 120px, var(--star-3), transparent); background-size: 200px 200px; animation-duration: 150s, 5s; }
+      #stars2 { background-image: radial-gradient(1px 1px at 10px 90px, var(--star-2), transparent), radial-gradient(2px 2px at 80px 30px, var(--star-1), transparent), radial-gradient(2px 2px at 100px 180px, var(--star-3), transparent), radial-gradient(1px 1px at 190px 60px, var(--star-1), transparent), radial-gradient(1px 1px at 140px 110px, var(--star-1), transparent), radial-gradient(2px 2px at 180px 150px, var(--star-3), transparent); background-size: 250px 250px; animation-duration: 100s, 7s; }
+      #stars3 { background-image: radial-gradient(1px 1px at 5px 55px, var(--star-1), transparent), radial-gradient(1px 1px at 125px 95px, var(--star-2), transparent); background-size: 150px 150px; animation-duration: 200s, 3s; }
+      
       .shooting-star {
         position: absolute; top: 50%; left: -100px; height: 2px;
-        background: linear-gradient(-45deg, var(--accent-color), rgba(0,0,0,0));
-        border-radius: 999px; filter: drop-shadow(0 0 6px var(--accent-color));
+        background: linear-gradient(-45deg, var(--shooting-star-color), transparent);
+        border-radius: 999px; filter: drop-shadow(0 0 6px var(--shooting-star-color));
         animation: shooting-star-animation 15s linear infinite;
       }
       .shooting-star:nth-child(2) { top: 20%; left: -50px; animation-delay: 5s; animation-duration: 12s; }
 
-      /* --- Home/Hero Section --- */
+      /* --- FIXED HERO SECTION SPACING --- */
       #home {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
-        text-align: center; min-height: 80vh; height: auto; background: transparent;
-        padding: 4rem 1rem 2rem 1rem; overflow: hidden;
+        text-align: center; padding: 5rem 1rem 3rem 1rem; overflow: hidden;
       }
-      .hero-logo { margin-bottom: 1rem; animation: fadeIn 1s ease-out forwards; opacity: 0; }
-      .hero-logo img { height: 200px; width: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 25px rgba(255, 255, 255, 0.5); }
-      #home h1 { font-size: 3.5rem; color: var(--white-color); margin-bottom: 0.5rem; animation: fadeIn 1s ease-out 0.2s forwards; opacity: 0; }
+      .hero-logo { animation: fadeIn 1s ease-out forwards; opacity: 0; margin-bottom: 1.5rem; }
+      .hero-logo img { height: 180px; width: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 30px rgba(255, 165, 0, 0.2); }
+      
+      #home h1 { font-size: 3.8rem; color: var(--white-color); margin: 0 0 0.5rem 0; animation: fadeIn 1s ease-out 0.2s forwards; opacity: 0; line-height: 1.2; }
       body[data-theme="light"] #home h1 { color: var(--heading-color); }
       body[data-theme="dark"] #home h1 { color: #ffffff; }
-      #home .tagline { font-size: 1.5rem; font-weight: 400; color: var(--accent-color); margin-bottom: 1rem; animation: fadeIn 1s ease-out 0.4s forwards; opacity: 0; }
+      
+      #home .tagline { font-size: 1.4rem; font-weight: 500; color: var(--accent-color); margin: 0 0 2rem 0; animation: fadeIn 1s ease-out 0.4s forwards; opacity: 0; }
 
-      .cta-buttons { animation: fadeIn 1s ease-out 0.8s forwards; opacity: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; max-width: 600px; }
-      .cta-buttons a { text-decoration: none; color: var(--white-color); background-color: var(--accent-color); padding: 0.8rem 1.8rem; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; flex-grow: 1; flex-basis: 200px; text-align: center; }
-      body[data-theme="dark"] .cta-buttons a { color: #ffffff; }
-      body[data-theme="light"] .cta-buttons a { color: #ffffff; }
+      .cta-buttons { animation: fadeIn 1s ease-out 0.6s forwards; opacity: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; max-width: 500px; }
+      .cta-buttons a { text-decoration: none; color: #ffffff; background-color: var(--accent-color); padding: 0.8rem 1.8rem; border-radius: 6px; font-weight: 600; transition: all 0.3s ease; flex: 1 1 200px; text-align: center; box-shadow: 0 4px 15px rgba(255,165,0,0.3); }
+      .cta-buttons a:hover { background-color: #e69500; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255,165,0,0.4); }
+      .cta-buttons a.secondary { background-color: transparent; border: 2px solid var(--accent-color); color: var(--white-color); box-shadow: none; }
       body[data-theme="light"] .cta-buttons a.secondary { color: var(--accent-color); }
-      body[data-theme="light"] .cta-buttons a.secondary:hover { color: #ffffff; }
-      .cta-buttons a:hover { background-color: #e69500; transform: translateY(-2px); }
-      .cta-buttons a.secondary { background-color: transparent; border: 2px solid var(--accent-color); }
-      .cta-buttons a.secondary:hover { background-color: var(--accent-color); }
+      .cta-buttons a.secondary:hover { background-color: var(--accent-color); color: #ffffff; }
 
       /* --- Services Section --- */
       #services { background-color: transparent; padding-left: 0; padding-right: 0; }
-      .property-row-wrapper { margin-bottom: 3rem; position: relative; }
-      .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding: 0 2rem; }
-      .category-title { font-size: 1.8rem; color: var(--heading-color); font-weight: 600; margin: 0; padding: 0; }
+      .property-row-wrapper { margin-bottom: 2rem; position: relative; } /* Reduced bottom margin */
+      .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding: 0 2rem; }
+      .category-title { font-size: 1.6rem; color: var(--heading-color); font-weight: 600; margin: 0; }
       .scroll-arrows { display: flex; gap: 0.5rem; }
-      .scroll-btn { background-color: var(--scroll-btn-bg); border: 1px solid var(--border-color); color: var(--white-color); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; display: inline-block; }
+      .scroll-btn { background-color: var(--scroll-btn-bg); border: 1px solid var(--border-color); color: var(--white-color); border-radius: 50%; width: 38px; height: 38px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; display: flex; justify-content: center; align-items: center;}
       .scroll-btn:hover:not(:disabled) { background-color: var(--accent-color); border-color: var(--accent-color); color: #ffffff; }
-      .scroll-btn:disabled { opacity: 0.2; cursor: not-allowed; }
-      body[data-theme="light"] .scroll-btn:disabled { opacity: 0.4; }
+      .scroll-btn:disabled { opacity: 0.3; cursor: not-allowed; }
 
-      .property-scroll-container { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 2rem; padding: 0.5rem 2rem 1.5rem 2rem; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; scroll-snap-type: x mandatory; }
+      .property-scroll-container { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding: 0.5rem 2rem 1.5rem 2rem; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; }
       .property-scroll-container::-webkit-scrollbar { display: none; }
-      .property-scroll-container { -ms-overflow-style: none; scrollbar-width: none; }
 
-      .property-card { position: relative; border-radius: 15px; overflow: hidden; box-shadow: var(--card-shadow); transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease; border: 1px solid var(--border-color); flex: 0 0 320px; height: 380px; scroll-snap-align: start; }
-      .property-card:hover { transform: translateY(-10px); box-shadow: var(--card-hover-shadow); }
+      .property-card { position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--card-shadow); transition: transform 0.4s ease, box-shadow 0.4s ease; border: 1px solid var(--border-color); flex: 0 0 300px; height: 360px; scroll-snap-align: start; }
+      .property-card:hover { transform: translateY(-8px); box-shadow: var(--card-hover-shadow); }
       .property-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, filter 0.4s ease; }
       .property-card:hover img { transform: scale(1.1); filter: brightness(0.6); }
 
-      .card-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: var(--card-gradient); display: flex; flex-direction: column; justify-content: flex-end; text-align: left; height: 100%; z-index: 2; }
-      .card-content h3 { margin-top: 0; font-size: 1.6rem; color: #ffffff; margin-bottom: 0.5rem; }
-      .card-content p { flex-grow: 0; margin-bottom: 1.5rem; opacity: 1; color: #f0f0f0; }
-      .card-buttons { display: flex; justify-content: flex-start; gap: 1rem; opacity: 1; }
-      .card-buttons a { text-decoration: none; padding: 0.6rem 1rem; border-radius: 5px; font-size: 0.9rem; font-weight: 600; transition: background-color 0.3s ease; text-align: center; color: #ffffff; flex-grow: 1; flex-basis: 0; }
+      .card-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.2rem; background: var(--card-gradient); display: flex; flex-direction: column; justify-content: flex-end; text-align: left; height: 100%; z-index: 2; }
+      .card-content h3 { margin-top: 0; font-size: 1.4rem; color: #ffffff; margin-bottom: 0.3rem; }
+      .card-content p { flex-grow: 0; margin-bottom: 1rem; font-size: 0.9rem; color: #eaeaea; }
+      .card-buttons { display: flex; gap: 0.8rem; }
+      .card-buttons a { text-decoration: none; padding: 0.6rem; border-radius: 5px; font-size: 0.85rem; font-weight: 600; transition: background-color 0.3s ease; text-align: center; color: #ffffff; flex: 1; }
       .card-buttons .btn-call { background-color: var(--primary-color); }
       .card-buttons .btn-call:hover { background-color: #1a4a75; }
       .card-buttons .btn-whatsapp { background-color: #25d366; }
       .card-buttons .btn-whatsapp:hover { background-color: #1ebe5a; }
 
-      /* --- About Us Section --- */
+      /* --- Smart Spacing for About Section --- */
       #about {
         background-color: var(--about-bg); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-        border: 1px solid var(--border-color); border-radius: 15px; margin: 4rem 2rem; padding: 4rem; position: relative; z-index: 1; transition: background-color 0.3s ease, border 0.3s ease;
+        border: 1px solid var(--border-color); border-radius: 15px; margin: 2rem; padding: 3rem; position: relative; z-index: 1; transition: background-color 0.3s ease, border 0.3s ease;
       }
-      #about h2 { margin-top: 0; margin-bottom: 3rem; padding: 0; }
       .about-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; }
-      .about-image img { width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
+      .about-image img { width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); }
       body[data-theme="light"] .about-image img { box-shadow: var(--card-shadow); }
-      .about-text h3 { font-size: 1.8rem; color: var(--accent-color); margin-top: 0; margin-bottom: 1.5rem; }
+      .about-text h3 { font-size: 1.6rem; color: var(--accent-color); margin-bottom: 1rem; }
       .about-text p { text-align: left; margin-bottom: 1rem; }
-      .why-choose-us { list-style: none; padding: 0; margin-top: 2rem; }
-      .why-choose-us li { display: flex; align-items: flex-start; margin-bottom: 1.25rem; font-size: 1rem; }
-      .why-choose-us i { color: var(--accent-color); font-size: 1.2rem; margin-right: 1rem; padding-top: 4px; width: 25px; text-align: center; }
-      .why-choose-us li div { flex: 1; }
-      .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.25rem; transition: color 0.3s ease; }
+      .why-choose-us { list-style: none; padding: 0; margin-top: 1.5rem; }
+      .why-choose-us li { display: flex; align-items: flex-start; margin-bottom: 1rem; font-size: 0.95rem; }
+      .why-choose-us i { color: var(--accent-color); font-size: 1.2rem; margin-right: 1rem; padding-top: 2px; width: 25px; text-align: center; }
+      .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.2rem; }
 
-      /* --- FAQ Section (For LLM SEO) --- */
-      #faq {
-        max-width: 900px; margin: 0 auto; padding: 4rem 1rem;
-      }
-      .faq-item {
-        background-color: var(--faq-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        overflow: hidden;
-        transition: all 0.3s ease;
-      }
-      .faq-item:hover {
-        border-color: var(--accent-color);
-      }
-      .faq-item summary {
-        padding: 1.5rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--heading-color);
-        cursor: pointer;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+      /* --- FAQ Section Smart Spacing --- */
+      #faq { max-width: 900px; margin: 0 auto; padding: 3rem 1rem; }
+      .faq-item { background-color: var(--faq-bg); border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 1rem; overflow: hidden; transition: border-color 0.3s ease; }
+      .faq-item:hover { border-color: var(--accent-color); }
+      .faq-item summary { padding: 1.2rem 1.5rem; font-size: 1.05rem; font-weight: 600; color: var(--heading-color); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
       .faq-item summary::-webkit-details-marker { display: none; }
-      .faq-item summary::after {
-        content: '\f078'; /* FontAwesome down arrow */
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 900;
-        color: var(--accent-color);
-        transition: transform 0.3s ease;
-      }
-      .faq-item[open] summary::after {
-        transform: rotate(180deg);
-      }
-      .faq-item p {
-        padding: 0 1.5rem 1.5rem 1.5rem;
-        margin: 0;
-        color: var(--text-color);
-        border-top: 1px solid var(--border-color);
-        padding-top: 1rem;
-      }
+      .faq-item summary::after { content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--accent-color); transition: transform 0.3s ease; }
+      .faq-item[open] summary::after { transform: rotate(180deg); }
+      .faq-item p { padding: 0 1.5rem 1.5rem 1.5rem; margin: 0; color: var(--text-color); border-top: 1px solid var(--border-color); padding-top: 1rem; font-size: 0.95rem; }
 
-      /* --- Footer / Contact Section --- */
+      /* --- Footer Section Fixes --- */
       #contact {
         background-color: var(--footer-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--text-color);
-        border-top: 1px solid var(--border-color); position: relative; z-index: 1; padding: 4rem 2rem 2rem 2rem; transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+        border-top: 1px solid var(--border-color); position: relative; z-index: 1; padding: 4rem 2rem 1.5rem 2rem; transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease; margin-top: 2rem;
       }
-      .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; text-align: left; }
-      .footer-column h4 { font-size: 1.2rem; color: var(--heading-color); margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; }
+      .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; }
+      .footer-column h4 { font-size: 1.2rem; color: var(--heading-color); margin-bottom: 1.2rem; position: relative; padding-bottom: 0.5rem; }
       .footer-column h4::after { content: ""; position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background-color: var(--accent-color); }
       .footer-column ul { list-style: none; padding: 0; margin: 0; }
       .footer-column ul li { margin-bottom: 0.8rem; }
       .footer-column a { color: var(--text-color); text-decoration: none; transition: color 0.3s ease, padding-left 0.3s ease; display: inline-block; }
       .footer-column a:hover { color: var(--accent-color); padding-left: 5px; }
-      .footer-column .contact-info p { margin-bottom: 0.8rem; }
-      .footer-column .social-icons a { font-size: 1.2rem; margin-right: 1rem; display: inline-block; transition: all 0.3s ease; }
-      .footer-column .social-icons a:hover { color: var(--accent-color); transform: translateY(-3px) scale(1.1); }
-      .footer-bottom { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; transition: border 0.3s ease; }
+      .footer-column .contact-info p { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
+      .footer-column .contact-info i { color: var(--accent-color); }
+      
+      /* Footer Social Icons Flex Fix */
+      .footer-column .social-icons { display: flex; flex-wrap: wrap; gap: 15px; }
 
-      /* --- Responsive Design --- */
-      @media (min-width: 768px) { #home h1 { font-size: 4.5rem; } }
+      .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; }
+
+      /* --- Responsive Design Adjustments --- */
+      @media (min-width: 768px) { #home h1 { font-size: 4rem; } }
       @media (max-width: 992px) {
-        #about { margin: 2rem 1rem; padding: 3rem 2rem; }
+        #about { margin: 2rem 1rem; padding: 2.5rem 1.5rem; }
         .about-content { grid-template-columns: 1fr; gap: 2rem; }
         .about-text { text-align: center; } .about-text p, .about-text .why-choose-us li { text-align: left; }
       }
-
-      /* --- MOBILE STYLES --- */
       @media (max-width: 767px) {
-        .navbar { flex-wrap: wrap; padding: 0.8rem 1rem; }
+        .navbar { padding: 0.8rem 1rem; }
+        .nav-logo { font-size: 1.4rem; }
         .nav-toggle-label { display: block; }
         .mobile-controls { display: flex; }
         .nav-menu .theme-toggle-btn { display: none; }
-
         .nav-menu {
           display: none; flex-direction: column; width: 100%;
-          background-color: var(--mobile-menu-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-          position: absolute; top: 100%; left: 0; padding: 1rem 0; border-top: 1px solid var(--border-color);
-          order: 3; transition: background-color 0.3s ease, border 0.3s ease;
+          background-color: var(--mobile-menu-bg); position: absolute; top: 100%; left: 0; padding: 1rem 0; border-top: 1px solid var(--border-color); order: 3;
         }
-
         #nav-toggle:checked ~ .nav-menu { display: flex; }
-        .nav-links { flex-direction: column; width: 100%; text-align: center; flex-grow: 0; }
-        .nav-links li { margin: 0; width: 100%; }
-        .nav-links a { display: block; padding: 1rem 0; width: 100%; }
-
-        .nav-social { justify-content: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); width: 90%; margin-left: auto; margin-right: auto; }
-
-        #home { padding: 3rem 1rem 2rem 1rem; min-height: 70vh; }
-        .hero-logo img { height: 160px; width: 160px; }
-        #home h1 { font-size: 2.5rem; } #home .tagline { font-size: 1.1rem; }
-        .cta-buttons { gap: 0.8rem; } .cta-buttons a { padding: 0.7rem 1rem; font-size: 0.9rem; flex-basis: 150px; }
+        .nav-links { flex-direction: column; width: 100%; text-align: center; }
+        .nav-links li { margin: 0; }
+        .nav-links a { display: block; padding: 1rem 0; }
+        .nav-social { justify-content: center; margin: 1.5rem auto 0 auto; padding-top: 1.5rem; border-top: 1px solid var(--border-color); width: 90%; }
         
-        section { padding: 2.5rem 0; } #services { padding-top: 1rem; }
-        #about { margin: 1.5rem 1rem; padding: 2.5rem 1.5rem; }
-        h2 { font-size: 1.8rem; margin-bottom: 2rem; }
+        #home { padding: 4rem 1rem 2rem 1rem; }
+        .hero-logo img { height: 140px; width: 140px; }
+        #home h1 { font-size: 2.5rem; } #home .tagline { font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .cta-buttons { gap: 0.8rem; } .cta-buttons a { padding: 0.7rem 1rem; font-size: 0.9rem; flex-basis: 100%; }
         
+        section { padding: 2rem 0; } h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
         .footer-content { text-align: center; gap: 1.5rem; }
         .footer-column h4::after { left: 50%; transform: translateX(-50%); }
+        .footer-column .contact-info p { justify-content: center; }
+        .footer-column .social-icons { justify-content: center; }
 
-        .scroll-arrows { display: none; } .category-header { padding: 0 1rem; margin-bottom: 1rem; } .category-title { font-size: 1.5rem; }
+        .scroll-arrows { display: none; } .category-header { padding: 0 1rem; margin-bottom: 1rem; } .category-title { font-size: 1.3rem; }
         .property-scroll-container { gap: 1rem; padding: 0.5rem 1rem 1rem 1rem; }
-        .property-card { flex-basis: 260px; height: 350px; }
-        .card-content { padding: 1.2rem; } .card-content h3 { font-size: 1.25rem; margin-bottom: 0.5rem; } .card-content p { font-size: 0.9rem; margin-bottom: 1rem; }
-        .card-buttons { gap: 0.5rem; } .card-buttons a { padding: 0.5rem 0.8rem; font-size: 0.85rem; flex-grow: 1; flex-basis: 0; }
+        .property-card { flex-basis: 260px; height: 340px; }
       }
-
       @media (max-width: 380px) {
-        .hero-logo img { height: 140px; width: 140px; }
-        #home h1 { font-size: 2.2rem; } #home .tagline { font-size: 1rem; }
-        .cta-buttons a { flex-basis: 100%; }
-        .property-card { flex-basis: 240px; height: 330px; }
-        .card-content { padding: 1rem; } .card-content h3 { font-size: 1.1rem; } .card-content p { font-size: 0.85rem; margin-bottom: 0.8rem; }
-        .card-buttons a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
+        .hero-logo img { height: 120px; width: 120px; }
+        #home h1 { font-size: 2.2rem; }
+        .property-card { flex-basis: 240px; height: 320px; }
       }
     </style>
   </head>
@@ -426,13 +369,11 @@
       <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
 
       <div class="mobile-controls">
-        <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
+        <button class="theme-toggle-btn" aria-label="Toggle mode">
           <i class="fas fa-sun icon-sun"></i>
           <i class="fas fa-moon icon-moon" style="display: none"></i>
         </button>
-        <label for="nav-toggle" class="nav-toggle-label">
-          <i class="fas fa-bars"></i>
-        </label>
+        <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars"></i></label>
       </div>
 
       <input type="checkbox" id="nav-toggle" />
@@ -446,17 +387,17 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
         <div class="nav-social">
-          <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
+          <button class="theme-toggle-btn" aria-label="Toggle mode">
             <i class="fas fa-sun icon-sun"></i>
             <i class="fas fa-moon icon-moon" style="display: none"></i>
           </button>
-          <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/kavachbuilders/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
-          <a href="https://www.x.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-          <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f icon-facebook"></i></a>
+          <a href="https://www.instagram.com/kavachbuilders/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram icon-instagram"></i></a>
+          <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads icon-threads"></i></a>
+          <a href="https://www.x.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter icon-x"></i></a>
+          <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in icon-linkedin"></i></a>
+          <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest icon-pinterest"></i></a>
+          <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube icon-youtube"></i></a>
         </div>
       </div>
     </nav>
@@ -469,13 +410,15 @@
         <h1>Kavach Builders</h1>
         <p class="tagline">Your Trusted Partner in Construction & Renovation</p>
         <div class="cta-buttons">
-          <a href="#services" class="primary">Kavach Builders</a>
+          <a href="#services" class="primary">Explore Services</a>
           <a href="https://www.kavachestate.com" target="_blank" rel="noopener noreferrer" class="secondary">Kavach Estate</a>
         </div>
       </section>
 
       <section id="services" class="fade-in-section">
         <h2>Our Services</h2>
+        
+        <!-- Slider 1 -->
         <div class="property-row-wrapper">
           <div class="category-header">
             <h3 class="category-title">Complete Construction Projects</h3>
@@ -543,6 +486,7 @@
           </div>
         </div>
 
+        <!-- Slider 2 -->
         <div class="property-row-wrapper">
           <div class="category-header">
             <h3 class="category-title">Building Materials & Architecture</h3>
@@ -869,13 +813,13 @@
           <div class="footer-column">
             <h4>Follow Us</h4>
             <div class="social-icons">
-              <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
-              <a href="https://www.x.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-              <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f icon-facebook"></i></a>
+              <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram icon-instagram"></i></a>
+              <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads icon-threads"></i></a>
+              <a href="https://www.x.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter icon-x"></i></a>
+              <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in icon-linkedin"></i></a>
+              <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest icon-pinterest"></i></a>
+              <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube icon-youtube"></i></a>
             </div>
           </div>
         </div>
@@ -902,7 +846,7 @@
         
         const spyOptions = {
           root: null,
-          rootMargin: "-20% 0px -60% 0px", // Triggers when section is near center
+          rootMargin: "-30% 0px -50% 0px", 
           threshold: 0
         };
 
