@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+    <!-- Local Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -33,6 +34,7 @@
       }
     </script>
 
+    <!-- Detailed FAQ Schema for AI Search -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -58,39 +60,37 @@
     </script>
 
     <style>
-      /* --- CSS Variables and Global Styles --- */
+      /* --- CSS Variables and Global Styles (Apple Glassmorphism Edition) --- */
       :root {
         /* DARK MODE (DEFAULT) */
         --primary-color: #0d2f4b;
         --accent-color: #ffa500;
         --accent-glow: rgba(255, 165, 0, 0.4);
-        --background-color: #050b14; /* Deep dark blue for modern tech feel */
+        --background-color: #050b14; 
         --surface-color: #0a0a0a;
         --text-color: #a8b2d1;
         --heading-color: #e6f1ff;
         --white-color: #ffffff;
         --navbar-height: 60px;
 
-        --navbar-bg: rgba(5, 11, 20, 0.85);
-        --mobile-menu-bg: rgba(5, 11, 20, 0.95);
-        --footer-bg: rgba(5, 11, 20, 0.95);
-        --about-bg: rgba(17, 34, 64, 0.4);
-        --faq-bg: rgba(255, 255, 255, 0.03);
-        --border-color: rgba(255, 255, 255, 0.08);
-        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        --card-hover-shadow: 0 20px 40px rgba(255, 165, 0, 0.15);
-        --card-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.2) 100%);
-        --heading-gradient: linear-gradient(120deg, var(--heading-color), var(--white-color));
-        --scroll-btn-bg: rgba(255, 255, 255, 0.1);
+        /* Liquid Glass Variables */
+        --glass-bg: rgba(15, 20, 30, 0.5);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        --glass-blur: blur(16px);
+        
+        /* Happy & Energetic Vibe for About Section (Sunrise Gradient) */
+        --about-glass-bg: linear-gradient(135deg, rgba(255, 87, 34, 0.15), rgba(255, 165, 0, 0.1));
 
-        /* Colorful Stars/Sparks Variables (Dark Mode) */
+        /* Card Content Glass */
+        --card-content-bg: rgba(5, 11, 20, 0.65);
+
+        /* Colorful Stars/Sparks Variables */
         --star-1: #ffffff;
-        --star-2: #ffa500; /* Orange Sparks */
-        --star-3: #4da6ff; /* Blue Sparks */
+        --star-2: #ffa500; 
+        --star-3: #4da6ff; 
         --shooting-star-color: var(--accent-color);
         --dynamic-black-white: #ffffff;
-        
-        /* Grid Pattern */
         --bg-grid: rgba(255, 255, 255, 0.03);
       }
 
@@ -102,26 +102,23 @@
         --heading-color: #0d2f4b;
         --white-color: #111111;
 
-        --navbar-bg: rgba(255, 255, 255, 0.9);
-        --mobile-menu-bg: rgba(255, 255, 255, 0.98);
-        --footer-bg: #f0f4f8;
-        --about-bg: #ffffff;
-        --faq-bg: #ffffff;
-        --border-color: rgba(0, 0, 0, 0.08);
-        --card-shadow: 0 8px 24px rgba(13, 47, 75, 0.08);
-        --card-hover-shadow: 0 15px 35px rgba(255, 165, 0, 0.2);
-        --card-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.1) 100%);
-        --heading-gradient: linear-gradient(120deg, var(--primary-color), var(--accent-color));
-        --scroll-btn-bg: rgba(0, 0, 0, 0.05);
+        /* Liquid Glass Variables */
+        --glass-bg: rgba(255, 255, 255, 0.6);
+        --glass-border: rgba(255, 255, 255, 1);
+        --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        
+        /* Happy & Energetic Vibe for About Section */
+        --about-glass-bg: linear-gradient(135deg, rgba(255, 87, 34, 0.05), rgba(255, 165, 0, 0.08));
 
-        /* Colorful Stars/Sparks Variables (Light Mode) */
-        --star-1: #0d2f4b; /* Dark Blue */
-        --star-2: #ffa500; /* Orange */
-        --star-3: #888888; /* Grey */
+        /* Card Content Glass */
+        --card-content-bg: rgba(0, 0, 0, 0.6); /* Keep text readable over images */
+
+        /* Colorful Stars/Sparks Variables */
+        --star-1: #0d2f4b; 
+        --star-2: #ffa500; 
+        --star-3: #888888; 
         --shooting-star-color: var(--accent-color);
         --dynamic-black-white: #000000;
-
-        /* Grid Pattern */
         --bg-grid: rgba(0, 0, 0, 0.03);
       }
 
@@ -130,10 +127,10 @@
         margin: 0; font-family: "Montserrat", sans-serif;
         background-color: var(--background-color); color: var(--text-color);
         line-height: 1.6; transition: background-color 0.4s ease, color 0.4s ease;
-        position: relative;
+        position: relative; overflow-x: hidden;
       }
       
-      /* --- CONSTRUCTION BLUEPRINT GRID EFFECT --- */
+      /* --- BACKGROUND GRID & AMBIENT BLOBS (Apple Style) --- */
       body::before {
         content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
         background-image: linear-gradient(var(--bg-grid) 1px, transparent 1px),
@@ -141,6 +138,15 @@
         background-size: 40px 40px; z-index: -11; pointer-events: none;
         transition: background-image 0.4s ease;
       }
+      
+      .blob { position: fixed; filter: blur(90px); z-index: -12; pointer-events: none; border-radius: 50%; animation: float 12s ease-in-out infinite alternate; opacity: 0.6;}
+      .blob-1 { top: -10%; right: -5%; width: 50vw; height: 50vw; background: rgba(255, 165, 0, 0.2); }
+      .blob-2 { bottom: -10%; left: -10%; width: 60vw; height: 60vw; background: rgba(0, 136, 204, 0.15); animation-delay: -5s;}
+      
+      body[data-theme="light"] .blob-1 { background: rgba(255, 165, 0, 0.3); opacity: 0.4;}
+      body[data-theme="light"] .blob-2 { background: rgba(0, 136, 204, 0.2); opacity: 0.4;}
+
+      @keyframes float { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-5%, 10%) scale(1.1); } }
 
       * { box-sizing: border-box; }
       section { padding: 3.5rem 0; }
@@ -153,14 +159,22 @@
       }
       .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
 
+      /* --- GENERAL GLASS CLASS --- */
+      .glass-panel {
+        background: var(--glass-bg);
+        -webkit-backdrop-filter: var(--glass-blur);
+        backdrop-filter: var(--glass-blur);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+      }
+
       /* --- Navigation Bar --- */
       .navbar {
         display: flex; justify-content: space-between; align-items: center;
-        background-color: var(--navbar-bg); -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px); border-bottom: 1px solid var(--border-color);
         padding: 0.5rem 2rem; position: sticky; top: 0; width: 100%;
         z-index: 1000; min-height: var(--navbar-height);
         transition: background-color 0.4s ease, border-bottom 0.4s ease;
+        border-radius: 0 0 15px 15px; /* Slight rounding at bottom */
       }
 
       .nav-logo { color: var(--white-color); font-weight: 800; font-size: 1.6rem; text-decoration: none; flex-shrink: 0; letter-spacing: -0.5px; }
@@ -170,15 +184,14 @@
       .nav-links { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-grow: 1; }
       .nav-links li { margin: 0 1.2rem; }
 
-      /* --- SCROLL SPY ANIMATION --- */
       .nav-links a {
         color: var(--white-color); text-decoration: none; font-weight: 600;
         transition: color 0.3s ease; position: relative; padding-bottom: 5px; font-size: 0.95rem;
       }
       .nav-links a::after {
-        content: ''; position: absolute; width: 0; height: 2px;
-        bottom: 0; left: 50%; background-color: var(--accent-color);
-        transition: all 0.3s ease-in-out; transform: translateX(-50%); border-radius: 2px;
+        content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 50%; 
+        background-color: var(--accent-color); transition: all 0.3s ease-in-out; 
+        transform: translateX(-50%); border-radius: 2px;
       }
       .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
       .nav-links a.active { color: var(--accent-color); }
@@ -199,7 +212,7 @@
       .icon-youtube { color: #FF0000; }
 
       .theme-toggle-btn {
-        background-color: var(--scroll-btn-bg); border: 1px solid var(--border-color);
+        background: transparent; border: 1px solid var(--glass-border);
         color: var(--white-color); font-size: 1rem; cursor: pointer;
         width: 38px; height: 38px; border-radius: 50%; display: flex;
         justify-content: center; align-items: center; transition: all 0.3s ease;
@@ -219,7 +232,7 @@
       .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
       .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
-      /* --- COLORFUL SMART STARFIELD (Sparks Effect) --- */
+      /* --- COLORFUL SMART STARFIELD --- */
       .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; overflow: hidden; pointer-events: none; }
       .stars-bg {
         position: absolute; top: 0; left: 0; width: 100%; height: 200%;
@@ -227,7 +240,6 @@
         animation-name: animateStars, blink; animation-timing-function: linear, ease-in-out;
         animation-iteration-count: infinite, infinite; animation-direction: normal, alternate;
       }
-      /* Updated with colors */
       #stars1 { background-image: radial-gradient(1.5px 1.5px at 20px 30px, var(--star-2), transparent), radial-gradient(1px 1px at 40px 70px, var(--star-1), transparent), radial-gradient(2px 2px at 50px 160px, var(--star-3), transparent), radial-gradient(1px 1px at 90px 40px, var(--star-1), transparent), radial-gradient(2px 2px at 130px 80px, var(--star-2), transparent), radial-gradient(1.5px 1.5px at 160px 120px, var(--star-3), transparent); background-size: 200px 200px; animation-duration: 120s, 4s; }
       #stars2 { background-image: radial-gradient(1.5px 1.5px at 10px 90px, var(--star-3), transparent), radial-gradient(2px 2px at 80px 30px, var(--star-1), transparent), radial-gradient(1px 1px at 100px 180px, var(--star-2), transparent), radial-gradient(1.5px 1.5px at 190px 60px, var(--star-1), transparent), radial-gradient(1px 1px at 140px 110px, var(--star-3), transparent), radial-gradient(2px 2px at 180px 150px, var(--star-2), transparent); background-size: 250px 250px; animation-duration: 90s, 6s; }
       #stars3 { background-image: radial-gradient(2px 2px at 5px 55px, var(--star-1), transparent), radial-gradient(1.5px 1.5px at 125px 95px, var(--star-2), transparent); background-size: 150px 150px; animation-duration: 150s, 3s; }
@@ -248,27 +260,29 @@
       .hero-logo { animation: fadeIn 1s ease-out forwards; opacity: 0; margin-bottom: 1.5rem; }
       .hero-logo img { height: 180px; width: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 35px var(--accent-glow); border: 3px solid rgba(255,255,255,0.1); }
       
-      #home h1 { font-size: 4rem; font-weight: 800; color: var(--white-color); margin: 0 0 0.5rem 0; animation: fadeIn 1s ease-out 0.2s forwards; opacity: 0; line-height: 1.2; letter-spacing: -1px;}
-      body[data-theme="light"] #home h1 { color: var(--heading-color); }
+      #home h1 { font-size: 4.2rem; font-weight: 800; color: var(--white-color); margin: 0 0 0.5rem 0; animation: fadeIn 1s ease-out 0.2s forwards; opacity: 0; line-height: 1.2; letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.4);}
+      body[data-theme="light"] #home h1 { color: var(--heading-color); text-shadow: none;}
       body[data-theme="dark"] #home h1 { color: #ffffff; }
       
-      #home .tagline { font-size: 1.3rem; font-weight: 500; color: var(--text-color); margin: 0 0 2rem 0; animation: fadeIn 1s ease-out 0.4s forwards; opacity: 0; max-width: 600px; line-height: 1.6;}
-      #home .tagline span { color: var(--accent-color); font-weight: 600; }
+      #home .tagline { font-size: 1.4rem; font-weight: 500; color: var(--text-color); margin: 0 0 2.5rem 0; animation: fadeIn 1s ease-out 0.4s forwards; opacity: 0; max-width: 600px; line-height: 1.6; text-shadow: 0 2px 10px rgba(0,0,0,0.5);}
+      body[data-theme="light"] #home .tagline { text-shadow: none; }
+      #home .tagline span { color: var(--accent-color); font-weight: 700; }
 
-      /* --- MODERN PILL SHAPE BUTTONS --- */
-      .cta-buttons { animation: fadeIn 1s ease-out 0.6s forwards; opacity: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; max-width: 500px; }
+      /* --- NEW WHATSAPP & TELEGRAM BUTTONS --- */
+      .cta-buttons { animation: fadeIn 1s ease-out 0.6s forwards; opacity: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem; width: 100%; max-width: 550px; }
       .cta-buttons a { 
-        text-decoration: none; color: #ffffff; background-color: var(--accent-color); 
-        padding: 0.8rem 2rem; border-radius: 50px; /* Fully Rounded */
-        font-weight: 600; font-size: 1rem; transition: all 0.3s ease; flex: 1 1 200px; 
-        text-align: center; box-shadow: 0 8px 20px rgba(255,165,0,0.3); border: 2px solid var(--accent-color);
+        text-decoration: none; color: #ffffff;
+        padding: 0.9rem 2.2rem; border-radius: 50px; /* Modern Pill Shape */
+        font-weight: 700; font-size: 1.05rem; transition: all 0.3s ease; flex: 1 1 200px; 
+        text-align: center; display: flex; justify-content: center; align-items: center; gap: 8px;
+        border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);
       }
-      .cta-buttons a:hover { background-color: #e69500; border-color: #e69500; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255,165,0,0.4); }
       
-      .cta-buttons a.secondary { background-color: transparent; border: 2px solid var(--border-color); color: var(--white-color); box-shadow: none; backdrop-filter: blur(5px); }
-      body[data-theme="light"] .cta-buttons a.secondary { color: var(--heading-color); border-color: var(--heading-color); }
-      .cta-buttons a.secondary:hover { background-color: var(--white-color); color: var(--background-color); border-color: var(--white-color); }
-      body[data-theme="light"] .cta-buttons a.secondary:hover { background-color: var(--heading-color); color: #ffffff; }
+      .btn-hero-whatsapp { background-color: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
+      .btn-hero-whatsapp:hover { background-color: #1ebd56; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5); }
+      
+      .btn-hero-telegram { background-color: #0088cc; box-shadow: 0 8px 25px rgba(0, 136, 204, 0.3); }
+      .btn-hero-telegram:hover { background-color: #007ab8; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 136, 204, 0.5); }
 
       /* --- Services Section (Sliders) --- */
       #services { background-color: transparent; padding-left: 0; padding-right: 0; }
@@ -277,80 +291,83 @@
       
       /* Stylish Underlined Subheading */
       .category-title { 
-        font-size: 1.8rem; color: var(--heading-color); font-weight: 700; margin: 0; 
+        font-size: 1.8rem; color: var(--heading-color); font-weight: 800; margin: 0; 
         position: relative; padding-bottom: 10px;
       }
       .category-title::after {
         content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px;
-        background: linear-gradient(90deg, var(--accent-color), transparent);
-        border-radius: 2px;
+        background: linear-gradient(90deg, var(--accent-color), transparent); border-radius: 2px;
       }
 
       .scroll-arrows { display: flex; gap: 0.5rem; margin-bottom: 5px; }
-      .scroll-btn { background-color: var(--scroll-btn-bg); border: 1px solid var(--border-color); color: var(--white-color); border-radius: 50px; width: 42px; height: 42px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(5px);}
+      .scroll-btn { background: var(--glass-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); color: var(--white-color); border-radius: 50px; width: 42px; height: 42px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; display: flex; justify-content: center; align-items: center;}
       .scroll-btn:hover:not(:disabled) { background-color: var(--accent-color); border-color: var(--accent-color); color: #ffffff; transform: scale(1.05);}
       .scroll-btn:disabled { opacity: 0.2; cursor: not-allowed; transform: none;}
 
       .property-scroll-container { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding: 0.5rem 2rem 1.5rem 2rem; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; }
       .property-scroll-container::-webkit-scrollbar { display: none; }
 
-      .property-card { position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--card-shadow); transition: transform 0.4s ease, box-shadow 0.4s ease; border: 1px solid var(--border-color); flex: 0 0 320px; height: 380px; scroll-snap-align: start; background-color: var(--surface-color);}
-      .property-card:hover { transform: translateY(-10px); box-shadow: var(--card-hover-shadow); border-color: rgba(255,165,0,0.3); }
+      .property-card { position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--card-shadow); transition: transform 0.4s ease, box-shadow 0.4s ease; border: 1px solid var(--glass-border); flex: 0 0 320px; height: 380px; scroll-snap-align: start; background-color: var(--surface-color);}
+      .property-card:hover { transform: translateY(-10px); box-shadow: var(--card-hover-shadow); border-color: rgba(255,165,0,0.4); }
       .property-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease, filter 0.5s ease; }
       .property-card:hover img { transform: scale(1.08); filter: brightness(0.7); }
 
-      .card-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: var(--card-gradient); display: flex; flex-direction: column; justify-content: flex-end; text-align: left; height: 100%; z-index: 2; }
-      .card-content h3 { margin-top: 0; font-size: 1.5rem; color: #ffffff; margin-bottom: 0.4rem; font-weight: 700; }
-      .card-content p { flex-grow: 0; margin-bottom: 1.2rem; font-size: 0.95rem; color: #eaeaea; line-height: 1.5;}
+      /* Glassmorphism over card content */
+      .card-content { 
+        position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; 
+        background: var(--card-content-bg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+        display: flex; flex-direction: column; justify-content: flex-end; text-align: left; 
+        z-index: 2; border-top: 1px solid rgba(255,255,255,0.1); border-radius: 0 0 20px 20px;
+      }
+      .card-content h3 { margin-top: 0; font-size: 1.4rem; color: #ffffff; margin-bottom: 0.4rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5);}
+      .card-content p { flex-grow: 0; margin-bottom: 1.2rem; font-size: 0.95rem; color: #eaeaea; line-height: 1.5; text-shadow: 0 1px 3px rgba(0,0,0,0.5);}
       
-      /* Rounded Card Buttons */
       .card-buttons { display: flex; gap: 0.8rem; }
       .card-buttons a { text-decoration: none; padding: 0.6rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s ease; text-align: center; color: #ffffff; flex: 1; display: flex; justify-content: center; align-items: center; gap: 5px;}
       .card-buttons .btn-call { background-color: var(--primary-color); border: 1px solid transparent; }
-      .card-buttons .btn-call:hover { background-color: transparent; border-color: #ffffff; }
+      .card-buttons .btn-call:hover { background-color: rgba(13, 47, 75, 0.8); border-color: #ffffff; }
       .card-buttons .btn-whatsapp { background-color: #25d366; border: 1px solid transparent;}
-      .card-buttons .btn-whatsapp:hover { background-color: transparent; border-color: #25d366; color: #25d366;}
+      .card-buttons .btn-whatsapp:hover { background-color: rgba(37, 211, 102, 0.8); border-color: #ffffff;}
 
-      /* --- About Section --- */
+      /* --- HAPPY ENERGETIC ABOUT SECTION --- */
       #about {
-        background-color: var(--about-bg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-        border: 1px solid var(--border-color); border-radius: 20px; margin: 2rem; padding: 4rem; position: relative; z-index: 1; transition: background-color 0.4s ease, border 0.4s ease;
+        background: var(--about-glass-bg); /* Energetic Vibe Gradient */
+        -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+        border: 1px solid var(--glass-border); border-radius: 24px; margin: 2rem; padding: 4rem; 
+        position: relative; z-index: 1; box-shadow: var(--glass-shadow);
       }
       .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-      .about-image img { width: 100%; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);}
-      .about-text h3 { font-size: 1.8rem; color: var(--accent-color); margin-bottom: 1.5rem; font-weight: 700;}
-      .about-text p { text-align: left; margin-bottom: 1.5rem; font-size: 1.05rem;}
+      .about-image img { width: 100%; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--glass-border);}
+      .about-text h3 { font-size: 1.8rem; color: var(--accent-color); margin-bottom: 1.5rem; font-weight: 800;}
+      .about-text p { text-align: left; margin-bottom: 1.5rem; font-size: 1.05rem; font-weight: 500;}
       .why-choose-us { list-style: none; padding: 0; margin-top: 1.5rem; }
       .why-choose-us li { display: flex; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1rem; }
-      .why-choose-us i { color: var(--accent-color); font-size: 1.2rem; margin-right: 1.2rem; padding-top: 2px; width: 25px; text-align: center; }
-      .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.3rem; font-weight: 600;}
+      .why-choose-us i { color: var(--accent-color); font-size: 1.3rem; margin-right: 1.2rem; padding-top: 2px; width: 25px; text-align: center; text-shadow: 0 0 10px rgba(255,165,0,0.5);}
+      .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.3rem; font-weight: 700;}
 
-      /* --- FAQ Section (Modern Rounded) --- */
+      /* --- FAQ Section (Apple Glass UI) --- */
       #faq { max-width: 900px; margin: 0 auto; padding: 4rem 1rem; }
       .faq-accordion { display: flex; flex-direction: column; gap: 1rem; }
       .faq-item { 
-        background-color: var(--faq-bg); border: 1px solid var(--border-color); 
-        border-radius: 16px; /* High Border Radius */
-        overflow: hidden; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        backdrop-filter: blur(5px);
+        border-radius: 16px; overflow: hidden; transition: all 0.3s ease; 
       }
-      .faq-item:hover { border-color: rgba(255,165,0,0.5); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15);}
+      .faq-item:hover { border-color: rgba(255,165,0,0.5); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2);}
       .faq-item summary { 
-        padding: 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--heading-color); 
+        padding: 1.5rem; font-size: 1.1rem; font-weight: 700; color: var(--heading-color); 
         cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
       }
       .faq-item summary::-webkit-details-marker { display: none; }
       .faq-item summary::after { content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--accent-color); transition: transform 0.3s ease; background: rgba(255,165,0,0.1); padding: 8px; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;}
       .faq-item[open] summary::after { transform: rotate(180deg); background: var(--accent-color); color: #fff;}
-      .faq-item p { padding: 0 1.5rem 1.5rem 1.5rem; margin: 0; color: var(--text-color); border-top: 1px solid var(--border-color); padding-top: 1.2rem; font-size: 1rem; line-height: 1.6; }
+      .faq-item p { padding: 0 1.5rem 1.5rem 1.5rem; margin: 0; color: var(--text-color); border-top: 1px solid var(--glass-border); padding-top: 1.2rem; font-size: 1rem; line-height: 1.6; font-weight: 500;}
 
-      /* --- Footer Section --- */
+      /* --- Footer Section (Glass) --- */
       #contact {
-        background-color: var(--footer-bg); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); color: var(--text-color);
-        border-top: 1px solid var(--border-color); position: relative; z-index: 1; padding: 4rem 2rem 1.5rem 2rem; transition: background-color 0.4s ease, border 0.4s ease, color 0.4s ease; margin-top: 2rem;
+        margin-top: 2rem; padding: 4rem 2rem 1.5rem 2rem; border-top: 1px solid var(--glass-border);
+        border-radius: 24px 24px 0 0;
       }
       .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
-      .footer-column h4 { font-size: 1.3rem; color: var(--heading-color); margin-bottom: 1.5rem; position: relative; padding-bottom: 0.8rem; font-weight: 700;}
+      .footer-column h4 { font-size: 1.3rem; color: var(--heading-color); margin-bottom: 1.5rem; position: relative; padding-bottom: 0.8rem; font-weight: 800;}
       .footer-column h4::after { content: ""; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: var(--accent-color); border-radius: 2px;}
       .footer-column ul { list-style: none; padding: 0; margin: 0; }
       .footer-column ul li { margin-bottom: 0.8rem; }
@@ -360,55 +377,63 @@
       .footer-column .contact-info i { color: var(--accent-color); padding-top: 4px;}
       
       .footer-column .social-icons { display: flex; flex-wrap: wrap; gap: 15px; }
-      .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; font-weight: 500;}
+      .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--glass-border); font-size: 0.9rem; font-weight: 500;}
 
       /* --- Responsive Design Adjustments --- */
-      @media (min-width: 768px) { #home h1 { font-size: 4.5rem; } }
+      @media (min-width: 768px) { #home h1 { font-size: 4.8rem; } }
       @media (max-width: 992px) {
         #about { margin: 2rem 1rem; padding: 3rem 2rem; }
         .about-content { grid-template-columns: 1fr; gap: 3rem; }
         .about-text { text-align: center; } .about-text p, .about-text .why-choose-us li { text-align: left; }
       }
       @media (max-width: 767px) {
-        .navbar { padding: 0.5rem 1rem; }
+        .navbar { padding: 0.5rem 1rem; border-radius: 0; }
         .nav-logo { font-size: 1.4rem; }
         .nav-toggle-label { display: block; }
         .mobile-controls { display: flex; }
         .nav-menu .theme-toggle-btn { display: none; }
         .nav-menu {
           display: none; flex-direction: column; width: 100%;
-          background-color: var(--mobile-menu-bg); backdrop-filter: blur(15px); position: absolute; top: 100%; left: 0; padding: 1rem 0; border-top: 1px solid var(--border-color); order: 3; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+          background: var(--mobile-menu-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+          position: absolute; top: 100%; left: 0; padding: 1rem 0; border-top: 1px solid var(--glass-border); order: 3; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         #nav-toggle:checked ~ .nav-menu { display: flex; }
         .nav-links { flex-direction: column; width: 100%; text-align: center; }
         .nav-links li { margin: 0; }
         .nav-links a { display: block; padding: 1rem 0; font-size: 1.1rem;}
-        .nav-social { justify-content: center; margin: 1.5rem auto 0 auto; padding-top: 1.5rem; border-top: 1px solid var(--border-color); width: 90%; }
+        .nav-social { justify-content: center; margin: 1.5rem auto 0 auto; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); width: 90%; }
         
         #home { padding: 5rem 1rem 3rem 1rem; }
         .hero-logo img { height: 150px; width: 150px; }
         #home h1 { font-size: 2.8rem; } #home .tagline { font-size: 1.1rem; margin-bottom: 2rem; }
-        .cta-buttons { gap: 1rem; } .cta-buttons a { padding: 0.8rem 1rem; font-size: 0.95rem; flex-basis: 100%; }
         
-        section { padding: 2.5rem 0; } h2 { font-size: 2rem; margin-bottom: 2rem; }
+        /* Mobile Buttons Full Width */
+        .cta-buttons { gap: 1rem; flex-direction: column;} 
+        .cta-buttons a { padding: 0.9rem 1rem; font-size: 1rem; width: 100%;}
+        
+        section { padding: 2.5rem 0; } h2 { font-size: 2.2rem; margin-bottom: 2rem; }
         .footer-content { text-align: center; gap: 2.5rem; }
         .footer-column h4::after { left: 50%; transform: translateX(-50%); }
         .footer-column .contact-info p { justify-content: center; text-align: left;}
         .footer-column .social-icons { justify-content: center; }
 
-        .scroll-arrows { display: none; } .category-header { padding: 0 1rem; margin-bottom: 1rem; flex-direction: column; align-items: flex-start; gap: 10px;} .category-title { font-size: 1.4rem; }
+        .scroll-arrows { display: none; } .category-header { padding: 0 1rem; margin-bottom: 1rem; flex-direction: column; align-items: flex-start; gap: 10px;} .category-title { font-size: 1.5rem; }
         .property-scroll-container { gap: 1rem; padding: 0.5rem 1rem 1rem 1rem; }
         .property-card { flex-basis: 280px; height: 350px; }
         .faq-item summary { font-size: 1rem; padding: 1.2rem;}
       }
       @media (max-width: 380px) {
         .hero-logo img { height: 120px; width: 120px; }
-        #home h1 { font-size: 2.2rem; }
+        #home h1 { font-size: 2.4rem; }
         .property-card { flex-basis: 250px; height: 330px; }
       }
     </style>
   </head>
   <body>
+    <!-- Background Ambient Blobs for Apple Glass Effect -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <div class="stars">
       <div class="stars-bg" id="stars1"></div>
       <div class="stars-bg" id="stars2"></div>
@@ -417,7 +442,8 @@
       <div class="shooting-star"></div>
     </div>
 
-    <nav class="navbar">
+    <!-- Added 'glass-panel' class for global glass effect -->
+    <nav class="navbar glass-panel">
       <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
 
       <div class="mobile-controls">
@@ -461,15 +487,22 @@
         </div>
         <h1>Kavach Builders</h1>
         <p class="tagline">Premium Construction & Renovation in <span>Delhi NCR</span></p>
+        
+        <!-- NEW Modern WhatsApp & Telegram Buttons -->
         <div class="cta-buttons">
-          <a href="#services" class="primary">Explore Services</a>
-          <a href="https://www.kavachestate.com" target="_blank" rel="noopener noreferrer" class="secondary">Kavach Estate</a>
+          <a href="https://wa.me/918168759184" target="_blank" rel="noopener noreferrer" class="btn-hero-whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="https://t.me/kavachbuilders" target="_blank" rel="noopener noreferrer" class="btn-hero-telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram Us
+          </a>
         </div>
       </section>
 
       <section id="services" class="fade-in-section">
         <h2>Our Services</h2>
         
+        <!-- Slider 1 -->
         <div class="property-row-wrapper">
           <div class="category-header">
             <h3 class="category-title">Complete Construction Projects</h3>
@@ -480,86 +513,86 @@
           </div>
           <div class="property-scroll-container">
             
-            <div class="property-card" data-category="project">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1587022216694-8f8b8f2a1a8c?w=400&h=380&fit=crop" alt="Warehouse Construction in Sonipat" loading="lazy" />
               <div class="card-content">
                 <h3>Warehouse</h3>
                 <p>Constructing large-scale, durable warehouses tailored for storage and logistics.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="project">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1564013799919-ab60b927216f?w=400&h=380&fit=crop" alt="Factory Construction Kharkhoda" loading="lazy" />
               <div class="card-content">
                 <h3>Factory</h3>
                 <p>Specialized construction of robust industrial factories and manufacturing structures.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="project">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1574958269340-fa927503f3dd?w=400&h=380&fit=crop" alt="SCO Construction Bahadurgarh" loading="lazy" />
               <div class="card-content">
                 <h3>SCO (Shop-cum-Office)</h3>
                 <p>Premium commercial complexes perfectly designed for retail shops and modern offices.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="project">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?w=400&h=380&fit=crop" alt="Office Construction Delhi NCR" loading="lazy" />
               <div class="card-content">
                 <h3>Office</h3>
                 <p>Building modern, efficient, and inspiring office spaces for your business growth.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="project">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=380&fit=crop" alt="House Construction" loading="lazy" />
               <div class="card-content">
                 <h3>House</h3>
                 <p>Expert construction for your dream residential home, from solid foundation to luxury finish.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="project">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=380&fit=crop" alt="Floor Construction" loading="lazy" />
               <div class="card-content">
                 <h3>Floor</h3>
                 <p>High-quality builder floors and independent apartment levels with modern amenities.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="project">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&h=380&fit=crop" alt="Farmhouse Construction" loading="lazy" />
               <div class="card-content">
                 <h3>Farmhouse</h3>
                 <p>Beautiful, spacious luxury farmhouses blending nature with modern architectural comfort.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -567,6 +600,7 @@
           </div>
         </div>
 
+        <!-- Slider 2 -->
         <div class="property-row-wrapper">
           <div class="category-header">
             <h3 class="category-title">Our Construction Services</h3>
@@ -577,62 +611,62 @@
           </div>
           <div class="property-scroll-container">
             
-            <div class="property-card" data-category="service">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=380&fit=crop" alt="Interior and Exterior Design" loading="lazy" />
               <div class="card-content">
                 <h3>Interior & Exterior Design</h3>
                 <p>Complete design and decoration services to transform the look of your building inside and out.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="service">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1558692131-061051a445f1?w=400&h=380&fit=crop" alt="Architect 2D & 3D Design" loading="lazy" />
               <div class="card-content">
                 <h3>Architecture 2D & 3D</h3>
                 <p>Creating precise 2D blueprints and realistic 3D models for perfect structural planning.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="service">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=400&h=380&fit=crop" alt="Demarcation Pole Installation" loading="lazy" />
               <div class="card-content">
                 <h3>Demarcation Pole</h3>
                 <p>Accurate installation of demarcation poles for clear land boundaries and site surveying.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="service">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1550137785-3bccecd1ddaa?w=400&h=380&fit=crop" alt="Precast Boundary Wall" loading="lazy" />
               <div class="card-content">
                 <h3>Precast Boundary Wall</h3>
                 <p>Ready-to-install, highly durable precast concrete boundary walls for quick perimeter security.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
 
-            <div class="property-card" data-category="service">
+            <div class="property-card">
               <img src="https://images.unsplash.com/photo-1621295280261-2b04f14545fb?w=400&h=380&fit=crop" alt="Wire Fencing Installation" loading="lazy" />
               <div class="card-content">
                 <h3>Wire Fencing</h3>
                 <p>Strong and reliable wire fencing solutions for farms, plots, and commercial properties.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener"><i class="fas fa-phone"></i> Call</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
                 </div>
               </div>
             </div>
@@ -641,6 +675,7 @@
         </div>
       </section>
 
+      <!-- Energetic "Sunrise Glow" Background handled by CSS variables -->
       <section id="about" class="fade-in-section">
         <div class="container">
           <h2>About Kavach Builders</h2>
@@ -685,23 +720,23 @@
         <div class="container">
           <h2>Frequently Asked Questions</h2>
           <div class="faq-accordion">
-            <details class="faq-item">
+            <details class="faq-item glass-panel">
               <summary>Where does Kavach Builders provide construction services?</summary>
               <p>We are a leading construction company primarily serving <strong>Sonipat, Kharkhoda, Bahadurgarh, and the wider Delhi NCR region</strong>. Our team is equipped to handle major projects across these locations.</p>
             </details>
-            <details class="faq-item">
+            <details class="faq-item glass-panel">
               <summary>What types of construction projects do you handle?</summary>
               <p>We manage complete construction projects including residential Houses, builder Floors, commercial Offices, SCOs (Shop-cum-Office), industrial Factories, Warehouses, and luxury Farmhouses.</p>
             </details>
-            <details class="faq-item">
+            <details class="faq-item glass-panel">
               <summary>Do you construct precast boundary walls and wire fencing?</summary>
               <p>Yes, we specialize in quick, durable, and cost-effective perimeter security. This includes installing precast concrete boundary walls, setting up demarcation poles, and durable wire fencing for open plots and farms.</p>
             </details>
-            <details class="faq-item">
+            <details class="faq-item glass-panel">
               <summary>How can I get a cost estimate for my project in Delhi NCR or Sonipat?</summary>
               <p>You can easily get a personalized cost estimate by calling us directly at <strong>+91 8168759184</strong> or messaging us via the WhatsApp button. We will discuss your site location and specific requirements.</p>
             </details>
-            <details class="faq-item">
+            <details class="faq-item glass-panel">
               <summary>Do you handle both interior and exterior architectural design?</summary>
               <p>Absolutely. We offer comprehensive 2D and 3D architectural planning along with dedicated interior and exterior design services, ensuring your building is structurally sound and aesthetically modern.</p>
             </details>
@@ -710,7 +745,7 @@
       </section>
     </main>
 
-    <footer id="contact" class="fade-in-section">
+    <footer id="contact" class="fade-in-section glass-panel">
       <div class="container">
         <div class="footer-content">
           <div class="footer-column">
@@ -820,7 +855,6 @@
 
           container.addEventListener("scroll", updateScrollButtons, { passive: true });
           new ResizeObserver(updateScrollButtons).observe(container);
-          // Initial delay to ensure widths are calculated
           setTimeout(updateScrollButtons, 100); 
         });
 
