@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Kavach Builders | Construction & Renovation in Sonipat, Delhi NCR</title>
     <meta name="description" content="Kavach Builders offers top-tier construction, renovation, and interior design services in Sonipat, Kharkhoda, Bahadurgarh, and Delhi NCR." />
-    <meta name="keywords" content="construction company sonipat, kavach builders, home construction sonipat, commercial construction delhi ncr, renovation services kharkhoda, interior design bahadurgarh, building contractors" />
+    <meta name="keywords" content="construction company sonipat, kavach builders, home construction sonipat, commercial construction delhi ncr, renovation services kharkhoda" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <script type="application/ld+json">
@@ -19,756 +19,581 @@
         "@type": "GeneralContractor",
         "name": "Kavach Builders",
         "url": "https://www.kavachbuilders.com",
-        "logo": "https://www.kavachbuilders.com/logo.PNG",
         "telephone": "+918168759184",
         "email": "kavachbuilders@gmail.com",
-        "address": { "@type": "PostalAddress", "addressLocality": "Sonipat", "addressRegion": "HR", "addressCountry": "IN" },
-        "description": "Leading construction contractor in Sonipat and Delhi NCR.",
-        "areaServed": ["Sonipat", "Kharkhoda", "Bahadurgarh", "Delhi NCR"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Construction Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Warehouse Construction" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Construction" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SCO Complexes" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luxury Farmhouses" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Precast Boundary Walls & Fencing" } }
-          ]
-        }
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "Where does Kavach Builders provide construction services?", "acceptedAnswer": { "@type": "Answer", "text": "We primarily serve Sonipat, Kharkhoda, Bahadurgarh, and the wider Delhi NCR region." } },
-          { "@type": "Question", "name": "What construction services do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "Turnkey construction including houses, builder floors, offices, SCOs, factories, warehouses, and farmhouses." } },
-          { "@type": "Question", "name": "Do you construct precast boundary walls in Delhi NCR?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we specialize in precast boundary walls, demarcation poles, and wire fencing for open plots." } },
-          { "@type": "Question", "name": "How can I get a cost estimate?", "acceptedAnswer": { "@type": "Answer", "text": "Call us at +91 8168759184 or message via WhatsApp for a free personalized estimate." } },
-          { "@type": "Question", "name": "Are you experienced in warehouse construction?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we are experts in industrial construction, delivering robust warehouses and factories." } },
-          { "@type": "Question", "name": "Do you handle architectural design?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer 2D/3D planning and complete interior/exterior design services." } },
-          { "@type": "Question", "name": "Do you build SCO complexes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we build premium Shop-cum-Office complexes optimized for modern business." } },
-          { "@type": "Question", "name": "Can you design luxury farmhouses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we construct spacious luxury farmhouses blending nature with modern architecture." } },
-          { "@type": "Question", "name": "Are your materials of premium quality?", "acceptedAnswer": { "@type": "Answer", "text": "We strictly use industry-approved, premium grade materials for structural longevity." } },
-          { "@type": "Question", "name": "Do you undertake turnkey builder floor projects?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, complete turnkey construction from foundation to final interior finishing." } }
-        ]
+        "address": { "@type": "PostalAddress", "addressLocality": "Sonipat", "addressRegion": "HR", "addressCountry": "IN" }
       }
     </script>
 
     <style>
-      /* --- ENERGETIC & PREMIUM THEME VARIABLES --- */
+      /* =======================================================================
+         🌟 HAPPY & ENERGETIC THEME VARIABLES 
+         ======================================================================= */
       :root {
-        --primary-color: #0d2f4b;
-        --accent-color: #ffa500;
-        --accent-glow: rgba(255, 165, 0, 0.4);
+        /* Default Light & Happy Theme */
+        --bg-gradient: linear-gradient(135deg, #f0f7fa 0%, #ffffff 100%);
+        --surface-color: #ffffff;
+        --section-alt-bg: #f8fbff;
         
-        /* Dark Theme */
-        --background-color: #050b14; 
-        --surface-color: #0a0a0a;
-        --text-color: #a8b2d1;
-        --heading-color: #e6f1ff;
+        --primary-color: #0066cc; /* Bright, trustworthy blue */
+        --accent-color: #ff7700; /* Vibrant, happy orange */
+        --accent-hover: #e66a00;
+        
+        --text-color: #334155;
+        --heading-color: #0f172a;
         --white-color: #ffffff;
         
-        /* Transparent Glassmorphism */
-        --navbar-height: 65px;
-        --glass-bg: rgba(15, 20, 30, 0.5); 
-        --glass-border: rgba(255, 255, 255, 0.04); 
-        --glass-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4); 
-        --glass-blur: blur(20px);
+        --card-shadow: 0 10px 30px rgba(0, 40, 100, 0.08);
+        --nav-bg: rgba(255, 255, 255, 0.95);
+        --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         
-        --about-glass-bg: linear-gradient(135deg, rgba(255, 87, 34, 0.1), rgba(0, 136, 204, 0.08));
-        --card-content-bg: rgba(5, 11, 20, 0.7);
-        
-        /* Twinkling Stars */
-        --star-1: #ffffff; 
-        --star-2: #ffa500; 
-        --star-3: #4da6ff; 
-        
-        --bg-grid: rgba(255, 255, 255, 0.02);
+        --border-color: rgba(0, 100, 200, 0.1);
       }
 
-      body[data-theme="light"] {
-        /* Light Theme */
-        --background-color: #fafbfc;
-        --surface-color: #ffffff;
-        --text-color: #444444;
-        --heading-color: #0d2f4b;
-        --white-color: #111111;
-
-        --glass-bg: rgba(255, 255, 255, 0.75);
-        --glass-border: rgba(0, 0, 0, 0.04);
-        --glass-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.08);
+      body[data-theme="dark"] {
+        /* Premium Dark Theme */
+        --bg-gradient: linear-gradient(135deg, #0b1120 0%, #111827 100%);
+        --surface-color: #1e293b;
+        --section-alt-bg: #0f172a;
         
-        --about-glass-bg: linear-gradient(135deg, rgba(255, 87, 34, 0.05), rgba(0, 136, 204, 0.03));
-        --card-content-bg: rgba(255, 255, 255, 0.9);
-
-        --star-1: #0d2f4b; 
-        --star-2: #ffa500; 
-        --star-3: #888888; 
+        --primary-color: #3b82f6;
+        --accent-color: #f59e0b;
+        --accent-hover: #d97706;
         
-        --bg-grid: rgba(0, 0, 0, 0.02);
+        --text-color: #cbd5e1;
+        --heading-color: #f8fafc;
+        
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        --nav-bg: rgba(15, 23, 42, 0.95);
+        --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        
+        --border-color: rgba(255, 255, 255, 0.05);
       }
 
-      html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+      /* =======================================================================
+         🛠 CORE RESET & SMOOTH SCROLLING 
+         ======================================================================= */
+      html { 
+        scroll-behavior: smooth; 
+        font-size: 16px; 
+      }
       
       body {
         margin: 0; padding: 0;
         font-family: "Montserrat", sans-serif;
-        background-color: var(--background-color); color: var(--text-color);
-        line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease;
-        position: relative; width: 100%; overflow-x: hidden;
-        /* Hardware Acceleration to Fix Mobile Lag */
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        will-change: background-color, color;
+        background: var(--bg-gradient);
+        color: var(--text-color);
+        line-height: 1.6; 
+        transition: background 0.4s ease, color 0.4s ease;
+        /* Fixes footer overscroll & horizontal overflow */
+        width: 100%; 
+        overflow-x: hidden; 
+        position: relative;
       }
-      
-      /* Vibrant Background Mesh Gradient & Grid */
-      body::before {
-        content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-        background-image: linear-gradient(var(--bg-grid) 1px, transparent 1px),
-                          linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
-        background-size: 40px 40px; z-index: -11; pointer-events: none;
-      }
-      
-      /* Enhanced Ambient Mesh Background */
-      .blob { position: fixed; z-index: -12; pointer-events: none; border-radius: 50%; animation: float 15s ease-in-out infinite alternate; opacity: 0.6;}
-      .blob-1 { top: -20%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(255, 165, 0, 0.25) 0%, transparent 60%); }
-      .blob-2 { bottom: -20%; left: -10%; width: 70vw; height: 70vw; background: radial-gradient(circle, rgba(0, 136, 204, 0.2) 0%, transparent 60%); animation-delay: -5s;}
-      .blob-3 { top: 30%; left: 30%; width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 60%); animation-duration: 20s;}
-      
-      body[data-theme="light"] .blob-1 { background: radial-gradient(circle, rgba(255, 165, 0, 0.2) 0%, transparent 60%); }
-      body[data-theme="light"] .blob-2 { background: radial-gradient(circle, rgba(0, 136, 204, 0.15) 0%, transparent 60%); }
-      body[data-theme="light"] .blob-3 { display: none; }
-
-      @keyframes float { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-3%, 8%) scale(1.1); } }
 
       * { box-sizing: border-box; }
-      section { padding: 4rem 0; width: 100%; }
+      section { padding: 5rem 0; width: 100%; }
 
-      /* Typography */
-      h1, h2, h3, h4 { color: var(--heading-color); font-weight: 800; transition: color 0.4s ease; margin-top: 0; letter-spacing: -0.5px; }
-      h2 { text-align: center; font-size: 2.8rem; margin-bottom: 2rem; padding: 0 1rem; }
+      h1, h2, h3, h4 { 
+        color: var(--heading-color); 
+        font-weight: 800; 
+        margin-top: 0; 
+        transition: color 0.4s ease; 
+      }
+      h2 { text-align: center; font-size: 2.8rem; margin-bottom: 3rem; padding: 0 1rem; }
       .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
 
-      .glass-panel {
-        background: var(--glass-bg);
-        -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
-        border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+      /* =======================================================================
+         📌 FIXED PILL NAVBAR
+         ======================================================================= */
+      .navbar-wrapper {
+        position: fixed; 
+        top: 15px; 
+        left: 0; 
+        width: 100%; 
+        z-index: 9999; /* Highest priority */
+        display: flex; 
+        justify-content: center;
+        pointer-events: none; /* Allows clicking through the empty space */
       }
 
-      /* --- 🚀 FLOATING PILL NAVBAR --- */
       .navbar {
+        pointer-events: auto; /* Re-enable clicks for navbar */
         display: flex; justify-content: space-between; align-items: center;
-        padding: 0.5rem 1.5rem; 
-        position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-        width: 92%; max-width: 1200px; 
-        z-index: 1000; min-height: var(--navbar-height);
-        border-radius: 50px; transition: background-color 0.3s ease;
+        padding: 0.6rem 1.5rem; 
+        width: 95%; max-width: 1200px; 
+        background: var(--nav-bg);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--nav-shadow);
+        border-radius: 50px; 
+        transition: all 0.3s ease;
       }
 
-      .nav-logo { color: var(--heading-color); font-weight: 800; font-size: 1.5rem; text-decoration: none; flex-shrink: 0; letter-spacing: -0.5px; }
-      .nav-logo span { color: var(--accent-color); transition: text-shadow 0.3s ease; }
+      .nav-logo { color: var(--heading-color); font-weight: 900; font-size: 1.5rem; text-decoration: none; letter-spacing: -0.5px; }
+      .nav-logo span { color: var(--accent-color); }
       
       .nav-menu { display: flex; align-items: center; flex-grow: 1; justify-content: flex-end; }
-      .nav-links { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-grow: 1; }
-      .nav-links li { margin: 0 1.2rem; }
-
+      .nav-links { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-grow: 1; gap: 2rem;}
+      
       .nav-links a {
-        color: var(--white-color); text-decoration: none; font-weight: 600;
+        color: var(--text-color); text-decoration: none; font-weight: 600;
         position: relative; padding-bottom: 5px; font-size: 0.95rem; transition: color 0.3s ease;
       }
-      body[data-theme="light"] .nav-links a { color: var(--text-color); }
-      body[data-theme="light"] .nav-links a:hover, body[data-theme="light"] .nav-links a.active { color: var(--heading-color); }
-
-      .nav-links a:hover { color: var(--accent-color); }
+      .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
       .nav-links a::after {
         content: ''; position: absolute; width: 0; height: 3px; bottom: 0; left: 50%; 
-        background-color: var(--accent-color); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-        transform: translateX(-50%); border-radius: 3px; box-shadow: 0 0 8px var(--accent-glow);
+        background-color: var(--primary-color); transition: all 0.3s ease; transform: translateX(-50%); border-radius: 3px;
       }
-      .nav-links a.active { color: var(--accent-color); }
-      .nav-links a.active::after { width: 100%; }
+      .nav-links a.active::after, .nav-links a:hover::after { width: 100%; }
 
-      /* Desktop Right-Side Actions */
       .nav-actions-desktop { display: flex; align-items: center; gap: 1rem; margin-left: 1rem; }
       
       .theme-toggle-btn {
-        background: transparent; border: 1px solid var(--glass-border);
-        color: var(--heading-color); cursor: pointer;
-        width: 40px; height: 40px; border-radius: 50%; display: flex;
-        justify-content: center; align-items: center; transition: all 0.3s ease; font-size: 1.1rem;
-        -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+        background: transparent; border: 1px solid var(--border-color); color: var(--heading-color);
+        width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; 
+        cursor: pointer; transition: all 0.3s ease; font-size: 1.1rem;
       }
-      @media (hover: hover) {
-        .theme-toggle-btn:hover { background-color: var(--accent-color); color: #fff; transform: scale(1.05); border-color: var(--accent-color); box-shadow: 0 0 15px var(--accent-glow);}
-      }
+      .theme-toggle-btn:hover { background: var(--accent-color); color: #fff; border-color: var(--accent-color); }
 
       .btn-call-nav {
-        background: var(--heading-color); color: var(--background-color);
-        padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;
-        text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;
+        background: var(--primary-color); color: #fff; padding: 0.6rem 1.4rem; border-radius: 50px; 
+        font-weight: 700; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;
       }
-      @media (hover: hover) {
-        .btn-call-nav:hover { transform: scale(1.05); background: var(--accent-color); color: #fff; box-shadow: 0 5px 15px var(--accent-glow);}
-      }
-      body[data-theme="light"] .btn-call-nav { background: var(--primary-color); color: #fff; }
+      .btn-call-nav:hover { background: var(--accent-color); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 119, 0, 0.4); }
 
-      .nav-social { display: flex; align-items: center; gap: 12px; margin-left: 1rem; }
-      .nav-social a, .footer-column .social-icons a { 
-        font-size: 1.2rem; transition: transform 0.3s ease; display: flex; 
-        align-items: center; justify-content: center; text-decoration: none;
-      }
-      @media (hover: hover) {
-        .nav-social a:hover, .footer-column .social-icons a:hover { transform: scale(1.2); }
-      }
-
-      /* Brand Colors */
-      .icon-facebook { color: #1877F2; }
-      .icon-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-      .icon-threads, .icon-x { color: var(--heading-color); }
-      .icon-linkedin { color: #0A66C2; }
-      .icon-pinterest { color: #E60023; }
-      .icon-youtube { color: #FF0000; }
-
-      .mobile-controls { display: none; align-items: center; gap: 10px; }
+      .mobile-controls { display: none; align-items: center; gap: 12px; }
       #nav-toggle { display: none; }
-      .nav-toggle-label { display: none; font-size: 1.4rem; color: var(--heading-color); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+      .nav-toggle-label { display: none; font-size: 1.5rem; color: var(--heading-color); cursor: pointer; }
 
-      /* --- TWINKLING STARS --- */
-      @keyframes animateStars { from { transform: translateY(0px); } to { transform: translateY(-2000px); } }
-      @keyframes blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
-
-      .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; overflow: hidden; pointer-events: none; }
-      .stars-bg {
-        position: absolute; top: 0; left: 0; width: 100%; height: 200%;
-        background-repeat: repeat; background-position: 0 0;
-        animation-name: animateStars, blink; animation-timing-function: linear, ease-in-out;
-        animation-iteration-count: infinite, infinite; animation-direction: normal, alternate;
-      }
-      #stars1 { background-image: radial-gradient(1.5px 1.5px at 20px 30px, var(--star-2), transparent), radial-gradient(1px 1px at 40px 70px, var(--star-1), transparent), radial-gradient(2px 2px at 50px 160px, var(--star-3), transparent), radial-gradient(1px 1px at 90px 40px, var(--star-1), transparent), radial-gradient(2px 2px at 130px 80px, var(--star-2), transparent); background-size: 200px 200px; animation-duration: 120s, 4s; }
-      #stars2 { background-image: radial-gradient(1.5px 1.5px at 10px 90px, var(--star-3), transparent), radial-gradient(2px 2px at 80px 30px, var(--star-1), transparent), radial-gradient(1px 1px at 100px 180px, var(--star-2), transparent), radial-gradient(1.5px 1.5px at 190px 60px, var(--star-1), transparent); background-size: 250px 250px; animation-duration: 90s, 6s; }
-
-      @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-      .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
-      .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-
-      /* --- HERO SECTION --- */
+      /* =======================================================================
+         HERO SECTION
+         ======================================================================= */
       #home {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
-        text-align: center; padding: 12rem 1rem 0.5rem 1rem; position: relative; width: 100%;
+        text-align: center; padding: 10rem 1rem 4rem 1rem; position: relative; width: 100%;
+        background: radial-gradient(circle at center, var(--section-alt-bg) 0%, transparent 70%);
       }
-      .hero-logo { animation: fadeIn 1s ease-out forwards; opacity: 0; margin-bottom: 2rem; }
-      .hero-logo img { height: 200px; width: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 45px var(--accent-glow); border: 2px solid rgba(255,255,255,0.1); }
+      .hero-logo img { height: 180px; width: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 4px solid var(--white-color); margin-bottom: 2rem;}
       
-      .main-title { 
-        font-weight: 800; color: var(--white-color); margin: 0 0 1rem 0; 
-        animation: fadeIn 1s ease-out 0.2s forwards; opacity: 0; line-height: 1.1; 
-        text-shadow: 0 4px 20px rgba(0,0,0,0.4);
-        font-size: clamp(2.2rem, 6vw, 4.8rem); 
-        white-space: nowrap; 
-      }
-      body[data-theme="light"] .main-title { color: var(--heading-color); text-shadow: none; }
+      .main-title { font-weight: 900; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0 0 1rem 0; line-height: 1.1; color: var(--primary-color); }
+      body[data-theme="dark"] .main-title { color: var(--white-color); }
       
-      #home .tagline { font-size: 1.4rem; font-weight: 500; margin: 0 0 3rem 0; animation: fadeIn 1s ease-out 0.4s forwards; opacity: 0; text-shadow: 0 2px 10px rgba(0,0,0,0.5);}
-      body[data-theme="light"] #home .tagline { text-shadow: none; }
-      #home .tagline span { color: var(--accent-color); font-weight: 700; }
+      .tagline { font-size: 1.4rem; font-weight: 500; margin: 0 0 3rem 0; color: var(--text-color); }
+      .tagline span { color: var(--accent-color); font-weight: 800; }
 
-      .cta-cluster {
-        animation: fadeIn 1s ease-out 0.6s forwards; opacity: 0;
-        display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; width: 100%;
-      }
-      .circular-btns { display: flex; gap: 1.2rem; }
-      .btn-circle {
-        width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
-        font-size: 1.8rem; color: #fff; text-decoration: none; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-        border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);
-      }
-      .btn-wa { background-color: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
-      .btn-tg { background-color: #0088cc; box-shadow: 0 8px 25px rgba(0, 136, 204, 0.3); }
-      @media (hover: hover) {
-        .btn-wa:hover { transform: scale(1.05) translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6); }
-        .btn-tg:hover { transform: scale(1.05) translateY(-3px); box-shadow: 0 12px 30px rgba(0, 136, 204, 0.6); }
-      }
+      .cta-cluster { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; width: 100%; }
       
       .btn-pill {
-        background: linear-gradient(135deg, #ffa500, #ff7b00); color: #fff;
-        padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; font-size: 1.1rem;
-        text-decoration: none; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease;
-        box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3); border: 1px solid rgba(255,255,255,0.2);
+        background: var(--accent-color); color: #fff; padding: 1.2rem 2.8rem; border-radius: 50px; 
+        font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: all 0.3s ease;
+        box-shadow: 0 10px 25px rgba(255, 119, 0, 0.3);
       }
-      @media (hover: hover) {
-        .btn-pill:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255, 165, 0, 0.6); }
-      }
+      .btn-pill:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(255, 119, 0, 0.4); background: var(--accent-hover); }
 
-      /* --- SERVICES SECTION --- */
-      #services { padding-top: 0.5rem; } 
-      .property-row-wrapper { margin-bottom: 2rem; position: relative; width: 100%; } 
-      .category-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem; padding: 0 3rem; max-width: 1300px; margin-left: auto; margin-right: auto;}
-      
-      .category-title { 
-        font-size: 2rem; color: var(--heading-color); font-weight: 800; margin: 0; 
-        position: relative; display: inline-block; padding-bottom: 8px;
+      .btn-circle {
+        width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+        font-size: 1.8rem; color: #fff; text-decoration: none; transition: all 0.3s ease;
       }
+      .btn-wa { background-color: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
+      .btn-wa:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5); }
+
+      /* =======================================================================
+         🎬 NETFLIX-STYLE HORIZONTAL SLIDERS 
+         ======================================================================= */
+      #services { background: var(--surface-color); }
+      
+      /* Full width breakout for edge-to-edge scrolling */
+      .property-row-wrapper { 
+        width: 100vw; 
+        position: relative; 
+        left: 50%; right: 50%; 
+        margin-left: -50vw; margin-right: -50vw; 
+        margin-bottom: 4rem;
+      }
+      
+      .category-header { 
+        display: flex; justify-content: space-between; align-items: flex-end; 
+        margin-bottom: 1.5rem; 
+        max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 1.5rem;
+      }
+      
+      .category-title { font-size: 2rem; color: var(--heading-color); margin: 0; position: relative; padding-bottom: 10px; }
       .category-title::after {
         content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px;
-        background: linear-gradient(90deg, var(--accent-color), transparent); border-radius: 2px;
+        background: var(--accent-color); border-radius: 2px;
       }
 
       .scroll-arrows { display: flex; gap: 0.8rem; }
-      .scroll-btn { background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); color: var(--heading-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; display: flex; justify-content: center; align-items: center; box-shadow: var(--glass-shadow);}
-      @media (hover: hover) {
-        .scroll-btn:hover { background-color: var(--accent-color); color: var(--white-color); border-color: var(--accent-color); transform: scale(1.05);}
+      .scroll-btn { 
+        background: var(--surface-color); border: 2px solid var(--border-color); color: var(--text-color); 
+        border-radius: 50%; width: 45px; height: 45px; cursor: pointer; font-size: 1.1rem; 
+        transition: all 0.3s ease; display: flex; justify-content: center; align-items: center; 
       }
+      .scroll-btn:hover { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); transform: scale(1.1);}
 
+      /* The Netflix Scroll Magic */
       .property-scroll-container { 
-        display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; 
-        padding: 1rem 3rem 3rem 3rem; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; 
+        display: flex; gap: 1.5rem; overflow-x: auto; 
+        scroll-behavior: smooth; /* Smooth gliding */
+        /* Calculates padding to align first box with 1200px max-width container */
+        padding: 1rem max(1.5rem, calc((100vw - 1200px) / 2 + 1.5rem)); 
+        scrollbar-width: none; /* Hide scrollbar Firefox */
       }
-      .property-scroll-container::-webkit-scrollbar { display: none; }
+      .property-scroll-container::-webkit-scrollbar { display: none; /* Hide scrollbar Chrome/Safari */ }
 
-      /* Property Cards Layout */
       .property-card { 
-        position: relative; border-radius: 20px; overflow: hidden; 
-        transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease; 
-        border: 1px solid var(--glass-border); flex: 0 0 340px; height: 430px; scroll-snap-align: start; 
-        display: flex; flex-direction: column; background-color: var(--surface-color);
+        flex: 0 0 340px; height: 420px; 
+        background: var(--surface-color); border: 1px solid var(--border-color);
+        border-radius: 20px; overflow: hidden; display: flex; flex-direction: column;
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+        box-shadow: var(--card-shadow);
       }
-      @media (hover: hover) {
-        /* Removed Orange Border on Hover */
-        .property-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 10;}
+      .property-card:hover { 
+        transform: scale(1.03) translateY(-10px); /* Pop effect */
+        z-index: 10; 
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
       }
+      body[data-theme="dark"] .property-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.8); }
       
-      .property-card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.8s ease; }
-      @media (hover: hover) {
-        .property-card:hover img { transform: scale(1.08); filter: brightness(0.9); }
-      }
-
-      .card-content { 
-        position: relative; flex: 1; padding: 1.5rem 1.5rem 2rem 1.5rem; 
-        display: flex; flex-direction: column; justify-content: space-between; text-align: left; z-index: 2; 
-        background: var(--card-content-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-        border-top: 1px solid rgba(255,255,255,0.02);
-      }
+      .property-card img { width: 100%; height: 200px; object-fit: cover; }
       
-      .card-content h3 { margin-top: 0; font-size: 1.4rem; color: var(--heading-color); margin-bottom: 0.5rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.3);}
-      body[data-theme="light"] .card-content h3 { text-shadow: none; }
-      .card-content p { flex-grow: 0; margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.5; }
+      .card-content { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+      .card-content h3 { font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 800; color: var(--primary-color); }
+      body[data-theme="dark"] .card-content h3 { color: var(--white-color); }
+      
+      .card-content p { font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
       
       .card-buttons { display: flex; gap: 1rem; margin-top: auto;} 
-      .card-buttons a { text-decoration: none; padding: 0.7rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; transition: all 0.3s ease; text-align: center; flex: 1; display: flex; justify-content: center; align-items: center; gap: 6px; color: #fff;}
-      .card-buttons .btn-call { background-color: var(--primary-color); border: 1px solid transparent; }
-      .card-buttons .btn-whatsapp { background-color: #25d366; border: 1px solid transparent; }
-      @media (hover: hover) {
-        .card-buttons .btn-call:hover { background-color: rgba(13, 47, 75, 0.8); border-color: #ffffff; }
-        .card-buttons .btn-whatsapp:hover { background-color: rgba(37, 211, 102, 0.8); border-color: #ffffff; }
+      .card-buttons a { 
+        text-decoration: none; padding: 0.8rem; border-radius: 12px; font-size: 0.95rem; font-weight: 700; 
+        transition: all 0.3s ease; text-align: center; flex: 1; display: flex; justify-content: center; align-items: center; gap: 8px; color: #fff;
       }
+      .btn-call { background-color: var(--primary-color); }
+      .btn-whatsapp { background-color: #25d366; color: #fff !important; }
+      .btn-call:hover { background-color: var(--heading-color); }
+      .btn-whatsapp:hover { background-color: #1ebc59; }
 
-      /* --- ABOUT SECTION --- */
-      #about {
-        background: var(--about-glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-        border: 1px solid var(--glass-border); border-radius: 32px; margin: 2rem auto; padding: 5rem; 
-        position: relative; z-index: 1; max-width: 1200px; width: 94%; box-shadow: var(--glass-shadow);
-      }
+      /* =======================================================================
+         ABOUT & FAQ SECTIONS
+         ======================================================================= */
+      #about { background: var(--section-alt-bg); }
       .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-      .about-image img { width: 100%; border-radius: 20px; box-shadow: var(--glass-shadow); border: 1px solid var(--glass-border);}
-      .about-text h3 { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 1.5rem; font-weight: 800;}
-      .about-text p { text-align: left; margin-bottom: 2rem; font-size: 1.1rem; font-weight: 500; }
-      .why-choose-us { list-style: none; padding: 0; margin-top: 1.5rem; }
+      .about-image img { width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); }
+      .about-text h3 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1.5rem; }
+      body[data-theme="dark"] .about-text h3 { color: var(--accent-color); }
+      
+      .about-text p { font-size: 1.1rem; font-weight: 500; margin-bottom: 2rem; }
+      .why-choose-us { list-style: none; padding: 0; }
       .why-choose-us li { display: flex; align-items: flex-start; margin-bottom: 1.5rem; font-size: 1.05rem; }
-      .why-choose-us i { color: var(--accent-color); font-size: 1.4rem; margin-right: 1.2rem; padding-top: 2px; width: 25px; text-align: center; text-shadow: 0 0 10px rgba(255,165,0,0.5);}
-      .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.3rem; font-weight: 700;}
+      .why-choose-us i { color: var(--accent-color); font-size: 1.5rem; margin-right: 1.2rem; width: 30px; text-align: center; }
+      .why-choose-us li strong { color: var(--heading-color); display: block; font-weight: 800; margin-bottom: 0.3rem;}
 
-      /* --- 🚀 FAQ SECTION --- */
-      #faq { padding: 5rem 0; width: 100%; }
-      .faq-title { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 2rem; text-align: center;}
-
-      .faq-wrapper {
-        background: var(--about-glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-        border: 1px solid var(--glass-border); border-radius: 24px; padding: 2.5rem;
-        box-shadow: var(--glass-shadow); max-width: 1200px; width: 94%; margin: 0 auto;
-      }
-      .faq-accordion { 
-        display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; align-items: start;
-      }
-      
+      #faq { background: var(--surface-color); }
+      .faq-wrapper { max-width: 900px; margin: 0 auto; }
       .faq-item { 
-        border-bottom: 1px solid var(--glass-border);
-        overflow: hidden; transition: all 0.3s ease; 
+        border-bottom: 1px solid var(--border-color); overflow: hidden; margin-bottom: 1rem;
+        background: var(--section-alt-bg); border-radius: 16px; padding: 0.5rem 1.5rem;
       }
-      .faq-item:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-      
       .faq-item summary { 
         padding: 1.2rem 0; font-size: 1.1rem; font-weight: 700; color: var(--heading-color); 
         cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
       }
       .faq-item summary::-webkit-details-marker { display: none; }
-      
       .faq-item summary::after { 
-        content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; 
-        color: var(--accent-color); transition: transform 0.3s ease; 
-        font-size: 1rem; flex-shrink: 0; margin-left: 10px;
+        content: '\f067'; font-family: 'Font Awesome 6 Free'; font-weight: 900; 
+        color: var(--primary-color); transition: transform 0.3s ease; font-size: 1.2rem;
       }
-      .faq-item[open] summary::after { transform: rotate(180deg); }
-      .faq-item p { padding: 0 0 1.2rem 0; margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-color);}
+      .faq-item[open] summary::after { content: '\f068'; transform: rotate(180deg); color: var(--accent-color);}
+      .faq-item p { padding: 0 0 1.5rem 0; margin: 0; font-size: 1rem; line-height: 1.6; color: var(--text-color);}
 
-      /* --- ENERGETIC GLOW FOOTER --- */
+      /* =======================================================================
+         FOOTER (FIXED OVERSCROLL)
+         ======================================================================= */
       #contact { 
-        margin-top: 3rem; padding: 5rem 2rem 2rem 2rem; border-top: 1px solid var(--glass-border); 
-        border-radius: 40px 40px 0 0; position: relative; overflow: hidden; background: var(--surface-color);
+        background: var(--heading-color); color: rgba(255,255,255,0.8);
+        padding: 6rem 2rem 2rem 2rem; border-radius: 40px 40px 0 0; margin-top: 2rem;
+        /* Ensure no extra margins are pushing the document height */
+        margin-bottom: 0; border: none;
       }
-      #contact::before {
-        content: ''; position: absolute; bottom: -50%; left: 50%; transform: translateX(-50%);
-        width: 100vw; height: 100vw; background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
-        z-index: 0; filter: blur(60px); pointer-events: none; opacity: 0.7;
-      }
-
-      .footer-content { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; margin-bottom: 3rem; max-width: 1200px; margin-left: auto; margin-right: auto;}
-      .footer-column h4 { font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 800; color: var(--heading-color); position: relative; padding-bottom: 0.8rem;}
-      .footer-column h4::after { content: ""; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: var(--accent-color); border-radius: 2px;}
+      
+      .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; margin-bottom: 3rem; max-width: 1200px; margin-left: auto; margin-right: auto;}
+      .footer-column h4 { font-size: 1.4rem; margin-bottom: 1.5rem; color: #fff; position: relative; padding-bottom: 0.8rem;}
+      .footer-column h4::after { content: ""; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background-color: var(--accent-color); border-radius: 2px;}
       
       .footer-column ul { list-style: none; padding: 0; margin: 0; }
       .footer-column ul li { margin-bottom: 1rem; }
-      .footer-column a { color: var(--text-color); text-decoration: none; transition: all 0.3s ease; font-weight: 500;}
-      @media (hover: hover) { .footer-column a:hover { color: var(--accent-color); padding-left: 5px; } }
-      .footer-column .contact-info p { margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 12px; font-weight: 500;}
-      .footer-column .contact-info i { color: var(--accent-color); padding-top: 4px; }
+      .footer-column a { color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s ease; font-weight: 500;}
+      .footer-column a:hover { color: var(--accent-color); padding-left: 5px; }
+      
+      .footer-column .contact-info p { margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 12px; }
+      .footer-column .contact-info i { color: var(--accent-color); padding-top: 4px; font-size: 1.2rem;}
       
       .footer-column .social-icons { display: flex; flex-wrap: wrap; gap: 15px; }
-      .footer-bottom { position: relative; z-index: 1; text-align: center; padding-top: 2rem; border-top: 1px solid var(--glass-border); font-size: 0.9rem; font-weight: 500;}
+      .footer-column .social-icons a { 
+        display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; 
+        background: rgba(255,255,255,0.1); border-radius: 50%; transition: all 0.3s ease; color: #fff;
+      }
+      .footer-column .social-icons a:hover { background: var(--accent-color); transform: translateY(-3px);}
+
+      .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem;}
 
       /* =======================================================================
-         MOBILE RESPONSIVE RULES (100% BUG-FREE & MAX WIDTH)
+         📱 MOBILE RESPONSIVE 
          ======================================================================= */
       @media (max-width: 992px) {
-        #about { padding: 4rem 2rem; }
         .about-content { grid-template-columns: 1fr; gap: 3rem; }
-        .about-image img { max-width: 600px; margin: 0 auto; display: block; }
-        .category-header { padding: 0 1.5rem; }
-        .property-scroll-container { padding: 1rem 1.5rem 3rem 1.5rem; }
+        .about-text { text-align: center; }
+        .why-choose-us li { text-align: left; }
       }
 
       @media (max-width: 767px) {
-        /* Boosted Background Colors for Mobile */
-        .blob-1 { width: 90vw; height: 90vw; top: -5%; right: -15%; background: radial-gradient(circle, rgba(255, 165, 0, 0.35) 0%, transparent 65%); opacity: 0.8;}
-        .blob-2 { width: 100vw; height: 100vw; bottom: 0%; left: -15%; background: radial-gradient(circle, rgba(0, 136, 204, 0.3) 0%, transparent 65%); opacity: 0.8;}
+        section { padding: 4rem 0; }
+        h2 { font-size: 2.2rem; }
         
-        .navbar { width: 92%; top: 12px; border-radius: 40px; padding: 0.5rem 1rem; }
-        .nav-logo { font-size: 1.4rem; } 
-        
+        /* Mobile Navbar */
+        .navbar { padding: 0.8rem 1.2rem; width: 92%; }
         .nav-actions-desktop { display: none; }
-        
-        .mobile-controls { display: flex; align-items: center; gap: 12px; }
-        .nav-toggle-label { display: block; font-size: 1.4rem; padding-right: 5px; cursor: pointer; -webkit-tap-highlight-color: transparent;}
+        .mobile-controls { display: flex; }
+        .nav-toggle-label { display: block; }
         
         .btn-call-nav-mobile {
-          background: #25D366; color: #fff; width: 38px; height: 38px; border-radius: 50%;
+          background: var(--primary-color); color: #fff; width: 38px; height: 38px; border-radius: 50%;
           display: flex; justify-content: center; align-items: center; text-decoration: none; font-size: 1.1rem;
-          box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
-        }
-        /* Tap Bug fix */
-        .theme-toggle-btn.mobile-theme {
-          display: flex; width: 38px; height: 38px; border-radius: 50%; margin: 0; padding: 0;
-          pointer-events: auto; z-index: 1100; border: 1px solid var(--glass-border); background: transparent;
         }
         
-        /* 🔥 Transparent Glass Dropdown Menu */
+        /* Dropdown Menu */
         .nav-menu {
           display: none; flex-direction: column; width: 100%;
-          background: rgba(10, 15, 25, 0.7); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-          position: absolute; top: calc(100% + 10px); left: 0; padding: 1.5rem 0; 
-          border: 1px solid var(--glass-border); border-radius: 24px; order: 3; box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+          background: var(--nav-bg); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+          position: absolute; top: calc(100% + 15px); left: 0; padding: 1.5rem 0; 
+          border: 1px solid var(--border-color); border-radius: 24px; box-shadow: var(--card-shadow);
         }
-        body[data-theme="light"] .nav-menu { background: rgba(255, 255, 255, 0.7); }
-        
         #nav-toggle:checked ~ .nav-menu { display: flex; }
-        .nav-links { flex-direction: column; width: 100%; text-align: center; }
-        .nav-links li { margin: 0; }
-        .nav-links a { display: block; padding: 1rem 0; font-size: 1.1rem;}
+        .nav-links { flex-direction: column; gap: 0; width: 100%; }
+        .nav-links a { display: block; padding: 1.2rem 0; font-size: 1.1rem; }
         
-        .nav-social { justify-content: center; margin: 1rem auto 0 auto; padding-top: 1rem; border-top: 1px solid var(--glass-border); width: 85%; flex-wrap: wrap; }
+        #home { padding-top: 9rem; }
+        .hero-logo img { height: 140px; width: 140px; }
+        .cta-cluster { flex-direction: column; gap: 1.5rem; }
+        .btn-pill { width: 100%; max-width: 300px; text-align: center; }
         
-        #home { padding: 9rem 1rem 0.5rem 1rem; }
-        .hero-logo img { height: 180px; width: 180px; border-radius: 50%; } 
-        #home h1 { margin-bottom: 0.8rem; }
-        #home .tagline { font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.4; max-width: 90%; }
+        .scroll-arrows { display: none; } /* Hide arrows on mobile, rely on smooth swipe */
+        .property-card { flex: 0 0 85vw; height: 400px; } /* Netflix sizing for mobile */
         
-        .cta-cluster { flex-direction: column; gap: 1rem; }
-        .circular-btns { justify-content: center; width: 100%; gap: 1.2rem;}
-        .btn-circle { width: 55px; height: 55px; font-size: 1.5rem; }
-        .btn-pill { width: 100%; max-width: 300px; justify-content: center; padding: 0.9rem 1.5rem; }
-        
-        section { padding: 3rem 0; } 
-        #services { padding-top: 0; }
-
-        h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
-        
-        .scroll-arrows { display: none; } 
-        .category-header { padding: 0 1rem; margin-bottom: 1rem; } 
-        .category-title { font-size: 1.6rem; }
-        .property-row-wrapper { margin-bottom: 1.5rem; }
-        
-        .property-scroll-container { gap: 1rem; padding: 0.5rem 1rem 1.5rem 1rem; }
-        
-        .property-card { flex: 0 0 min(85vw, 320px); height: 400px; border-radius: 20px; }
-        .property-card img { height: 180px; }
-        .card-content { padding: 1.2rem 1.2rem 1.5rem 1.2rem; }
-        .card-content h3 { font-size: 1.25rem; }
-        .card-content p { font-size: 0.85rem; margin-bottom: 1rem;}
-        .card-buttons a { padding: 0.6rem; font-size: 0.85rem; }
-
-        /* 🔥 About Box Max Width */
-        #about { margin: 1rem auto; padding: 2.5rem 1.5rem; border-radius: 28px; width: 94%; max-width: 100%;}
-        .about-text h3 { font-size: 1.8rem; }
-        .about-text p { font-size: 1rem; }
-
-        /* 🔥 FAQ Section Centered and Max Width matching About */
-        #faq { padding: 2.5rem 0; width: 100%; }
-        .faq-title { text-align: center; white-space: normal; line-height: 1.2; font-size: 2rem; margin-bottom: 1.5rem; padding: 0 1rem; }
-        .faq-wrapper { padding: 1.5rem 1rem; border-radius: 24px; width: 94%; max-width: 100%; margin: 0 auto; }
-        
-        .faq-accordion { grid-template-columns: 1fr; gap: 0; }
-        .faq-item summary { font-size: 1.05rem; padding: 1rem 0; }
-        .faq-item p { padding: 0 0 1rem 0; font-size: 0.9rem; }
-        .faq-item:last-child { border-bottom: none; }
-
         #contact { padding: 4rem 1.5rem 2rem 1.5rem; border-radius: 30px 30px 0 0; }
-        .footer-content { text-align: left; gap: 2.5rem; grid-template-columns: 1fr; margin-bottom: 2rem;}
         .footer-column h4::after { left: 0; transform: none; }
-        .footer-column .contact-info p { justify-content: flex-start; text-align: left;}
-      }
-
-      @media (max-width: 380px) {
-        .navbar { width: 95%; padding: 0.4rem 0.8rem; }
-        .main-title { font-size: clamp(1.8rem, 10vw, 2.4rem); }
-        .property-card { height: 380px; }
-        .property-card img { height: 160px; }
-        .faq-title { font-size: 1.8rem; }
       }
     </style>
   </head>
-  <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+  <body data-theme="light">
 
-    <div class="stars">
-      <div class="stars-bg" id="stars1"></div>
-      <div class="stars-bg" id="stars2"></div>
-    </div>
+    <div class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
 
-    <nav class="navbar glass-panel">
-      <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
-
-      <div class="mobile-controls">
-        <a href="tel:+918168759184" class="btn-call-nav-mobile" aria-label="Call Us"><i class="fas fa-phone"></i></a>
-        <button class="theme-toggle-btn mobile-theme" aria-label="Toggle mode" onclick="window.toggleThemeMode(event)">
-          <i class="fas fa-sun icon-sun"></i>
-          <i class="fas fa-moon icon-moon" style="display: none"></i>
-        </button>
-        <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars"></i></label>
-      </div>
-
-      <input type="checkbox" id="nav-toggle" />
-
-      <div class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#about" class="nav-link">About Us</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        
-        <div class="nav-actions-desktop">
-          <button class="theme-toggle-btn desktop-theme" aria-label="Toggle mode" onclick="window.toggleThemeMode(event)">
-            <i class="fas fa-sun icon-sun"></i>
-            <i class="fas fa-moon icon-moon" style="display: none"></i>
+        <div class="mobile-controls">
+          <a href="tel:+918168759184" class="btn-call-nav-mobile"><i class="fas fa-phone"></i></a>
+          <button class="theme-toggle-btn mobile-theme" aria-label="Toggle mode" onclick="window.toggleThemeMode(event)">
+            <i class="fas fa-moon icon-moon"></i>
+            <i class="fas fa-sun icon-sun" style="display: none"></i>
           </button>
-          <a href="tel:+918168759184" class="btn-call-nav"><i class="fas fa-phone"></i> Call Now</a>
+          <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars"></i></label>
         </div>
 
-        <div class="nav-social">
-          <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f icon-facebook"></i></a>
-          <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram icon-instagram"></i></a>
-          <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-threads icon-threads"></i></a>
-          <a href="https://www.x.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter icon-x"></i></a>
-          <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in icon-linkedin"></i></a>
-          <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest icon-pinterest"></i></a>
-          <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube icon-youtube"></i></a>
+        <input type="checkbox" id="nav-toggle" />
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+          </ul>
+          
+          <div class="nav-actions-desktop">
+            <button class="theme-toggle-btn desktop-theme" aria-label="Toggle mode" onclick="window.toggleThemeMode(event)">
+              <i class="fas fa-moon icon-moon"></i>
+              <i class="fas fa-sun icon-sun" style="display: none"></i>
+            </button>
+            <a href="tel:+918168759184" class="btn-call-nav"><i class="fas fa-phone"></i> Call Now</a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <main>
       <section id="home">
         <div class="hero-logo">
-          <img src="/IMG_1726.png" alt="Kavach Builders Logo" />
+          <img src="IMG_1726.png" alt="Kavach Builders Logo" onerror="this.src='https://images.unsplash.com/photo-1541888086925-920a061f5164?w=200&h=200&fit=crop'" />
         </div>
         <h1 class="main-title">Kavach Builders</h1>
         <p class="tagline">Premium Construction & Renovation in <span>Delhi NCR</span></p>
         
         <div class="cta-cluster">
-          <div class="circular-btns">
-            <a href="https://wa.me/918168759184" target="_blank" rel="noopener noreferrer" class="btn-circle btn-wa" aria-label="WhatsApp Us">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://t.me/kavachbuilders" target="_blank" rel="noopener noreferrer" class="btn-circle btn-tg" aria-label="Telegram Us">
-              <i class="fab fa-telegram-plane"></i>
-            </a>
-          </div>
           <a href="#services" class="btn-pill">Explore Services</a>
+          <a href="https://wa.me/918168759184" target="_blank" class="btn-circle btn-wa"><i class="fab fa-whatsapp"></i></a>
         </div>
       </section>
 
-      <section id="services" class="fade-in-section">
+      <section id="services">
+        
+        <div class="property-row-wrapper">
+          <div class="category-header">
+            <h3 class="category-title">Turnkey Residential</h3>
+            <div class="scroll-arrows">
+              <button class="scroll-btn prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="scroll-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="property-scroll-container">
+            <div class="property-card">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop" alt="Luxury Villas" loading="lazy" />
+              <div class="card-content">
+                <h3>Luxury Villas</h3>
+                <p>Bespoke luxury villa construction with modern amenities and premium finishes.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop" alt="Smart Homes" loading="lazy" />
+              <div class="card-content">
+                <h3>Smart Homes</h3>
+                <p>Fully integrated smart home construction tailored to your modern lifestyle.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Builder Floors" loading="lazy" />
+              <div class="card-content">
+                <h3>Builder Floors</h3>
+                <p>High-quality, spacious builder floors constructed with structural perfection.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="property-row-wrapper">
           <div class="category-header">
             <h3 class="category-title">Complete Construction</h3>
             <div class="scroll-arrows">
-              <button class="scroll-btn prev" aria-label="Scroll left"><i class="fas fa-arrow-left"></i></button>
-              <button class="scroll-btn next" aria-label="Scroll right"><i class="fas fa-arrow-right"></i></button>
+              <button class="scroll-btn prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="scroll-btn next"><i class="fas fa-chevron-right"></i></button>
             </div>
           </div>
           <div class="property-scroll-container">
-            
             <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1587022216694-8f8b8f2a1a8c?w=400&h=380&fit=crop" alt="Warehouse Construction in Sonipat" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1587022216694-8f8b8f2a1a8c?w=400&h=300&fit=crop" alt="Warehouse" loading="lazy" />
               <div class="card-content">
                 <h3>Warehouse</h3>
                 <p>Constructing large-scale, durable warehouses tailored for storage and logistics.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
             </div>
-
             <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1564013799919-ab60b927216f?w=400&h=380&fit=crop" alt="Factory Construction Kharkhoda" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1564013799919-ab60b927216f?w=400&h=300&fit=crop" alt="Factory" loading="lazy" />
               <div class="card-content">
                 <h3>Factory</h3>
                 <p>Specialized construction of robust industrial factories and manufacturing structures.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
             </div>
-
             <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1574958269340-fa927503f3dd?w=400&h=380&fit=crop" alt="SCO Construction Bahadurgarh" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1574958269340-fa927503f3dd?w=400&h=300&fit=crop" alt="SCO Complex" loading="lazy" />
               <div class="card-content">
-                <h3>SCO (Shop-cum-Office)</h3>
+                <h3>SCO Complex</h3>
                 <p>Premium commercial complexes perfectly designed for retail shops and modern offices.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
             </div>
-
             <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?w=400&h=380&fit=crop" alt="Office Construction" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" alt="Office Space" loading="lazy" />
               <div class="card-content">
-                <h3>Office</h3>
+                <h3>Office Spaces</h3>
                 <p>Building modern, efficient, and inspiring office spaces for your business growth.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
             </div>
-
-            <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=380&fit=crop" alt="House Construction" loading="lazy" />
-              <div class="card-content">
-                <h3>House</h3>
-                <p>Expert construction for your dream residential home, from solid foundation to finish.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
-        <div class="property-row-wrapper">
+        <div class="property-row-wrapper" style="margin-bottom: 0;">
           <div class="category-header">
             <h3 class="category-title">Specialized Solutions</h3>
             <div class="scroll-arrows">
-              <button class="scroll-btn prev" aria-label="Scroll left"><i class="fas fa-arrow-left"></i></button>
-              <button class="scroll-btn next" aria-label="Scroll right"><i class="fas fa-arrow-right"></i></button>
+              <button class="scroll-btn prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="scroll-btn next"><i class="fas fa-chevron-right"></i></button>
             </div>
           </div>
           <div class="property-scroll-container">
-            
             <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=380&fit=crop" alt="Interior Design" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=300&fit=crop" alt="Interior Design" loading="lazy" />
               <div class="card-content">
                 <h3>Interior & Exterior</h3>
-                <p>Complete design and decoration services to transform the look of your building inside and out.</p>
+                <p>Complete design services to transform the look of your building inside and out.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
             </div>
-
             <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1558692131-061051a445f1?w=400&h=380&fit=crop" alt="Architecture" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=300&fit=crop" alt="Architecture" loading="lazy" />
               <div class="card-content">
                 <h3>Architecture 2D & 3D</h3>
                 <p>Creating precise blueprints and realistic 3D models for perfect structural planning.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
             </div>
-
             <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1550137785-3bccecd1ddaa?w=400&h=380&fit=crop" alt="Precast Boundary Wall" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1550137785-3bccecd1ddaa?w=400&h=300&fit=crop" alt="Precast Boundary" loading="lazy" />
               <div class="card-content">
-                <h3>Precast Boundary Wall</h3>
+                <h3>Precast Boundary</h3>
                 <p>Ready-to-install, highly durable concrete boundary walls for quick security.</p>
                 <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i></a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
             </div>
-
-            <div class="property-card">
-              <img src="https://images.unsplash.com/photo-1621295280261-2b04f14545fb?w=400&h=380&fit=crop" alt="Wire Fencing" loading="lazy" />
-              <div class="card-content">
-                <h3>Wire Fencing</h3>
-                <p>Strong and reliable wire fencing solutions for farms, plots, and commercial properties.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call"><i class="fas fa-phone"></i> Call</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
-      <section id="about" class="fade-in-section">
+      <section id="about">
         <div class="container">
           <div class="about-content">
             <div class="about-image">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&fit=crop" alt="Kavach Builders Team" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356f90?w=600&fit=crop" alt="Kavach Builders Team" loading="lazy" />
             </div>
             <div class="about-text">
-              <h3 class="category-title">Your Premier Construction Partner</h3>
-              <p style="margin-top: 15px;">Based in the heart of Haryana, Kavach Builders brings your construction dreams to life across <strong>Sonipat, Kharkhoda, Bahadurgarh, and the entire Delhi NCR region</strong>.</p>
+              <h3>Your Premier Construction Partner</h3>
+              <p>Based in the heart of Haryana, Kavach Builders brings your construction dreams to life across <strong>Sonipat, Kharkhoda, Bahadurgarh, and the entire Delhi NCR region</strong>.</p>
               <ul class="why-choose-us">
                 <li>
                   <i class="fas fa-map-marker-alt"></i>
@@ -788,58 +613,36 @@
         </div>
       </section>
 
-      <section id="faq" class="fade-in-section">
+      <section id="faq">
         <div class="container">
-          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <h2>Frequently Asked Questions</h2>
           <div class="faq-wrapper">
-            <div class="faq-accordion">
-              <details class="faq-item">
-                <summary>Where does Kavach Builders provide construction services?</summary>
-                <p>We primarily serve <strong>Sonipat, Kharkhoda, Bahadurgarh, and the wider Delhi NCR region</strong> for all residential and commercial projects.</p>
-              </details>
-              <details class="faq-item">
-                <summary>What construction services do you offer?</summary>
-                <p>We offer complete turnkey construction services including residential houses, builder floors, commercial offices, SCOs, factories, warehouses, and luxury farmhouses.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Do you construct precast boundary walls in Delhi NCR?</summary>
-                <p>Yes, we specialize in high-quality perimeter security, providing precast boundary walls, demarcation poles, and wire fencing for open plots and farms.</p>
-              </details>
-              <details class="faq-item">
-                <summary>How can I get a cost estimate for my project?</summary>
-                <p>You can easily get a free, personalized cost estimate by calling us at <strong>+91 8168759184</strong> or messaging our team via WhatsApp with your site location details.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Are you experienced in warehouse construction?</summary>
-                <p>Absolutely. We are experts in industrial construction, delivering robust and spacious warehouses and factories optimized for logistics and manufacturing.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Do you handle architectural design?</summary>
-                <p>Yes, we offer comprehensive 2D and 3D architectural planning along with dedicated interior and exterior design services.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Do you build SCO (Shop-cum-Office) complexes?</summary>
-                <p>Yes, we build premium SCO commercial complexes that are perfectly designed to maximize retail visibility and modern office functionality.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Can you design luxury farmhouses?</summary>
-                <p>Yes, we specialize in constructing beautiful, spacious luxury farmhouses that blend nature with modern architectural comfort.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Are your materials of premium quality?</summary>
-                <p>Yes, we strictly use industry-approved, premium grade materials to ensure the structural integrity, safety, and longevity of every building.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Do you undertake turnkey builder floor projects?</summary>
-                <p>Yes, we handle complete turnkey builder floor construction from foundation laying to final interior finishing and handover.</p>
-              </details>
-            </div>
+            <details class="faq-item">
+              <summary>Where does Kavach Builders provide services?</summary>
+              <p>We primarily serve <strong>Sonipat, Kharkhoda, Bahadurgarh, and the wider Delhi NCR region</strong> for all residential and commercial projects.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What construction services do you offer?</summary>
+              <p>We offer complete turnkey construction services including residential houses, builder floors, commercial offices, SCOs, factories, warehouses, and luxury farmhouses.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How can I get a cost estimate for my project?</summary>
+              <p>You can easily get a free, personalized cost estimate by calling us at <strong>+91 8168759184</strong> or messaging our team via WhatsApp with your site location details.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do you handle architectural design?</summary>
+              <p>Yes, we offer comprehensive 2D and 3D architectural planning along with dedicated interior and exterior design services.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Are your materials of premium quality?</summary>
+              <p>Yes, we strictly use industry-approved, premium grade materials to ensure the structural integrity, safety, and longevity of every building.</p>
+            </details>
           </div>
         </div>
       </section>
     </main>
 
-    <footer id="contact" class="fade-in-section glass-panel" style="border-radius: 40px 40px 0 0; border-bottom: none; border-left: none; border-right: none;">
+    <footer id="contact">
       <div class="container">
         <div class="footer-content">
           <div class="footer-column">
@@ -866,13 +669,10 @@
           <div class="footer-column">
             <h4>Follow Us</h4>
             <div class="social-icons">
-              <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f icon-facebook"></i></a>
-              <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram icon-instagram"></i></a>
-              <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-threads icon-threads"></i></a>
-              <a href="https://www.x.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter icon-x"></i></a>
-              <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in icon-linkedin"></i></a>
-              <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest icon-pinterest"></i></a>
-              <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube icon-youtube"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
         </div>
@@ -883,103 +683,74 @@
     </footer>
 
     <script>
-      // 🚀 GLOBAL BUG-FREE THEME TOGGLE (Uses requestAnimationFrame for Instant Response)
+      // 🌓 THEME TOGGLE LOGIC
       window.toggleThemeMode = function(e) {
-        if(e) { e.preventDefault(); e.stopPropagation(); }
+        if(e) e.preventDefault();
+        const body = document.body;
+        const currentTheme = body.dataset.theme;
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
-        requestAnimationFrame(() => {
-          const body = document.body;
-          const currentTheme = body.dataset.theme === 'light' ? 'light' : 'dark';
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          
-          body.dataset.theme = newTheme;
-          localStorage.setItem("kavachBuilderTheme", newTheme);
-          
-          document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
-            if (newTheme === "light") {
-              btn.querySelector(".icon-sun").style.display = "none";
-              btn.querySelector(".icon-moon").style.display = "inline-block";
-            } else {
-              btn.querySelector(".icon-sun").style.display = "inline-block";
-              btn.querySelector(".icon-moon").style.display = "none";
-            }
-          });
+        body.dataset.theme = newTheme;
+        localStorage.setItem("kavachTheme", newTheme);
+        
+        document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+          if (newTheme === "dark") {
+            btn.querySelector(".icon-moon").style.display = "none";
+            btn.querySelector(".icon-sun").style.display = "inline-block";
+          } else {
+            btn.querySelector(".icon-moon").style.display = "inline-block";
+            btn.querySelector(".icon-sun").style.display = "none";
+          }
         });
       };
 
       document.addEventListener("DOMContentLoaded", function () {
-        
-        // --- 1. Init Saved Theme ---
-        const savedTheme = localStorage.getItem("kavachBuilderTheme") || 'dark';
-        if(savedTheme === 'light') { window.toggleThemeMode(); }
+        // Init saved theme (Default is light/happy)
+        const savedTheme = localStorage.getItem("kavachTheme");
+        if(savedTheme === 'dark') { window.toggleThemeMode(); }
 
-        // --- 2. Navbar Scroll Spy (Active Line Follows Scroll) ---
-        const sections = document.querySelectorAll("section[id], footer[id]");
+        // 🎯 NAVBAR SCROLL SPY
+        const sections = document.querySelectorAll("section[id]");
         const navItems = document.querySelectorAll(".nav-link");
 
-        const scrollObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const currentId = entry.target.getAttribute("id");
-              navItems.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${currentId}`) link.classList.add("active");
-              });
-            }
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - 150) { current = section.getAttribute("id"); }
           });
-        }, { root: null, rootMargin: "-40% 0px -60% 0px", threshold: 0 });
-        sections.forEach(sec => scrollObserver.observe(sec));
 
-        // --- 3. Mobile Smart FAQ Accordion ---
-        const details = document.querySelectorAll("details.faq-item");
-        details.forEach((targetDetail) => {
-          targetDetail.addEventListener("click", () => {
-            if(window.innerWidth < 992) {
-              details.forEach((detail) => {
-                if (detail !== targetDetail) detail.removeAttribute("open");
-              });
-            }
+          navItems.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) { link.classList.add("active"); }
           });
         });
 
-        // --- 4. Infinite Scroll Sliders ---
+        // 🎬 NETFLIX-STYLE SMOOTH SLIDERS
         const allRowWrappers = document.querySelectorAll(".property-row-wrapper");
         allRowWrappers.forEach((wrapper) => {
           const container = wrapper.querySelector(".property-scroll-container");
           const prevBtn = wrapper.querySelector(".scroll-btn.prev");
           const nextBtn = wrapper.querySelector(".scroll-btn.next");
-          if (!container) return;
+          
+          if (!container || !nextBtn || !prevBtn) return;
 
-          const cards = Array.from(container.children);
-          cards.forEach(card => container.appendChild(card.cloneNode(true)));
+          // Calculate exact scroll distance based on card width + gap
+          const scrollDistance = () => {
+             const card = container.querySelector('.property-card');
+             return card ? card.offsetWidth + 24 : 300; // 24px is the 1.5rem gap
+          };
 
-          container.addEventListener("scroll", () => {
-            if (container.scrollLeft >= (container.scrollWidth - container.clientWidth) - 5) {
-              container.scrollLeft = container.clientWidth / 2; 
-            } else if (container.scrollLeft <= 0) {
-              container.scrollLeft = container.scrollWidth / 2;
-            }
-          }, { passive: true });
-
-          if(nextBtn && prevBtn) {
-            nextBtn.addEventListener("click", () => container.scrollBy({ left: container.clientWidth * 0.8, behavior: "smooth" }));
-            prevBtn.addEventListener("click", () => container.scrollBy({ left: -container.clientWidth * 0.8, behavior: "smooth" }));
-          }
+          nextBtn.addEventListener("click", () => {
+            container.scrollBy({ left: scrollDistance() * 2, behavior: "smooth" });
+          });
+          
+          prevBtn.addEventListener("click", () => {
+            container.scrollBy({ left: -(scrollDistance() * 2), behavior: "smooth" });
+          });
         });
 
-        // --- 5. Smooth Fade-in Sections ---
-        const fadeSections = document.querySelectorAll(".fade-in-section");
-        const fadeObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
-        fadeSections.forEach((section) => fadeObserver.observe(section));
-
-        // --- 6. Mobile Menu Auto-Close ---
+        // 📱 CLOSE MOBILE MENU ON CLICK
         const navToggle = document.getElementById("nav-toggle");
         navItems.forEach(link => {
             link.addEventListener("click", () => { if(navToggle.checked) navToggle.checked = false; });
