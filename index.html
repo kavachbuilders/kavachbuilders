@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- Local Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -28,7 +27,6 @@
       }
     </script>
 
-    <!-- FAQ Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -118,7 +116,6 @@
       }
       * { box-sizing: border-box; }
       
-      /* Reduced Section Padding for better spacing */
       section { padding: 3rem 0; }
 
       h1, h2, h3 { color: var(--heading-color); font-weight: 700; transition: color 0.3s ease; margin-top: 0; }
@@ -159,7 +156,7 @@
       .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
       .nav-links a.active { color: var(--accent-color); }
 
-      /* --- SOCIAL ICONS FIX (Flexbox + Gap) --- */
+      /* --- SOCIAL ICONS --- */
       .nav-social { display: flex; align-items: center; gap: 12px; margin-left: 1rem; }
       .nav-social a, .footer-column .social-icons a { 
         font-size: 1.1rem; transition: transform 0.3s ease; display: flex; 
@@ -167,7 +164,6 @@
       }
       .nav-social a:hover, .footer-column .social-icons a:hover { transform: scale(1.2); }
 
-      /* --- REAL BRAND COLORS FOR ICONS --- */
       .icon-facebook { color: #1877F2; }
       .icon-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
       .icon-threads, .icon-x { color: var(--dynamic-black-white); }
@@ -175,7 +171,6 @@
       .icon-pinterest { color: #E60023; }
       .icon-youtube { color: #FF0000; }
 
-      /* --- THEME TOGGLE BUTTON UI POLISH --- */
       .theme-toggle-btn {
         background-color: var(--scroll-btn-bg); border: 1px solid var(--border-color);
         color: var(--white-color); font-size: 1rem; cursor: pointer;
@@ -197,7 +192,7 @@
       .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
       .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
-      /* --- SMART STARFIELD (Works in Light & Dark Mode) --- */
+      /* --- SMART STARFIELD --- */
       .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; overflow: hidden; }
       .stars-bg {
         position: absolute; top: 0; left: 0; width: 100%; height: 200%;
@@ -217,7 +212,7 @@
       }
       .shooting-star:nth-child(2) { top: 20%; left: -50px; animation-delay: 5s; animation-duration: 12s; }
 
-      /* --- FIXED HERO SECTION SPACING --- */
+      /* --- HERO SECTION --- */
       #home {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
         text-align: center; padding: 5rem 1rem 3rem 1rem; overflow: hidden;
@@ -238,9 +233,9 @@
       body[data-theme="light"] .cta-buttons a.secondary { color: var(--accent-color); }
       .cta-buttons a.secondary:hover { background-color: var(--accent-color); color: #ffffff; }
 
-      /* --- Services Section --- */
+      /* --- Services Section (Sliders) --- */
       #services { background-color: transparent; padding-left: 0; padding-right: 0; }
-      .property-row-wrapper { margin-bottom: 2rem; position: relative; } /* Reduced bottom margin */
+      .property-row-wrapper { margin-bottom: 2.5rem; position: relative; }
       .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding: 0 2rem; }
       .category-title { font-size: 1.6rem; color: var(--heading-color); font-weight: 600; margin: 0; }
       .scroll-arrows { display: flex; gap: 0.5rem; }
@@ -266,7 +261,7 @@
       .card-buttons .btn-whatsapp { background-color: #25d366; }
       .card-buttons .btn-whatsapp:hover { background-color: #1ebe5a; }
 
-      /* --- Smart Spacing for About Section --- */
+      /* --- About Section --- */
       #about {
         background-color: var(--about-bg); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
         border: 1px solid var(--border-color); border-radius: 15px; margin: 2rem; padding: 3rem; position: relative; z-index: 1; transition: background-color 0.3s ease, border 0.3s ease;
@@ -281,7 +276,7 @@
       .why-choose-us i { color: var(--accent-color); font-size: 1.2rem; margin-right: 1rem; padding-top: 2px; width: 25px; text-align: center; }
       .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.2rem; }
 
-      /* --- FAQ Section Smart Spacing --- */
+      /* --- FAQ Section --- */
       #faq { max-width: 900px; margin: 0 auto; padding: 3rem 1rem; }
       .faq-item { background-color: var(--faq-bg); border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 1rem; overflow: hidden; transition: border-color 0.3s ease; }
       .faq-item:hover { border-color: var(--accent-color); }
@@ -291,7 +286,7 @@
       .faq-item[open] summary::after { transform: rotate(180deg); }
       .faq-item p { padding: 0 1.5rem 1.5rem 1.5rem; margin: 0; color: var(--text-color); border-top: 1px solid var(--border-color); padding-top: 1rem; font-size: 0.95rem; }
 
-      /* --- Footer Section Fixes --- */
+      /* --- Footer Section --- */
       #contact {
         background-color: var(--footer-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--text-color);
         border-top: 1px solid var(--border-color); position: relative; z-index: 1; padding: 4rem 2rem 1.5rem 2rem; transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease; margin-top: 2rem;
@@ -306,9 +301,7 @@
       .footer-column .contact-info p { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
       .footer-column .contact-info i { color: var(--accent-color); }
       
-      /* Footer Social Icons Flex Fix */
       .footer-column .social-icons { display: flex; flex-wrap: wrap; gap: 15px; }
-
       .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; }
 
       /* --- Responsive Design Adjustments --- */
@@ -418,7 +411,6 @@
       <section id="services" class="fade-in-section">
         <h2>Our Services</h2>
         
-        <!-- Slider 1 -->
         <div class="property-row-wrapper">
           <div class="category-header">
             <h3 class="category-title">Complete Construction Projects</h3>
@@ -428,294 +420,164 @@
             </div>
           </div>
           <div class="property-scroll-container">
-            <div class="property-card" data-category="project">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=380&fit=crop" alt="House Construction" loading="lazy" />
-              <div class="card-content">
-                <h3>House</h3>
-                <p>Expert construction for your dream home, from foundation to finish.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="project">
-              <img src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?w=400&h=380&fit=crop" alt="Office Construction" loading="lazy" />
-              <div class="card-content">
-                <h3>Office</h3>
-                <p>Building modern, efficient office spaces for your business.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="project">
-              <img src="https://images.unsplash.com/photo-1596642236194-3d02e6f4e8f1?w=400&h=380&fit=crop" alt="Land Plotting" loading="lazy" />
-              <div class="card-content">
-                <h3>Land Plotting</h3>
-                <p>Professional land plotting and development services.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
+            
             <div class="property-card" data-category="project">
               <img src="https://images.unsplash.com/photo-1587022216694-8f8b8f2a1a8c?w=400&h=380&fit=crop" alt="Warehouse Construction" loading="lazy" />
               <div class="card-content">
                 <h3>Warehouse</h3>
-                <p>Constructing large-scale, durable warehouses for your storage needs.</p>
+                <p>Constructing large-scale, durable warehouses tailored for your storage and logistics needs.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
                 </div>
               </div>
             </div>
+
             <div class="property-card" data-category="project">
               <img src="https://images.unsplash.com/photo-1564013799919-ab60b927216f?w=400&h=380&fit=crop" alt="Factory Construction" loading="lazy" />
               <div class="card-content">
                 <h3>Factory</h3>
-                <p>Specialized construction of industrial factories and structures.</p>
+                <p>Specialized construction of robust industrial factories and manufacturing structures.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
                 </div>
               </div>
             </div>
+
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1574958269340-fa927503f3dd?w=400&h=380&fit=crop" alt="SCO Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>SCO (Shop-cum-Office)</h3>
+                <p>Premium commercial complexes perfectly designed for retail shops and modern offices.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?w=400&h=380&fit=crop" alt="Office Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Office</h3>
+                <p>Building modern, efficient, and inspiring office spaces for your business growth.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=380&fit=crop" alt="House Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>House</h3>
+                <p>Expert construction for your dream residential home, from solid foundation to luxury finish.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=380&fit=crop" alt="Floor Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Floor</h3>
+                <p>High-quality builder floors and independent apartment levels with modern amenities.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&h=380&fit=crop" alt="Farmhouse Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Farmhouse</h3>
+                <p>Beautiful, spacious luxury farmhouses blending nature with modern architectural comfort.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Slider 2 -->
         <div class="property-row-wrapper">
           <div class="category-header">
-            <h3 class="category-title">Building Materials & Architecture</h3>
+            <h3 class="category-title">Our Construction Services</h3>
             <div class="scroll-arrows">
               <button class="scroll-btn prev" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
               <button class="scroll-btn next" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
             </div>
           </div>
           <div class="property-scroll-container">
-            <div class="property-card" data-category="design">
+            
+            <div class="property-card" data-category="service">
               <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=380&fit=crop" alt="Interior and Exterior Design" loading="lazy" />
               <div class="card-content">
                 <h3>Interior & Exterior Design</h3>
-                <p>Services for designing the look of both the inside and outside of a building.</p>
+                <p>Complete design and decoration services to transform the look of your building inside and out.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
                 </div>
               </div>
             </div>
-            <div class="property-card" data-category="design">
+
+            <div class="property-card" data-category="service">
               <img src="https://images.unsplash.com/photo-1558692131-061051a445f1?w=400&h=380&fit=crop" alt="Architect 2D & 3D Design" loading="lazy" />
               <div class="card-content">
                 <h3>Architecture 2D & 3D</h3>
-                <p>Creating 2D blueprints and 3D models for architectural planning.</p>
+                <p>Creating precise 2D blueprints and realistic 3D models for perfect structural planning.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
                 </div>
               </div>
             </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1593347100366-2a07c126588c?w=400&h=380&fit=crop" alt="Construction Aggregates (Rodi)" loading="lazy" />
+
+            <div class="property-card" data-category="service">
+              <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=400&h=380&fit=crop" alt="Demarcation Pole" loading="lazy" />
               <div class="card-content">
-                <h3>Construction Aggregates</h3>
-                <p>Coarse materials like gravel used in concrete (Rodi).</p>
+                <h3>Demarcation Pole</h3>
+                <p>Accurate installation of demarcation poles for clear land boundaries and site surveying.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
                 </div>
               </div>
             </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1582239339798-80b4377b7f97?w=400&h=380&fit=crop" alt="Crushed Stone Dust (Ret)" loading="lazy" />
+
+            <div class="property-card" data-category="service">
+              <img src="https://images.unsplash.com/photo-1550137785-3bccecd1ddaa?w=400&h=380&fit=crop" alt="Precast Boundary Wall" loading="lazy" />
               <div class="card-content">
-                <h3>Crushed Stone Dust</h3>
-                <p>Fine stone particles, often used as a sand replacement.</p>
+                <h3>Precast Boundary Wall</h3>
+                <p>Ready-to-install, highly durable precast concrete boundary walls for quick perimeter security.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
                 </div>
               </div>
             </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=380&fit=crop" alt="Cement" loading="lazy" />
+
+            <div class="property-card" data-category="service">
+              <img src="https://images.unsplash.com/photo-1621295280261-2b04f14545fb?w=400&h=380&fit=crop" alt="Wire Fencing" loading="lazy" />
               <div class="card-content">
-                <h3>Cement</h3>
-                <p>The primary binding agent used in concrete and mortar.</p>
+                <h3>Wire Fencing</h3>
+                <p>Strong and reliable wire fencing solutions for farms, plots, and commercial properties.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
                 </div>
               </div>
             </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1590215781144-8e3de3e3a4e9?w=400&h=380&fit=crop" alt="TMT Bars (Saria)" loading="lazy" />
-              <div class="card-content">
-                <h3>TMT Bars (Saria)</h3>
-                <p>Steel reinforcement bars used to strengthen concrete structures.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1557026722-b79b5b03510f?w=400&h=380&fit=crop" alt="Red Bricks" loading="lazy" />
-              <div class="card-content">
-                <h3>Red Bricks</h3>
-                <p>Traditional clay bricks for robust and timeless wall construction.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1534954492199-6c3df22c53f3?w=400&h=380&fit=crop" alt="Fly Ash Bricks" loading="lazy" />
-              <div class="card-content">
-                <h3>Fly Ash Bricks</h3>
-                <p>Eco-friendly and durable fly ash bricks for modern construction.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1604108842208-5f0e3b6f1e31?w=400&h=380&fit=crop" alt="Boundary Wall" loading="lazy" />
-              <div class="card-content">
-                <h3>Precast Concrete Bricks</h3>
-                <p>Precision-molded concrete bricks for uniform and rapid construction.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1518556637482-167bb3098319?w=400&h=380&fit=crop" alt="Hollow Concrete Blocks" loading="lazy" />
-              <div class="card-content">
-                <h3>Hollow Concrete Blocks</h3>
-                <p>Lightweight, insulating blocks for efficient and cost-effective walling.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&h=380&fit=crop" alt="Solid Concrete Blocks" loading="lazy" />
-              <div class="card-content">
-                <h3>Solid Concrete Blocks</h3>
-                <p>Dense, high-strength blocks for load-bearing walls and foundations.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=400&h=380&fit=crop" alt="RCC Poles" loading="lazy" />
-              <div class="card-content">
-                <h3>RCC Poles</h3>
-                <p>Reinforced Cement Concrete poles for strong fencing and utility support.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1621295280261-2b04f14545fb?w=400&h=380&fit=crop" alt="Wire Fencing Pole" loading="lazy" />
-              <div class="card-content">
-                <h3>Wire Fencing Pole</h3>
-                <p>Durable concrete poles designed to secure wire fencing.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1550137785-3bccecd1ddaa?w=400&h=380&fit=crop" alt="RCC Boundary Wall" loading="lazy" />
-              <div class="card-content">
-                <h3>RCC Boundary Wall</h3>
-                <p>Ready-to-install precast RCC boundary walls for quick perimeters.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?w=400&h=380&fit=crop" alt="Single Panel Wall" loading="lazy" />
-              <div class="card-content">
-                <h3>Single Panel Boundary Wall</h3>
-                <p>Sleek, modern single-panel walls for a clean and secure boundary.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1600171261310-c8316eb11402?w=400&h=380&fit=crop" alt="Interlocking Tiles" loading="lazy" />
-              <div class="card-content">
-                <h3>Interlocking Tiles & Pavers</h3>
-                <p>Durable and decorative paver blocks for driveways and paths.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1603885542790-2e400494fb21?w=400&h=380&fit=crop" alt="Kerb Stone" loading="lazy" />
-              <div class="card-content">
-                <h3>Kerb Stone</h3>
-                <p>Strong kerb stones to define edges for roads, footpaths, and gardens.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1596465451965-742918dfaf62?w=400&h=380&fit=crop" alt="U Drain" loading="lazy" />
-              <div class="card-content">
-                <h3>Dish Channel or U Drain</h3>
-                <p>Precast concrete U-drains for effective and tidy water drainage.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356f12?w=400&h=380&fit=crop" alt="Rolling Shutter" loading="lazy" />
-              <div class="card-content">
-                <h3>Rolling Shutter</h3>
-                <p>Secure and durable rolling shutters for commercial shops and godowns.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="property-card" data-category="material">
-              <img src="https://images.unsplash.com/photo-1493011311409-24b5a2ae0ee2?w=400&h=380&fit=crop" alt="Gate" loading="lazy" />
-              <div class="card-content">
-                <h3>Gate Fabrication</h3>
-                <p>Custom-fabricated gates for houses, factories, and warehouses.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -766,11 +628,11 @@
           <div class="faq-accordion">
             <details class="faq-item">
               <summary>What construction services does Kavach Builders offer in Sonipat?</summary>
-              <p>We offer complete construction services including residential homes, commercial offices, factories, warehouses, land plotting, and comprehensive 2D/3D architectural design.</p>
+              <p>We offer complete construction services including residential homes, commercial offices, factories, warehouses, SCO, Farmhouses, and comprehensive 2D/3D architectural design.</p>
             </details>
             <details class="faq-item">
-              <summary>Do you also supply building materials?</summary>
-              <p>Yes, we provide premium building materials including Cement, TMT Bars (Saria), Red Bricks, Fly Ash Bricks, Construction Aggregates (Rodi), and Interlocking Tiles directly to your site.</p>
+              <summary>Do you construct precast boundary walls and wire fencing?</summary>
+              <p>Yes, we specialize in quick and durable perimeter security, including precast boundary walls, demarcation poles, and wire fencing for plots and farms.</p>
             </details>
             <details class="faq-item">
               <summary>How can I get a cost estimate for my construction project?</summary>
