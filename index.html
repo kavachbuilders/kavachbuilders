@@ -4,627 +4,1435 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kavach Builders | Premium Architecture & Construction</title>
-    <meta name="description" content="Kavach Builders specializes in Architecture, Demarcation Poles, Precast Boundary Walls, Wire Fencing, Warehouse, and Factory construction in Delhi NCR." />
-    
-    <!-- Google Fonts: Roboto -->
+    <title>Kavach Builders | Construction & Renovation in Sonipat</title>
+    <meta
+      name="description"
+      content="Kavach Builders offers top-tier construction, renovation, and interior design services in Sonipat. Your trusted partner for residential, commercial, and industrial projects."
+    />
+    <meta
+      name="keywords"
+      content="construction company sonipat, kavach builders, home construction sonipat, commercial construction sonipat, renovation services sonipat, interior design sonipat, building contractors sonipat, MEP services sonipat"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome 6.5.2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    <!-- Schema for SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "GeneralContractor",
         "name": "Kavach Builders",
         "url": "https://www.kavachbuilders.com",
+        "logo": "https://www.kavachbuilders.com/logo.PNG",
         "telephone": "+918168759184",
         "email": "kavachbuilders@gmail.com",
-        "areaServed": [{"@type": "City", "name": "Delhi NCR"}, {"@type": "City", "name": "Sonipat"}]
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sonipat",
+          "addressRegion": "HR",
+          "addressCountry": "IN"
+        },
+        "description": "Leading construction and renovation contractor in Sonipat, Haryana, specializing in residential, commercial, and industrial projects.",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Sonipat"
+        },
+        "image": "https://www.kavachbuilders.com/logo.PNG",
+        "priceRange": "$$$"
       }
     </script>
 
     <style>
-      /* --- PREMIUM VARIABLES & THEME --- */
+      /* --- CSS Variables and Global Styles --- */
       :root {
-        /* Deep Space Midnight Blue */
-        --bg-color: #050b14; 
-        --grid-color: rgba(255, 255, 255, 0.04);
-        --text-color: #e2e8f0;
-        --heading-color: #ffffff;
-        
-        --glass-bg: rgba(10, 15, 25, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.08);
-        --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        
-        --orb-orange: rgba(245, 166, 35, 0.4);
-        --orb-blue: rgba(0, 136, 204, 0.3);
-        
-        --accent: #F5A623;
-        --nav-blur: blur(20px);
+        /* DARK MODE (DEFAULT) */
+        --primary-color: #0d2f4b;
+        --accent-color: #ffa500;
+        --background-color: #000000;
+        --surface-color: #0a0a0a;
+        --text-color: #a8b2d1;
+        --heading-color: #e6f1ff;
+        --white-color: #ffffff;
+        --navbar-height: 50px;
+
+        --navbar-bg: rgba(10, 10, 10, 0.75);
+        --mobile-menu-bg: rgba(10, 10, 10, 0.95);
+        --footer-bg: rgba(10, 10, 10, 0.75);
+        --about-bg: rgba(17, 34, 64, 0.6);
+        --border-color: rgba(255, 255, 255, 0.1);
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        --card-gradient: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.95) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        --heading-gradient: linear-gradient(
+          120deg,
+          var(--heading-color),
+          var(--white-color)
+        );
+        --scroll-btn-bg: rgba(255, 255, 255, 0.1);
       }
 
       body[data-theme="light"] {
-        /* Clean Slate White */
-        --bg-color: #fafbfc;
-        --grid-color: rgba(0, 0, 0, 0.04);
-        --text-color: #334155;
-        --heading-color: #0f172a;
-        
-        --glass-bg: rgba(255, 255, 255, 0.6);
-        --glass-border: rgba(0, 0, 0, 0.05);
-        --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-        
-        --orb-orange: rgba(245, 166, 35, 0.15);
-        --orb-blue: rgba(0, 136, 204, 0.1);
+        /* LIGHT MODE OVERRIDES */
+        --background-color: #ffffff;
+        --surface-color: #f4f4f4;
+        --text-color: #555555;
+        --heading-color: #0d2f4b;
+        --white-color: #111111;
+
+        --navbar-bg: rgba(255, 255, 255, 0.75);
+        --mobile-menu-bg: rgba(255, 255, 255, 0.95);
+        --footer-bg: #f9f9f9;
+        --about-bg: #f0f4f8;
+        --border-color: rgba(0, 0, 0, 0.1);
+        --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        --card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        --card-gradient: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        --heading-gradient: linear-gradient(
+          120deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        --scroll-btn-bg: rgba(0, 0, 0, 0.05);
       }
 
-      html { scroll-behavior: smooth; overflow-x: hidden; }
+      /* Hide starfield in light mode */
+      body[data-theme="light"] .stars,
+      body[data-theme="light"] .shooting-star {
+        display: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
 
       body {
         margin: 0;
-        font-family: 'Roboto', sans-serif;
-        background-color: var(--bg-color);
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--background-color);
         color: var(--text-color);
-        line-height: 1.7;
-        overflow-x: hidden;
-        transition: background-color 0.5s ease;
-        /* 40px Engineering Grid Blueprint */
-        background-image: 
-          linear-gradient(var(--grid-color) 1px, transparent 1px),
-          linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-        background-size: 40px 40px;
+        line-height: 1.6;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
-      * { box-sizing: border-box; }
-      section, footer { padding: 6rem 0; scroll-margin-top: 80px; position: relative; z-index: 5; }
-      .container { max-width: 1300px; margin: 0 auto; padding: 0 1.5rem; }
-
-      /* Apple/Google Smooth Easing */
-      .smooth-trans { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-
-      /* --- AMBIENT LIGHT ORBS & STARS --- */
-      .ambient-orb {
-        position: fixed; border-radius: 50%; filter: blur(100px); z-index: 0;
-        animation: floatOrb 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
-        pointer-events: none;
+      * {
+        box-sizing: border-box;
       }
-      .orb-1 { top: -10%; left: -5%; width: 40vw; height: 40vw; background: var(--orb-orange); }
-      .orb-2 { bottom: -10%; right: -5%; width: 50vw; height: 50vw; background: var(--orb-blue); animation-delay: -5s; }
 
-      .starfield { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
-      body[data-theme="light"] .starfield { opacity: 0.2; filter: invert(1); }
+      section {
+        padding: 4rem 0;
+      }
 
-      /* --- NAVBAR (Apple Glassmorphism) --- */
+      h1, h2, h3 {
+        color: var(--heading-color);
+        font-weight: 700;
+        transition: color 0.3s ease;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+        background: var(--heading-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* --- Navigation Bar --- */
       .navbar {
-        position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-        background: var(--glass-bg);
-        -webkit-backdrop-filter: var(--nav-blur); backdrop-filter: var(--nav-blur);
-        border-bottom: 1px solid var(--glass-border);
-        border-radius: 0 0 16px 16px; 
-        padding: 0.6rem 2rem;
-        display: flex; justify-content: space-between; align-items: center;
-        box-shadow: var(--glass-shadow);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--navbar-bg);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.8rem 2rem;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        min-height: var(--navbar-height);
+        transition: background-color 0.3s ease, border-bottom 0.3s ease;
       }
 
       .nav-logo {
-        color: var(--heading-color); font-weight: 900; font-size: 1.5rem;
-        text-decoration: none; display: flex; align-items: center; gap: 12px;
+        color: var(--white-color);
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-decoration: none;
+        flex-shrink: 0;
       }
-      .nav-logo span { color: var(--accent); }
 
-      /* Scroll Spy Links */
-      .nav-links { display: flex; gap: 2.5rem; list-style: none; margin: 0; padding: 0; }
+      .nav-logo span {
+        color: var(--accent-color);
+        transition: text-shadow 0.3s ease;
+      }
+
+      .nav-logo:hover span {
+        text-shadow: 0 0 8px var(--accent-color);
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+      .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+      }
+
+      .nav-links li {
+        margin: 0 1.5rem;
+      }
+
       .nav-links a {
-        color: var(--heading-color); text-decoration: none; font-weight: 500;
-        position: relative; padding: 0.5rem 0; transition: color 0.3s;
+        color: var(--white-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
       }
-      .nav-links a::after {
-        content: ''; position: absolute; width: 0; height: 3px; bottom: -2px; left: 50%;
-        background: linear-gradient(90deg, #F5A623, #ff4e50);
-        transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform: translateX(-50%); border-radius: 2px;
+
+      .nav-links a:hover {
+        color: var(--accent-color);
       }
-      .nav-links a.active::after, .nav-links a:hover::after { width: 100%; }
 
-      /* Right Actions & True Color Socials */
-      .nav-right { display: flex; align-items: center; gap: 1rem; }
-      
-      .nav-socials { display: flex; align-items: center; gap: 0.8rem; border-left: 1px solid var(--glass-border); padding-left: 1.2rem; }
-      .nav-socials a { font-size: 1.2rem; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: inline-block; text-decoration: none; }
-      .nav-socials a:hover { transform: scale(1.25); } 
-      
-      /* Social Colors */
-      .color-fb { color: #1877F2; }
-      .color-ig { background: -webkit-linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-      .color-yt { color: #FF0000; }
-      .color-x { color: var(--heading-color); }
-      .color-threads { color: var(--heading-color); }
-      .color-in { color: #0077b5; }
-      .color-pi { color: #E60023; }
-
-      .theme-btn, .call-btn {
-        background: transparent; border: 1px solid var(--glass-border); color: var(--heading-color);
-        width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center;
-        backdrop-filter: blur(5px); transition: transform 0.3s, background 0.3s; text-decoration: none;
+      .nav-social {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 1.5rem;
       }
-      .theme-btn:hover, .call-btn:hover { background: var(--glass-border); transform: scale(1.1); }
-      .call-btn { background: var(--accent); color: #fff; border: none; } /* Highlighted call button */
-      .call-btn:hover { background: #e0961f; }
 
-      /* --- HERO SECTION --- */
-      #home { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-      
-      .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
-      .hero-logo img {
-        width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
-        box-shadow: 0 0 30px rgba(245, 166, 35, 0.4); border: 2px solid rgba(255,255,255,0.1);
-        margin-bottom: 2rem;
-      }
-      #home h1 { font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: -1.5px; margin-bottom: 0.5rem; line-height: 1.1; }
-      .tagline { font-size: 1.4rem; color: var(--accent); font-weight: 500; margin-bottom: 3rem; }
-
-      /* Premium Button Cluster */
-      .btn-cluster { display: flex; align-items: center; gap: 1rem; background: var(--glass-bg); padding: 0.5rem; border-radius: 50px; border: 1px solid var(--glass-border); backdrop-filter: blur(10px); }
-      
-      .circle-btn {
-        width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
-        color: #fff !important; font-size: 1.6rem; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .btn-wa { background: #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); }
-      .btn-tg { background: #0088cc; box-shadow: 0 0 20px rgba(0, 136, 204, 0.4); }
-      .circle-btn:hover { transform: scale(1.15); box-shadow: 0 0 30px inherit; }
-
-      .pill-cta {
-        background: var(--heading-color); color: var(--bg-color) !important;
-        padding: 0 2.5rem; height: 55px; display: flex; align-items: center; gap: 10px;
-        border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none;
+      .nav-social a {
+        color: var(--white-color);
+        font-size: 1rem;
         transition: all 0.3s ease;
       }
-      .pill-cta i { transition: transform 0.3s ease; }
-      .pill-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-      .pill-cta:hover i { transform: translateX(6px); }
 
-      /* --- NETFLIX-STYLE CAROUSEL --- */
-      .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
-      .section-title { font-size: clamp(2rem, 4vw, 3rem); margin: 0; position: relative; padding-bottom: 10px; }
-      .section-title::after {
-        content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px;
-        background: linear-gradient(90deg, #F5A623, #ff4e50); border-radius: 2px;
+      .nav-social a:hover {
+        color: var(--accent-color);
+        transform: translateY(-3px);
+      }
+
+      .theme-toggle-btn {
+        background: none;
+        border: none;
+        color: var(--white-color);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+        line-height: 1;
+      }
+
+      .theme-toggle-btn:hover {
+        color: var(--accent-color);
+        transform: translateY(-3px);
+      }
+
+      .mobile-controls {
+        display: none;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .mobile-controls .theme-toggle-btn {
+        font-size: 1.2rem;
       }
       
-      .slider-nav { display: flex; gap: 1rem; }
-      .slider-btn {
-        width: 45px; height: 45px; border-radius: 50%; border: 1px solid var(--glass-border);
-        background: var(--glass-bg); color: var(--heading-color); cursor: pointer;
-        backdrop-filter: blur(10px); transition: all 0.3s; font-size: 1.2rem;
+      .mobile-controls .theme-toggle-btn:hover {
+        transform: none;
       }
-      .slider-btn:hover { background: var(--accent); color: #fff; transform: scale(1.1); }
 
-      .carousel-container { position: relative; overflow: hidden; margin: 0 -1.5rem; padding: 2rem 1.5rem; }
-      .carousel-track { display: flex; gap: 2rem; transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform; }
+      #nav-toggle {
+        display: none;
+      }
+
+      .nav-toggle-label {
+        display: none;
+        font-size: 1.5rem;
+        color: var(--white-color);
+        cursor: pointer;
+        z-index: 1001;
+      }
+
+      /* --- Keyframe Animations --- */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes animateStars {
+        from { transform: translateY(0px); }
+        to { transform: translateY(-2000px); }
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 0.8; }
+      }
+
+      @keyframes shooting-star-animation {
+        0% { transform: translate(0, 0); opacity: 1; }
+        100% { transform: translate(150vw, -150vh); opacity: 0; }
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
       
-      .service-card {
-        min-width: 350px; height: 420px; border-radius: 20px; position: relative; overflow: hidden;
-        border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); cursor: pointer;
-        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
-        transform-style: preserve-3d;
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
       }
-      .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
-      .service-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 10; }
-      .service-card:hover img { transform: scale(1.05); }
 
-      .card-overlay {
-        position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem;
-        background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.4), transparent);
-        backdrop-filter: blur(5px); color: #fff;
+      /* --- Starfield Background Effect --- */
+      .stars {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: -10;
+        overflow: hidden;
       }
-      .card-overlay h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-      .card-overlay p { font-size: 0.95rem; color: rgba(255,255,255,0.8); opacity: 0; transform: translateY(10px); transition: all 0.4s ease; }
-      .service-card:hover .card-overlay p { opacity: 1; transform: translateY(0); }
 
-      /* --- VIBRANT SUNRISE ABOUT SECTION --- */
-      #about { margin-top: 2rem; }
-      .sunrise-glass {
-        background: linear-gradient(135deg, rgba(245, 166, 35, 0.85), rgba(220, 36, 36, 0.8));
-        border-radius: 32px; padding: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-        align-items: center; backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-        border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 20px 50px rgba(220, 36, 36, 0.2);
-        color: #fff;
+      .stars-bg {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 200%;
+        background-repeat: repeat;
+        background-position: 0 0;
+        animation-name: animateStars, blink;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: infinite, infinite;
+        animation-direction: normal, alternate;
       }
-      .sunrise-glass h2 { color: #fff; font-size: 3rem; margin-bottom: 1.5rem; }
-      .sunrise-glass p { font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem; font-weight: 400; }
-      .about-img { border-radius: 20px; width: 100%; height: 100%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
-      /* --- FAQ ACCORDIONS --- */
-      .faq-wrapper { max-width: 800px; margin: 0 auto; }
-      details {
-        background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px;
-        margin-bottom: 1.2rem; overflow: hidden; backdrop-filter: blur(10px);
-        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      #stars1 {
+        background-image: radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+          radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+          radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)),
+          radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+          radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+          radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+        background-size: 200px 200px;
+        animation-duration: 150s, 5s;
       }
-      details[open] { border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-      summary {
-        padding: 1.5rem; font-weight: 600; font-size: 1.15rem; color: var(--heading-color); cursor: pointer;
-        display: flex; justify-content: space-between; align-items: center; list-style: none;
-      }
-      summary::-webkit-details-marker { display: none; }
-      .indicator {
-        width: 30px; height: 30px; border-radius: 50%; background: var(--grid-color);
-        display: flex; justify-content: center; align-items: center; color: var(--accent);
-        transition: transform 0.4s ease, background 0.4s;
-      }
-      details[open] .indicator { transform: rotate(180deg); background: var(--accent); color: #fff; }
-      .faq-content { padding: 0 1.5rem 1.5rem; color: var(--text-color); font-size: 1rem; line-height: 1.8; }
 
-      /* --- FROSTED FOOTER --- */
-      footer {
-        background: var(--glass-bg); -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px);
-        border-top: 1px solid var(--glass-border); padding-top: 6rem; padding-bottom: 2rem;
+      #stars2 {
+        background-image: radial-gradient(1px 1px at 10px 90px, #eee, rgba(0,0,0,0)),
+          radial-gradient(2px 2px at 80px 30px, #fff, rgba(0,0,0,0)),
+          radial-gradient(2px 2px at 100px 180px, #ddd, rgba(0,0,0,0)),
+          radial-gradient(1px 1px at 190px 60px, #fff, rgba(0,0,0,0)),
+          radial-gradient(1px 1px at 140px 110px, #fff, rgba(0,0,0,0)),
+          radial-gradient(2px 2px at 180px 150px, #ddd, rgba(0,0,0,0));
+        background-size: 250px 250px;
+        animation-duration: 100s, 7s;
       }
-      .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; margin-bottom: 4rem; }
-      .footer-col h4 { font-size: 1.4rem; color: var(--heading-color); margin-bottom: 2rem; }
-      .footer-col ul { list-style: none; padding: 0; margin: 0; }
-      .footer-col li { margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
-      .footer-col a { color: var(--text-color); text-decoration: none; transition: color 0.3s; }
-      .footer-col a:hover { color: var(--accent); }
+
+      #stars3 {
+        background-image: radial-gradient(1px 1px at 5px 55px, #fff, rgba(0,0,0,0)),
+          radial-gradient(1px 1px at 125px 95px, #eee, rgba(0,0,0,0));
+        background-size: 150px 150px;
+        animation-duration: 200s, 3s;
+      }
+
+      .shooting-star {
+        position: absolute;
+        top: 50%; left: -100px; height: 2px;
+        background: linear-gradient(-45deg, var(--accent-color), rgba(0,0,0,0));
+        border-radius: 999px;
+        filter: drop-shadow(0 0 6px var(--accent-color));
+        animation: shooting-star-animation 15s linear infinite;
+      }
+
+      .shooting-star:nth-child(2) {
+        top: 20%; left: -50px;
+        animation-delay: 5s; animation-duration: 12s;
+      }
+
+      /* --- Home/Hero Section --- */
+      #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 80vh;
+        height: auto;
+        background: transparent;
+        padding: 4rem 1rem 2rem 1rem;
+        overflow: hidden;
+      }
+
+      .hero-logo {
+        margin-bottom: 1rem;
+        animation: fadeIn 1s ease-out forwards;
+        opacity: 0;
+      }
+
+      .hero-logo img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+      }
+
+      #home h1 {
+        font-size: 3.5rem;
+        color: var(--white-color);
+        margin-bottom: 0.5rem;
+        animation: fadeIn 1s ease-out 0.2s forwards;
+        opacity: 0;
+      }
       
-      .f-socials { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-      .f-socials a {
-        width: 40px; height: 40px; border-radius: 50%; background: var(--grid-color); color: var(--text-color);
-        display: flex; justify-content: center; align-items: center; font-size: 1.2rem;
-        transition: transform 0.3s, background 0.3s, color 0.3s; text-decoration: none;
+      body[data-theme="light"] #home h1 { color: var(--heading-color); }
+      body[data-theme="dark"] #home h1 { color: #ffffff; }
+
+      #home .tagline {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+        animation: fadeIn 1s ease-out 0.4s forwards;
+        opacity: 0;
       }
-      /* Hover par unke true colors aayenge */
-      .f-socials a.color-fb:hover { background: #1877F2; color: #fff; transform: translateY(-5px); }
-      .f-socials a.color-ig:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; transform: translateY(-5px); }
-      .f-socials a.color-yt:hover { background: #FF0000; color: #fff; transform: translateY(-5px); }
-      .f-socials a.color-x:hover { background: #1da1f2; color: #fff; transform: translateY(-5px); }
-      .f-socials a.color-threads:hover { background: #000000; color: #fff; transform: translateY(-5px); }
-      .f-socials a.color-in:hover { background: #0077b5; color: #fff; transform: translateY(-5px); }
-      .f-socials a.color-pi:hover { background: #E60023; color: #fff; transform: translateY(-5px); }
+
+      .cta-buttons {
+        animation: fadeIn 1s ease-out 0.8s forwards;
+        opacity: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .cta-buttons a {
+        text-decoration: none;
+        color: var(--white-color);
+        background-color: var(--accent-color);
+        padding: 0.8rem 1.8rem;
+        margin: 0;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        flex-grow: 1;
+        flex-basis: 200px;
+        text-align: center;
+      }
       
-      .footer-bottom { text-align: center; border-top: 1px solid var(--glass-border); padding-top: 2rem; font-size: 0.9rem; }
+      body[data-theme="dark"] .cta-buttons a { color: #ffffff; }
+      body[data-theme="light"] .cta-buttons a { color: #ffffff; }
+      body[data-theme="light"] .cta-buttons a.secondary { color: var(--accent-color); }
+      body[data-theme="light"] .cta-buttons a.secondary:hover { color: #ffffff; }
 
-      /* --- ANIMATIONS --- */
-      .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
-      .reveal.active { opacity: 1; transform: translateY(0); }
+      .cta-buttons a:hover {
+        background-color: #e69500;
+        transform: translateY(-2px);
+      }
 
-      @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.1); } }
+      .cta-buttons a.secondary {
+        background-color: transparent;
+        border: 2px solid var(--accent-color);
+      }
 
-      /* Mobile Adjustments */
-      .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--heading-color); cursor: pointer; }
-      @media (max-width: 1024px) {
-        .nav-links, .nav-socials { display: none; }
-        .mobile-menu-btn { display: block; }
-        .sunrise-glass { grid-template-columns: 1fr; padding: 2.5rem; }
-        .btn-cluster { flex-wrap: wrap; justify-content: center; border-radius: 20px; }
-        .pill-cta { width: 100%; justify-content: center; }
-        .navbar { border-radius: 0; padding: 1rem; }
+      .cta-buttons a.secondary:hover {
+        background-color: var(--accent-color);
+      }
+
+      /* --- Services Section --- */
+      #services {
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .property-row-wrapper {
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .category-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 0 2rem;
+      }
+
+      .category-title {
+        font-size: 1.8rem;
+        color: var(--heading-color);
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+
+      .scroll-arrows {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .scroll-btn {
+        background-color: var(--scroll-btn-bg);
+        border: 1px solid var(--border-color);
+        color: var(--white-color);
+        border-radius: 50%;
+        width: 40px; height: 40px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .scroll-btn:hover:not(:disabled) {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        color: #ffffff;
+      }
+
+      .scroll-btn:disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
+      }
+      
+      body[data-theme="light"] .scroll-btn:disabled { opacity: 0.4; }
+
+      .property-scroll-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 2rem;
+        padding: 0.5rem 2rem 1.5rem 2rem;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        /* SCROLL SNAP ADDED HERE */
+        scroll-snap-type: x mandatory; 
+      }
+
+      .property-scroll-container::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .property-scroll-container {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .property-card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
+        border: 1px solid var(--border-color);
+        flex: 0 0 320px;
+        height: 380px;
+        /* SCROLL SNAP ALIGN ADDED HERE */
+        scroll-snap-align: start; 
+      }
+
+      .property-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--card-hover-shadow);
+      }
+
+      .property-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease, filter 0.4s ease;
+      }
+
+      .property-card:hover img {
+        transform: scale(1.1);
+        filter: brightness(0.6);
+      }
+
+      .card-content {
+        position: absolute;
+        bottom: 0; left: 0; width: 100%;
+        padding: 1.5rem;
+        background: var(--card-gradient);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: left;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .card-content h3 {
+        margin-top: 0;
+        font-size: 1.6rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-content p {
+        flex-grow: 0;
+        margin-bottom: 1.5rem;
+        opacity: 1;
+        color: #f0f0f0;
+      }
+
+      .card-buttons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        opacity: 1;
+      }
+
+      .card-buttons a {
+        text-decoration: none;
+        padding: 0.6rem 1rem;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        color: #ffffff;
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .card-buttons .btn-call { background-color: var(--primary-color); }
+      .card-buttons .btn-call:hover { background-color: #1a4a75; }
+      .card-buttons .btn-whatsapp { background-color: #25d366; }
+      .card-buttons .btn-whatsapp:hover { background-color: #1ebe5a; }
+
+      /* --- About Us Section --- */
+      #about {
+        background-color: var(--about-bg);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--border-color);
+        border-radius: 15px;
+        margin: 4rem 2rem;
+        padding: 4rem;
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s ease, border 0.3s ease;
+      }
+
+      #about h2 {
+        margin-top: 0;
+        margin-bottom: 3rem;
+        padding: 0;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-image img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      }
+      
+      body[data-theme="light"] .about-image img { box-shadow: var(--card-shadow); }
+
+      .about-text h3 {
+        font-size: 1.8rem;
+        color: var(--accent-color);
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-text p {
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+
+      .why-choose-us {
+        list-style: none;
+        padding: 0;
+        margin-top: 2rem;
+      }
+
+      .why-choose-us li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+      }
+
+      .why-choose-us i {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        padding-top: 4px;
+        width: 25px;
+        text-align: center;
+      }
+
+      .why-choose-us li div { flex: 1; }
+      .why-choose-us li strong {
+        color: var(--heading-color);
+        display: block;
+        margin-bottom: 0.25rem;
+        transition: color 0.3s ease;
+      }
+
+      /* --- Footer / Contact Section --- */
+      #contact {
+        background-color: var(--footer-bg);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: var(--text-color);
+        border-top: 1px solid var(--border-color);
+        position: relative;
+        z-index: 1;
+        padding: 4rem 2rem 2rem 2rem;
+        transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+        text-align: left;
+      }
+
+      .footer-column h4 {
+        font-size: 1.2rem;
+        color: var(--heading-color);
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .footer-column h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0; left: 0; width: 40px; height: 2px;
+        background-color: var(--accent-color);
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0; margin: 0;
+      }
+
+      .footer-column ul li { margin-bottom: 0.8rem; }
+      
+      .footer-column a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s ease, padding-left 0.3s ease;
+        display: inline-block;
+      }
+
+      .footer-column a:hover {
+        color: var(--accent-color);
+        padding-left: 5px;
+      }
+
+      .footer-column .contact-info p { margin-bottom: 0.8rem; }
+      
+      .footer-column .social-icons a {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .footer-column .social-icons a:hover {
+        color: var(--accent-color);
+        transform: translateY(-3px) scale(1.1);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border-color);
+        font-size: 0.9rem;
+        transition: border 0.3s ease;
+      }
+
+      /* --- Responsive Design --- */
+      @media (min-width: 768px) {
+        #home h1 { font-size: 4.5rem; }
+      }
+
+      @media (max-width: 992px) {
+        #about { margin: 2rem 1rem; padding: 3rem 2rem; }
+        .about-content { grid-template-columns: 1fr; gap: 2rem; }
+        .about-text { text-align: center; }
+        .about-text p, .about-text .why-choose-us li { text-align: left; }
+      }
+
+      /* --- MOBILE STYLES --- */
+      @media (max-width: 767px) {
+        .navbar { flex-wrap: wrap; padding: 0.8rem 1rem; }
+        .nav-toggle-label { display: block; }
+        .mobile-controls { display: flex; }
+        .nav-menu .theme-toggle-btn { display: none; }
+
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: var(--mobile-menu-bg);
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          position: absolute;
+          top: 100%; left: 0;
+          padding: 1rem 0;
+          border-top: 1px solid var(--border-color);
+          order: 3;
+          transition: background-color 0.3s ease, border 0.3s ease;
+        }
+
+        #nav-toggle:checked ~ .nav-menu { display: flex; }
+        .nav-links { flex-direction: column; width: 100%; text-align: center; flex-grow: 0; }
+        .nav-links li { margin: 0; width: 100%; }
+        .nav-links a { display: block; padding: 1rem 0; width: 100%; }
+
+        .nav-social {
+          justify-content: center; margin-top: 1.5rem; padding-top: 1.5rem;
+          border-top: 1px solid var(--border-color);
+          width: 90%; margin-left: auto; margin-right: auto;
+        }
+
+        #home { padding: 3rem 1rem 2rem 1rem; min-height: 70vh; }
+        .hero-logo img { height: 160px; width: 160px; }
+        #home h1 { font-size: 2.5rem; }
+        #home .tagline { font-size: 1.1rem; }
+        .cta-buttons { gap: 0.8rem; }
+        .cta-buttons a { padding: 0.7rem 1rem; font-size: 0.9rem; flex-basis: 150px; }
+        
+        section { padding: 2.5rem 0; }
+        #services { padding-top: 1rem; }
+        #about { margin: 1.5rem 1rem; padding: 2.5rem 1.5rem; }
+        h2 { font-size: 1.8rem; margin-bottom: 2rem; }
+        
+        .footer-content { text-align: center; gap: 1.5rem; }
+        .footer-column h4::after { left: 50%; transform: translateX(-50%); }
+
+        .scroll-arrows { display: none; }
+        .category-header { padding: 0 1rem; margin-bottom: 1rem; }
+        .category-title { font-size: 1.5rem; }
+        .property-scroll-container { gap: 1rem; padding: 0.5rem 1rem 1rem 1rem; }
+
+        .property-card { flex-basis: 260px; height: 350px; }
+        .card-content { padding: 1.2rem; }
+        .card-content h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .card-content p { font-size: 0.9rem; margin-bottom: 1rem; }
+        .card-buttons { gap: 0.5rem; }
+        .card-buttons a { padding: 0.5rem 0.8rem; font-size: 0.85rem; flex-grow: 1; flex-basis: 0; }
+      }
+
+      @media (max-width: 380px) {
+        .hero-logo img { height: 140px; width: 140px; }
+        #home h1 { font-size: 2.2rem; }
+        #home .tagline { font-size: 1rem; }
+        .cta-buttons a { flex-basis: 100%; }
+        .property-card { flex-basis: 240px; height: 330px; }
+        .card-content { padding: 1rem; }
+        .card-content h3 { font-size: 1.1rem; }
+        .card-content p { font-size: 0.85rem; margin-bottom: 0.8rem; }
+        .card-buttons a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
       }
     </style>
   </head>
   <body>
-    <!-- Ambient Light Orbs -->
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
+    <div class="stars">
+      <div class="stars-bg" id="stars1"></div>
+      <div class="stars-bg" id="stars2"></div>
+      <div class="stars-bg" id="stars3"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+    </div>
 
-    <!-- Multi-colored Starfield -->
-    <canvas id="starfield" class="starfield"></canvas>
-
-    <!-- Apple Glass Navbar -->
     <nav class="navbar">
-      <a href="#home" class="nav-logo">
-        <img src="/IMG_1726.png" alt="Logo" style="width:35px; height:35px; border-radius:50%; object-fit:cover;" onerror="this.style.display='none'">
-        Kavach<span>Builders</span>
-      </a>
+      <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
 
-      <!-- Center Links (Scroll Spy) -->
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-item active">Home</a></li>
-        <li><a href="#services" class="nav-item">Services</a></li>
-        <li><a href="#about" class="nav-item">About Us</a></li>
-        <li><a href="#faq" class="nav-item">FAQ</a></li>
-      </ul>
-
-      <!-- Right Actions -->
-      <div class="nav-right">
-        <!-- Social Media Icons (Navbar) -->
-        <div class="nav-socials">
-          <a href="#" class="color-fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="color-ig" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="color-yt" title="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="color-x" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" class="color-threads" title="Threads"><i class="fab fa-threads"></i></a>
-          <a href="#" class="color-in" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="color-pi" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-        </div>
-        
-        <!-- Call Button -->
-        <a href="tel:+918168759184" class="call-btn" title="Call Us">
-          <i class="fas fa-phone-alt"></i>
-        </a>
-
-        <!-- Dark/Light Theme Toggle Button -->
-        <button class="theme-btn" id="theme-toggle" title="Toggle Theme">
-          <i class="fas fa-sun" id="sun-icon"></i>
-          <i class="fas fa-moon" id="moon-icon" style="display:none;"></i>
+      <div class="mobile-controls">
+        <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
+          <i class="fas fa-sun icon-sun"></i>
+          <i class="fas fa-moon icon-moon" style="display: none"></i>
         </button>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
 
-        <i class="fas fa-bars mobile-menu-btn"></i>
+      <input type="checkbox" id="nav-toggle" />
+
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-social">
+          <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
+            <i class="fas fa-sun icon-sun"></i>
+            <i class="fas fa-moon icon-moon" style="display: none"></i>
+          </button>
+          <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kavachbuilders/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
+          <a href="https://www.x.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home">
-      <div class="hero-content reveal">
+    <main>
+      <section id="home">
         <div class="hero-logo">
-          <img src="/IMG_1726.png" alt="Kavach Builders" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&fit=crop'" />
+          <img src="/IMG_1726.png" alt="Kavach Builders Logo" />
         </div>
-        <h1>Build the Future.</h1>
-        <p class="tagline">Premium Architecture & Industrial Contracting in Delhi NCR</p>
+        <h1>Kavach Builders</h1>
+        <p class="tagline">Your Trusted Partner in Construction & Renovation</p>
 
-        <!-- Button Cluster -->
-        <div class="btn-cluster">
-          <a href="https://wa.me/918168759184" class="circle-btn btn-wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="circle-btn btn-tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-          <a href="https://www.kavachestate.com" target="_blank" class="pill-cta">
-            Explore Kavach Estate <i class="fas fa-arrow-right"></i>
-          </a>
+        <div class="cta-buttons">
+          <a href="#services" class="primary">Kavach Builders</a>
+          <a href="https://www.kavachestate.com" target="_blank" rel="noopener noreferrer" class="secondary">Kavach Estate</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Netflix-Style Interactive Services Carousel -->
-    <section id="services" class="container reveal">
-      <div class="section-header">
-        <h2 class="section-title">Our Expertise</h2>
-        <div class="slider-nav">
-          <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+      <section id="services" class="fade-in-section">
+        <h2>Our Services</h2>
+
+        <div class="property-row-wrapper">
+          <div class="category-header">
+            <h3 class="category-title">Complete Construction Projects</h3>
+            <div class="scroll-arrows">
+              <button class="scroll-btn prev" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+              <button class="scroll-btn next" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="property-scroll-container">
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=380&fit=crop" alt="House Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>House</h3>
+                <p>Expert construction for your dream home, from foundation to finish.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?w=400&h=380&fit=crop" alt="Office Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Office</h3>
+                <p>Building modern, efficient office spaces for your business.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1596642236194-3d02e6f4e8f1?w=400&h=380&fit=crop" alt="Land Plotting" loading="lazy" />
+              <div class="card-content">
+                <h3>Land Plotting</h3>
+                <p>Professional land plotting and development services.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1587022216694-8f8b8f2a1a8c?w=400&h=380&fit=crop" alt="Warehouse Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Warehouse</h3>
+                <p>Constructing large-scale, durable warehouses for your storage needs.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="project">
+              <img src="https://images.unsplash.com/photo-1564013799919-ab60b927216f?w=400&h=380&fit=crop" alt="Factory Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Factory</h3>
+                <p>Specialized construction of industrial factories and structures.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="carousel-container" id="carousel">
-        <div class="carousel-track" id="track">
-          <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&fit=crop" alt="Architecture">
-            <div class="card-overlay">
-              <h3>2D/3D Architecture</h3>
-              <p>Ultra-modern blueprints, elevation designs, and interior rendering.</p>
+        <div class="property-row-wrapper">
+          <div class="category-header">
+            <h3 class="category-title">Building Materials & Architecture</h3>
+            <div class="scroll-arrows">
+              <button class="scroll-btn prev" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+              <button class="scroll-btn next" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
             </div>
           </div>
-          <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1550137785-3bccecd1ddaa?w=600&fit=crop" alt="Precast">
-            <div class="card-overlay">
-              <h3>Precast Walls</h3>
-              <p>Heavy-duty, rapid-installation concrete boundaries for utmost security.</p>
+          <div class="property-scroll-container">
+            <div class="property-card" data-category="design">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=380&fit=crop" alt="Interior and Exterior Design" loading="lazy" />
+              <div class="card-content">
+                <h3>Interior & Exterior Design</h3>
+                <p>Services for designing the look of both the inside and outside of a building.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1587022216694-8f8b8f2a1a8c?w=600&fit=crop" alt="Warehouse">
-            <div class="card-overlay">
-              <h3>Industrial Construction</h3>
-              <p>Massive warehouses and factory units built for extreme durability.</p>
+            <div class="property-card" data-category="design">
+              <img src="https://images.unsplash.com/photo-1558692131-061051a445f1?w=400&h=380&fit=crop" alt="Architect 2D & 3D Design" loading="lazy" />
+              <div class="card-content">
+                <h3>Architecture 2D & 3D</h3>
+                <p>Creating 2D blueprints and 3D models for architectural planning.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1621295280261-2b04f14545fb?w=600&fit=crop" alt="Fencing">
-            <div class="card-overlay">
-              <h3>Wire Fencing</h3>
-              <p>Secure open agricultural and commercial plots swiftly across NCR.</p>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1593347100366-2a07c126588c?w=400&h=380&fit=crop" alt="Construction Aggregates (Rodi)" loading="lazy" />
+              <div class="card-content">
+                <h3>Construction Aggregates</h3>
+                <p>Coarse materials like gravel used in concrete (Rodi).</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=600&fit=crop" alt="Poles">
-            <div class="card-overlay">
-              <h3>Demarcation Poles</h3>
-              <p>Precision-cast RCC poles for perfect land plotting and demarcation.</p>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1582239339798-80b4377b7f97?w=400&h=380&fit=crop" alt="Crushed Stone Dust (Ret)" loading="lazy" />
+              <div class="card-content">
+                <h3>Crushed Stone Dust</h3>
+                <p>Fine stone particles, often used as a sand replacement.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=380&fit=crop" alt="Cement" loading="lazy" />
+              <div class="card-content">
+                <h3>Cement</h3>
+                <p>The primary binding agent used in concrete and mortar.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1590215781144-8e3de3e3a4e9?w=400&h=380&fit=crop" alt="TMT Bars (Saria)" loading="lazy" />
+              <div class="card-content">
+                <h3>TMT Bars (Saria)</h3>
+                <p>Steel reinforcement bars used to strengthen concrete structures.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1557026722-b79b5b03510f?w=400&h=380&fit=crop" alt="Red Bricks" loading="lazy" />
+              <div class="card-content">
+                <h3>Red Bricks</h3>
+                <p>Traditional clay bricks for robust and timeless wall construction.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1534954492199-6c3df22c53f3?w=400&h=380&fit=crop" alt="Fly Ash Bricks" loading="lazy" />
+              <div class="card-content">
+                <h3>Fly Ash Bricks</h3>
+                <p>Eco-friendly and durable fly ash bricks for modern construction.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1604108842208-5f0e3b6f1e31?w=400&h=380&fit=crop" alt="Boundary Wall" loading="lazy" />
+              <div class="card-content">
+                <h3>Precast Concrete Bricks</h3>
+                <p>Precision-molded concrete bricks for uniform and rapid construction.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1518556637482-167bb3098319?w=400&h=380&fit=crop" alt="Hollow Concrete Blocks" loading="lazy" />
+              <div class="card-content">
+                <h3>Hollow Concrete Blocks</h3>
+                <p>Lightweight, insulating blocks for efficient and cost-effective walling.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&h=380&fit=crop" alt="Solid Concrete Blocks" loading="lazy" />
+              <div class="card-content">
+                <h3>Solid Concrete Blocks</h3>
+                <p>Dense, high-strength blocks for load-bearing walls and foundations.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=400&h=380&fit=crop" alt="RCC Poles" loading="lazy" />
+              <div class="card-content">
+                <h3>RCC Poles</h3>
+                <p>Reinforced Cement Concrete poles for strong fencing and utility support.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1621295280261-2b04f14545fb?w=400&h=380&fit=crop" alt="Wire Fencing Pole" loading="lazy" />
+              <div class="card-content">
+                <h3>Wire Fencing Pole</h3>
+                <p>Durable concrete poles designed to secure wire fencing.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1550137785-3bccecd1ddaa?w=400&h=380&fit=crop" alt="RCC Boundary Wall" loading="lazy" />
+              <div class="card-content">
+                <h3>RCC Boundary Wall</h3>
+                <p>Ready-to-install precast RCC boundary walls for quick perimeters.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?w=400&h=380&fit=crop" alt="Single Panel Wall" loading="lazy" />
+              <div class="card-content">
+                <h3>Single Panel Boundary Wall</h3>
+                <p>Sleek, modern single-panel walls for a clean and secure boundary.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1600171261310-c8316eb11402?w=400&h=380&fit=crop" alt="Interlocking Tiles" loading="lazy" />
+              <div class="card-content">
+                <h3>Interlocking Tiles & Pavers</h3>
+                <p>Durable and decorative paver blocks for driveways and paths.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1603885542790-2e400494fb21?w=400&h=380&fit=crop" alt="Kerb Stone" loading="lazy" />
+              <div class="card-content">
+                <h3>Kerb Stone</h3>
+                <p>Strong kerb stones to define edges for roads, footpaths, and gardens.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1596465451965-742918dfaf62?w=400&h=380&fit=crop" alt="U Drain" loading="lazy" />
+              <div class="card-content">
+                <h3>Dish Channel or U Drain</h3>
+                <p>Precast concrete U-drains for effective and tidy water drainage.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356f12?w=400&h=380&fit=crop" alt="Rolling Shutter" loading="lazy" />
+              <div class="card-content">
+                <h3>Rolling Shutter</h3>
+                <p>Secure and durable rolling shutters for commercial shops and godowns.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" data-category="material">
+              <img src="https://images.unsplash.com/photo-1493011311409-24b5a2ae0ee2?w=400&h=380&fit=crop" alt="Gate" loading="lazy" />
+              <div class="card-content">
+                <h3>Gate Fabrication</h3>
+                <p>Custom-fabricated gates for houses, factories, and warehouses.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Vibrant Sunrise About Section -->
-    <section id="about" class="container reveal">
-      <div class="sunrise-glass">
-        <div>
-          <h2>Beyond Traditional Boundaries.</h2>
-          <p>At <strong>Kavach Builders</strong>, we abandon old, slow construction methods. We bring futuristic architecture, high-grade precast technology, and flawless execution to Delhi NCR, Sonipat, Kharkhoda, and Bahadurgarh.</p>
-          <p>From conceptualizing your commercial space in 3D to laying massive warehouse foundations, our engineering is crafted to outlast generations.</p>
-        </div>
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&fit=crop" alt="Engineering" class="about-img">
-      </div>
-    </section>
-
-    <!-- FAQ Accordions -->
-    <section id="faq" class="container reveal">
-      <div class="section-header" style="justify-content: center; margin-bottom: 4rem;">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-wrapper">
-        <details>
-          <summary>What is included in your Architectural services? <div class="indicator"><i class="fas fa-chevron-down"></i></div></summary>
-          <div class="faq-content">We provide comprehensive 2D floor plans, 3D elevation modeling, structural blueprints, and complete interior design rendering before any brick is laid.</div>
-        </details>
-        <details>
-          <summary>How fast can you install a Precast Boundary Wall? <div class="indicator"><i class="fas fa-chevron-down"></i></div></summary>
-          <div class="faq-content">Precast walls are manufactured off-site. Once the site is prepped, installation is incredibly rapid—often securing acres of land in just a few days.</div>
-        </details>
-        <details>
-          <summary>Do you construct heavy-duty Warehouses? <div class="indicator"><i class="fas fa-chevron-down"></i></div></summary>
-          <div class="faq-content">Yes, our industrial division specializes in high-load bearing factory floors, steel structural framework, and massive logistics warehouses across Kharkhoda and Bahadurgarh.</div>
-        </details>
-      </div>
-    </section>
-
-    <!-- Frosted Heavy Footer -->
-    <footer id="contact">
-      <div class="container reveal">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <a href="#home" class="nav-logo" style="margin-bottom: 1.5rem;">Kavach<span>Builders</span></a>
-            <p>Premium architectural and contracting services setting new benchmarks in structural integrity and modern design.</p>
-            
-            <!-- Social Media Icons (Footer) -->
-            <div class="f-socials">
-              <a href="#" class="color-fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="color-ig" title="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="color-yt" title="YouTube"><i class="fab fa-youtube"></i></a>
-              <a href="#" class="color-x" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-              <a href="#" class="color-threads" title="Threads"><i class="fab fa-threads"></i></a>
-              <a href="#" class="color-in" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" class="color-pi" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <section id="about" class="fade-in-section">
+        <div class="container">
+          <h2>About Kavach Builders</h2>
+          <div class="about-content">
+            <div class="about-image">
+              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&fit=crop" alt="Kavach Builders - Professional Construction Team in Sonipat" loading="lazy" />
+            </div>
+            <div class="about-text">
+              <h3>Your Premier Construction Partner in Sonipat</h3>
+              <p>
+                At Kavach Builders, we are dedicated to bringing your construction dreams to life in Sonipat, Haryana. With years of experience, we specialize in a diverse range of projects from residential homes to large-scale commercial and industrial structures.
+              </p>
+              <ul class="why-choose-us">
+                <li>
+                  <i class="fas fa-award"></i>
+                  <div>
+                    <strong>Local Expertise</strong>
+                    Deep knowledge of Sonipat's construction codes and environment.
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-handshake"></i>
+                  <div>
+                    <strong>Transparent Deals</strong>
+                    Our mission is to provide reliable, client-focused, and transparent services.
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-list-check"></i>
+                  <div>
+                    <strong>Full-Service Agency</strong>
+                    From laying the foundation to the final coat of paint, we guide you every step of the way.
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          
-          <div class="footer-col">
-            <h4>Navigation</h4>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="fade-in-section">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h4>Kavach<span>Builders</span></h4>
+            <p>
+              Your trusted partner in building your future. We specialize in all forms of construction, renovation, and design.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
             <ul>
               <li><a href="#home">Home</a></li>
-              <li><a href="#services">Our Expertise</a></li>
+              <li><a href="#services">Services</a></li>
               <li><a href="#about">About Us</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <li><a href="https://www.kavachbuilders.com" target="_blank" rel="noopener">Main Website</a></li>
             </ul>
           </div>
-
-          <div class="footer-col">
-            <h4>Contact Center</h4>
-            <ul>
-              <li><i class="fas fa-map-marker-alt" style="color:var(--accent);"></i> Sonipat, Haryana (Delhi NCR)</li>
-              <li><i class="fas fa-envelope" style="color:var(--accent);"></i> kavachbuilders@gmail.com</li>
-              <li><i class="fas fa-phone-alt" style="color:var(--accent);"></i> +91 8168759184</li>
-            </ul>
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <div class="contact-info">
+              <p><i class="fas fa-map-marker-alt"></i> Sonipat, Haryana</p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:kavachbuilders@gmail.com">kavachbuilders@gmail.com</a></p>
+              <p><i class="fas fa-phone"></i> <a href="tel:+918168759184">+91 8168759184</a></p>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
+              <a href="https://www.x.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+              <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom">
-          &copy; 2026 Kavach Builders. Engineered for Excellence.
+          &copy; 2026 Kavach Builders. All Rights Reserved.
         </div>
       </div>
     </footer>
 
-    <!-- JavaScript Interactions -->
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // 1. Dark/Light Mode Toggle
-        const themeBtn = document.getElementById("theme-toggle");
-        const sun = document.getElementById("sun-icon");
-        const moon = document.getElementById("moon-icon");
-
-        function switchTheme(theme) {
-          document.body.dataset.theme = theme;
-          localStorage.setItem("theme", theme);
-          if(theme === "light") { sun.style.display = "none"; moon.style.display = "inline-block"; }
-          else { sun.style.display = "inline-block"; moon.style.display = "none"; }
-        }
-        themeBtn.addEventListener("click", () => switchTheme(document.body.dataset.theme === "dark" ? "light" : "dark"));
-        switchTheme(localStorage.getItem("theme") || "dark");
-
-        // 2. Scroll Spy (Dynamic Underline)
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".nav-links .nav-item");
-        window.addEventListener("scroll", () => {
-          let current = "";
-          sections.forEach(sec => {
-            if (window.scrollY >= sec.offsetTop - 150) current = sec.getAttribute("id");
-          });
-          navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
-          });
-        });
-
-        // 3. Intersection Observer (Fade & Lift Reveal)
-        const reveals = document.querySelectorAll(".reveal");
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add("active");
-          });
-        }, { threshold: 0.1 });
-        reveals.forEach(rev => observer.observe(rev));
-
-        // 4. Netflix-Style Infinite Loop Carousel
-        const track = document.getElementById('track');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        const cards = Array.from(track.children);
+      document.addEventListener("DOMContentLoaded", function () {
+        // --- Mobile Menu Auto-Close Fix ---
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const navToggle = document.getElementById("nav-toggle");
         
-        // Clone for infinite illusion
-        cards.forEach(card => {
-          let clone = card.cloneNode(true);
-          track.appendChild(clone);
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                if(navToggle.checked) {
+                    navToggle.checked = false;
+                }
+            });
         });
-        
-        let scrollPos = 0;
-        const scrollAmount = 380; // Card width + gap
 
-        nextBtn.addEventListener('click', () => {
-          track.style.transition = "transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)";
-          scrollPos += scrollAmount;
-          track.style.transform = `translateX(-${scrollPos}px)`;
-          
-          // Reset logic
-          if (scrollPos >= scrollAmount * cards.length) {
-            setTimeout(() => {
-              track.style.transition = "none";
-              scrollPos = 0;
-              track.style.transform = `translateX(0)`;
-            }, 500);
+        // --- SCRIPT 1: Netflix-Style Row Scrollers ---
+        const allRowWrappers = document.querySelectorAll(".property-row-wrapper");
+
+        allRowWrappers.forEach((wrapper) => {
+          const container = wrapper.querySelector(".property-scroll-container");
+          const prevBtn = wrapper.querySelector(".scroll-btn.prev");
+          const nextBtn = wrapper.querySelector(".scroll-btn.next");
+
+          if (!container || !prevBtn || !nextBtn) return;
+
+          function updateScrollButtons() {
+            const scrollLeft = container.scrollLeft;
+            const scrollWidth = container.scrollWidth;
+            const clientWidth = container.clientWidth;
+
+            prevBtn.disabled = scrollLeft <= 0;
+            // Add a small buffer (5px) for scroll precision issues
+            nextBtn.disabled = scrollLeft + clientWidth >= scrollWidth - 5;
           }
-        });
 
-        prevBtn.addEventListener('click', () => {
-          if (scrollPos === 0) {
-            track.style.transition = "none";
-            scrollPos = scrollAmount * cards.length;
-            track.style.transform = `translateX(-${scrollPos}px)`;
-            // Force reflow
-            void track.offsetWidth;
-          }
-          track.style.transition = "transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)";
-          scrollPos -= scrollAmount;
-          track.style.transform = `translateX(-${scrollPos}px)`;
-        });
-
-        // 5. Dynamic Colored Starfield Canvas (Shooting stars removed)
-        const canvas = document.getElementById('starfield');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        const stars = [];
-        const colors = ['#ffffff', '#F5A623', '#0088cc'];
-
-        for (let i = 0; i < 150; i++) {
-          stars.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            r: Math.random() * 1.5,
-            c: colors[Math.floor(Math.random() * colors.length)],
-            dy: Math.random() * 0.3
+          nextBtn.addEventListener("click", () => {
+            const scrollAmount = container.clientWidth * 0.8;
+            container.scrollBy({ left: scrollAmount, behavior: "smooth" });
           });
+
+          prevBtn.addEventListener("click", () => {
+            const scrollAmount = container.clientWidth * 0.8;
+            container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+          });
+
+          container.addEventListener("scroll", updateScrollButtons, { passive: true });
+          new ResizeObserver(updateScrollButtons).observe(container);
+          updateScrollButtons(); 
+        });
+
+        // --- SCRIPT 2: Fade-in Sections on Scroll ---
+        const sections = document.querySelectorAll(".fade-in-section");
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+
+        // --- SCRIPT 3: Dark/Light Mode Toggle ---
+        const allToggleBtns = document.querySelectorAll(".theme-toggle-btn");
+        const body = document.body;
+        const sunIcons = document.querySelectorAll(".icon-sun");
+        const moonIcons = document.querySelectorAll(".icon-moon");
+
+        function applyTheme(theme) {
+          body.dataset.theme = theme;
+          localStorage.setItem("kavachBuilderTheme", theme); 
+
+          if (theme === "light") {
+            sunIcons.forEach((i) => (i.style.display = "none"));
+            moonIcons.forEach((i) => (i.style.display = "inline-block"));
+          } else {
+            sunIcons.forEach((i) => (i.style.display = "inline-block"));
+            moonIcons.forEach((i) => (i.style.display = "none"));
+          }
         }
 
-        function drawStars() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          stars.forEach(star => {
-            ctx.beginPath();
-            ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-            ctx.fillStyle = star.c;
-            ctx.fill();
-            star.y -= star.dy;
-            if (star.y < 0) star.y = canvas.height;
+        allToggleBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            let currentTheme = body.dataset.theme;
+            if (!currentTheme || currentTheme === "dark") {
+              applyTheme("light");
+            } else {
+              applyTheme("dark");
+            }
           });
-          requestAnimationFrame(drawStars);
-        }
-        drawStars();
-
-        window.addEventListener('resize', () => {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
         });
+
+        // On Load: Apply saved theme or default
+        const savedTheme = localStorage.getItem("kavachBuilderTheme");
+        if (savedTheme) {
+          applyTheme(savedTheme);
+        } else {
+          applyTheme("dark");
+          body.dataset.theme = "dark"; 
+        }
       });
     </script>
   </body>
