@@ -11,7 +11,7 @@
     />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-    <!-- Google Fonts: Roboto (Google's Standard Font) -->
+    <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -28,119 +28,144 @@
         "email": "kavachbuilders@gmail.com",
         "areaServed": [
           {"@type": "City", "name": "Delhi NCR"},
-          {"@type": "City", "name": "Sonipat"}
+          {"@type": "City", "name": "Sonipat"},
+          {"@type": "City", "name": "Kharkhoda"},
+          {"@type": "City", "name": "Bahadurgarh"}
         ]
       }
     </script>
 
     <style>
-      /* --- Global Variables --- */
+      /* --- Global Variables (Enhanced Premium Color Palette) --- */
       :root {
-        --primary-color: #0d2f4b;
-        --accent-color: #ffa500;
-        --background-color: #000000;
-        --surface-color: #121212;
-        --text-color: #cccccc;
+        /* DARK MODE (Refined Midnight & Amber) */
+        --primary-color: #0f2027; /* Deep elegant blue/black */
+        --accent-color: #F5A623; /* Premium Gold/Amber */
+        --accent-hover: #D08C1D;
+        --background-color: #0a0e17;
+        --surface-color: #131b2c;
+        --surface-hover: #1b263b;
+        --text-color: #cbd5e1;
         --heading-color: #ffffff;
         --white-color: #ffffff;
         
-        --navbar-bg: rgba(15, 15, 15, 0.85);
-        --mobile-menu-bg: rgba(15, 15, 15, 0.98);
-        --footer-bg: rgba(10, 10, 10, 0.95);
-        --border-color: rgba(255, 255, 255, 0.1);
-        --glass-bg: rgba(25, 25, 25, 0.6);
-        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        --navbar-bg: rgba(19, 27, 44, 0.75);
+        --mobile-menu-bg: rgba(19, 27, 44, 0.98);
+        --footer-bg: #0d131f;
+        --border-color: rgba(255, 255, 255, 0.08);
+        --glass-bg: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+        --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        --glow-shadow: 0 0 20px rgba(245, 166, 35, 0.2);
       }
 
       body[data-theme="light"] {
-        --background-color: #f5f7fa;
+        /* LIGHT MODE (Clean, Crisp, Professional) */
+        --primary-color: #1e3a8a;
+        --accent-color: #F5A623;
+        --accent-hover: #D08C1D;
+        --background-color: #f8fafc;
         --surface-color: #ffffff;
-        --text-color: #444444;
-        --heading-color: #222222;
+        --surface-hover: #f1f5f9;
+        --text-color: #475569;
+        --heading-color: #0f172a;
         --white-color: #ffffff;
         
-        --navbar-bg: rgba(255, 255, 255, 0.9);
+        --navbar-bg: rgba(255, 255, 255, 0.85);
         --mobile-menu-bg: rgba(255, 255, 255, 0.98);
-        --footer-bg: #e9ecef;
+        --footer-bg: #e2e8f0;
         --border-color: rgba(0, 0, 0, 0.08);
-        --glass-bg: rgba(255, 255, 255, 0.7);
-        --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --glass-bg: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.4));
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --glow-shadow: 0 0 20px rgba(245, 166, 35, 0.15);
       }
 
       body[data-theme="light"] .stars { display: none; }
 
-      html { scroll-behavior: smooth; }
+      html { scroll-behavior: smooth; overflow-x: hidden; }
 
       body {
         margin: 0;
         font-family: 'Roboto', sans-serif;
         background-color: var(--background-color);
         color: var(--text-color);
-        line-height: 1.6;
-        padding-top: 90px;
-        transition: all 0.3s ease;
+        line-height: 1.7;
+        /* Padding top removed, handled by section scroll-margin */
+        transition: background-color 0.4s ease, color 0.4s ease;
+        overflow-x: hidden;
       }
 
       * { box-sizing: border-box; }
-      section { padding: 5rem 0; }
+      
+      /* Bug Fix: Prevents navbar from hiding headings */
+      section, footer { 
+        padding: 5rem 0; 
+        scroll-margin-top: 100px; 
+      }
       
       .container { max-width: 1250px; margin: 0 auto; padding: 0 1.5rem; }
 
-      /* Headings scaling dynamically for single-line fit on mobile */
       h1, h2, h3 { color: var(--heading-color); font-weight: 700; margin-top: 0; }
       
       .single-line-heading {
         text-align: center;
-        margin-bottom: 3rem;
-        /* clamp ensures it doesn't break into 2 lines on small screens */
-        font-size: clamp(1.1rem, 4vw, 2.5rem); 
+        margin-bottom: 3.5rem;
+        font-size: clamp(1.2rem, 4vw, 2.8rem); 
         white-space: nowrap;
         background: linear-gradient(120deg, var(--accent-color), var(--heading-color));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        letter-spacing: -0.5px;
       }
 
-      /* --- Brand Colors --- */
+      /* --- Premium Social Colors --- */
       .color-fb { color: #1877F2 !important; }
-      .color-ig { background: -webkit-linear-gradient(#f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .color-ig { background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
       .color-x { color: var(--heading-color) !important; }
       .color-in { color: #0077b5 !important; }
       .color-yt { color: #FF0000 !important; }
       .color-wa { color: #25D366 !important; }
       .color-tg { color: #0088cc !important; }
-      .color-th { color: var(--heading-color) !important; }
       .color-pin { color: #E60023 !important; }
 
-      /* --- Modern Navbar --- */
+      /* --- Floating Rounded Navbar (Perfectly separated from edges) --- */
       .navbar {
         display: grid;
         grid-template-columns: auto 1fr auto;
         align-items: center;
         background-color: var(--navbar-bg);
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
-        border-bottom: 1px solid var(--border-color);
-        padding: 0.8rem 2rem;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border-color);
+        padding: 0.7rem 1.5rem;
         position: fixed;
-        top: 0; left: 0; width: 100%;
+        top: 20px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 96%;
+        max-width: 1300px;
+        border-radius: 50px; /* Fully rounded search-bar style */
         z-index: 1000;
-        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .nav-logo {
         color: var(--heading-color);
         font-weight: 900;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         text-decoration: none;
         letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
       .nav-logo span { color: var(--accent-color); }
 
-      /* Center Links with Scroll Spy */
+      /* Centered Links including Kavach Estate */
       .nav-links {
         display: flex;
         justify-content: center;
-        gap: 2.5rem;
+        gap: 2rem;
         list-style: none;
         margin: 0; padding: 0;
       }
@@ -148,13 +173,12 @@
         color: var(--heading-color);
         text-decoration: none;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 0.95rem;
         position: relative;
-        padding-bottom: 5px;
+        padding: 0.5rem 0;
         transition: color 0.3s ease;
       }
       
-      /* Orange Underline effect */
       .nav-links a::after {
         content: '';
         position: absolute;
@@ -177,11 +201,11 @@
       .nav-right {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.8rem;
       }
 
       .round-icon-btn {
-        width: 40px; height: 40px;
+        width: 38px; height: 38px;
         border-radius: 50%;
         display: flex; justify-content: center; align-items: center;
         background-color: var(--surface-color);
@@ -189,11 +213,11 @@
         color: var(--heading-color);
         text-decoration: none;
         cursor: pointer;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         transition: all 0.3s ease;
       }
-      .round-icon-btn:hover { background-color: var(--accent-color); color: #fff !important; border-color: var(--accent-color); }
-      .call-btn { background-color: var(--accent-color); color: #fff; border: none; }
+      .round-icon-btn:hover { background-color: var(--accent-color); color: #fff !important; border-color: var(--accent-color); transform: translateY(-2px); }
+      .call-btn { background-color: var(--accent-color); color: #fff; border: none; box-shadow: var(--glow-shadow); }
 
       .nav-socials {
         display: flex;
@@ -204,63 +228,73 @@
         padding-left: 1rem;
       }
       .nav-socials a { font-size: 1.1rem; transition: transform 0.3s; }
-      .nav-socials a:hover { transform: translateY(-3px) scale(1.15); }
+      .nav-socials a:hover { transform: translateY(-3px) scale(1.15); filter: brightness(1.2); }
 
       /* Mobile elements */
-      .mobile-toggle { display: none; color: var(--heading-color); font-size: 1.5rem; cursor: pointer; }
+      .mobile-toggle { display: none; color: var(--heading-color); font-size: 1.5rem; cursor: pointer; transition: 0.3s; }
       #menu-checkbox { display: none; }
 
       /* --- Hero Section --- */
       #home {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
-        text-align: center; min-height: 70vh; padding: 2rem 1rem;
+        text-align: center; min-height: 80vh; padding: 8rem 1rem 4rem 1rem;
+        position: relative;
       }
 
       .hero-logo img {
-        height: 160px; width: 160px; border-radius: 50%; object-fit: cover;
-        box-shadow: 0 0 25px rgba(255, 165, 0, 0.4);
-        margin-bottom: 1.5rem;
+        height: 170px; width: 170px; border-radius: 50%; object-fit: cover;
+        box-shadow: var(--glow-shadow);
+        margin-bottom: 1.8rem;
+        border: 3px solid rgba(245, 166, 35, 0.3);
+        animation: float 6s ease-in-out infinite;
       }
 
-      #home h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 0.5rem; }
-      .tagline { font-size: 1.2rem; color: var(--accent-color); font-weight: 500; margin-bottom: 2.5rem; }
+      #home h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 0.5rem; letter-spacing: -1px; }
+      .tagline { font-size: 1.25rem; color: var(--accent-color); font-weight: 500; margin-bottom: 3rem; letter-spacing: 0.5px; }
 
-      /* Single line mobile buttons */
+      /* Bug Fix: Strictly Single Line Mobile Buttons */
       .cta-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1rem;
+        width: 100%;
+        max-width: 500px;
+        flex-wrap: nowrap; /* Forces single line */
       }
       
       .pill-btn {
         background-color: transparent;
         border: 2px solid var(--accent-color);
         color: var(--heading-color);
-        padding: 0.8rem 2rem;
+        padding: 0.8rem 1.8rem;
         border-radius: 50px;
         text-decoration: none;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: clamp(0.9rem, 3vw, 1.1rem); /* Scales down slightly if space is tight */
         transition: all 0.3s;
+        white-space: nowrap;
+        flex-grow: 1;
+        text-align: center;
       }
-      .pill-btn:hover { background-color: var(--accent-color); color: #fff; }
+      .pill-btn:hover { background-color: var(--accent-color); color: #fff; box-shadow: var(--glow-shadow); transform: translateY(-3px); }
       
       .social-circle {
         width: 55px; height: 55px; border-radius: 50%;
         display: flex; justify-content: center; align-items: center;
-        color: #fff !important; font-size: 1.8rem; text-decoration: none;
-        transition: transform 0.3s, box-shadow 0.3s;
+        color: #fff !important; font-size: 1.6rem; text-decoration: none;
+        transition: all 0.3s ease;
+        flex-shrink: 0; /* Prevents circles from squishing */
       }
       .wa-bg { background-color: #25D366; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); }
       .tg-bg { background-color: #0088cc; box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3); }
-      .social-circle:hover { transform: translateY(-5px); }
+      .social-circle:hover { transform: translateY(-5px) scale(1.05); }
 
       /* --- Modern Bento Grid Services --- */
       .bento-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 280px;
+        grid-auto-rows: 300px;
         gap: 1.5rem;
       }
 
@@ -269,144 +303,183 @@
         border-radius: 24px;
         overflow: hidden;
         box-shadow: var(--card-shadow);
-        transition: transform 0.4s ease;
+        transition: all 0.4s ease;
         background-color: var(--surface-color);
         border: 1px solid var(--border-color);
+        /* Bug fix for Safari overflow rendering */
+        -webkit-mask-image: -webkit-radial-gradient(white, black); 
       }
-      .bento-card:hover { transform: translateY(-8px); }
+      .bento-card:hover { transform: translateY(-10px); border-color: var(--accent-color); box-shadow: var(--glow-shadow); }
 
-      /* Making grid dynamic */
       .card-wide { grid-column: span 2; }
       .card-tall { grid-row: span 2; }
 
       .bento-card img {
         width: 100%; height: 100%; object-fit: cover;
-        transition: transform 0.6s ease;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      .bento-card:hover img { transform: scale(1.1); }
+      .bento-card:hover img { transform: scale(1.08); }
 
       .bento-content {
         position: absolute; bottom: 0; left: 0; width: 100%;
-        padding: 2rem 1.5rem 1.5rem 1.5rem;
-        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%);
         color: #fff;
         display: flex; flex-direction: column; justify-content: flex-end;
+        transition: padding 0.3s ease;
       }
-      .bento-content h3 { color: #fff; font-size: 1.3rem; margin-bottom: 0.3rem; }
-      .bento-content p { font-size: 0.9rem; margin: 0; color: #ddd; display: none; }
-      .bento-card:hover .bento-content p { display: block; animation: fadeIn 0.4s; }
+      .bento-content h3 { color: #fff; font-size: 1.35rem; margin-bottom: 0.4rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+      .bento-content p { font-size: 0.95rem; margin: 0; color: #e2e8f0; display: none; line-height: 1.5; }
+      .bento-card:hover .bento-content p { display: block; animation: slideUp 0.4s forwards; }
 
-      /* --- Modern About Us (Glassmorphism & Overlay) --- */
+      /* --- Enhanced Glassmorphism About Us --- */
       .about-modern {
         position: relative;
-        border-radius: 30px;
+        border-radius: 32px;
         overflow: hidden;
         display: flex;
         align-items: center;
-        min-height: 500px;
+        min-height: 550px;
         box-shadow: var(--card-shadow);
+        border: 1px solid var(--border-color);
       }
       
       .about-bg-img {
         position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        object-fit: cover; z-index: 1; filter: brightness(0.6);
+        object-fit: cover; z-index: 1; filter: brightness(0.4);
+        transition: filter 0.5s ease;
       }
-      body[data-theme="light"] .about-bg-img { filter: brightness(0.85); }
+      .about-modern:hover .about-bg-img { filter: brightness(0.5); }
+      body[data-theme="light"] .about-bg-img { filter: brightness(0.8); }
 
       .about-glass-box {
         position: relative;
         z-index: 2;
         background: var(--glass-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        margin: 3rem;
-        padding: 3rem;
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.2);
-        max-width: 600px;
-        color: var(--heading-color);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        margin: 4rem;
+        padding: 3.5rem;
+        border-radius: 24px;
+        border: 1px solid rgba(255,255,255,0.15);
+        max-width: 650px;
+        color: var(--white-color); /* Kept white for contrast against dark img */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
       }
+      body[data-theme="light"] .about-glass-box { color: var(--heading-color); border: 1px solid rgba(0,0,0,0.1); }
       
-      .about-glass-box h3 { color: var(--accent-color); font-size: 2rem; margin-bottom: 1rem; }
-      .about-glass-box p { font-size: 1.05rem; font-weight: 400; margin-bottom: 1rem; }
+      .about-glass-box h3 { color: var(--accent-color); font-size: 2.2rem; margin-bottom: 1.2rem; }
+      .about-glass-box p { font-size: 1.1rem; font-weight: 400; margin-bottom: 1.2rem; line-height: 1.8; }
 
       /* --- FAQ Section --- */
-      .faq-wrapper { max-width: 850px; margin: 0 auto; }
+      .faq-wrapper { max-width: 900px; margin: 0 auto; }
       
       details {
         background-color: var(--surface-color);
         border: 1px solid var(--border-color);
-        border-radius: 12px;
-        margin-bottom: 1rem;
-        padding: 1rem 1.5rem;
+        border-radius: 16px;
+        margin-bottom: 1.2rem;
+        padding: 1.2rem 1.8rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
       }
+      details:hover { border-color: rgba(245, 166, 35, 0.5); }
+      details[open] { border-color: var(--accent-color); box-shadow: var(--glow-shadow); }
+
       summary {
-        font-weight: 500; font-size: 1.1rem; color: var(--heading-color);
+        font-weight: 600; font-size: 1.15rem; color: var(--heading-color);
         cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
       }
       summary::-webkit-details-marker { display: none; }
-      summary::after { content: '\f067'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--accent-color); }
-      details[open] summary::after { content: '\f068'; }
-      .faq-text { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: 0.95rem; }
+      summary::after { 
+        content: '\f067'; font-family: 'Font Awesome 6 Free'; font-weight: 900; 
+        color: var(--accent-color); transition: transform 0.3s ease;
+        background: var(--background-color); padding: 8px 10px; border-radius: 50%; font-size: 0.9rem;
+      }
+      details[open] summary::after { content: '\f068'; transform: rotate(180deg); }
+      .faq-text { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--border-color); font-size: 1rem; color: var(--text-color); line-height: 1.7; }
 
       /* --- Footer --- */
-      footer { background-color: var(--footer-bg); padding: 4rem 0 2rem 0; border-top: 1px solid var(--border-color); }
-      .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
-      .footer-col h4 { font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--heading-color); }
-      .footer-col p, .footer-col ul { font-size: 0.95rem; }
+      footer { background-color: var(--footer-bg); padding: 5rem 0 2rem 0; border-top: 1px solid var(--border-color); }
+      .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+      .footer-col h4 { font-size: 1.25rem; margin-bottom: 1.8rem; color: var(--heading-color); position: relative; padding-bottom: 0.5rem; }
+      .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background: var(--accent-color); border-radius: 2px; }
+      .footer-col p, .footer-col ul { font-size: 1rem; }
       .footer-col ul { list-style: none; padding: 0; }
-      .footer-col li { margin-bottom: 0.8rem; }
+      .footer-col li { margin-bottom: 1rem; display: flex; gap: 10px; }
+      .footer-col li i { color: var(--accent-color); margin-top: 5px; }
       .footer-col a { color: var(--text-color); text-decoration: none; transition: 0.3s; }
-      .footer-col a:hover { color: var(--accent-color); }
+      .footer-col a:hover { color: var(--accent-color); padding-left: 5px; }
       
       .footer-social-grid {
-        display: flex; flex-wrap: wrap; gap: 1rem; font-size: 1.5rem; margin-top: 1rem;
+        display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: 1.4rem; margin-top: 1.5rem;
       }
+      .footer-bottom { text-align: center; border-top: 1px solid var(--border-color); padding-top: 1.5rem; font-size: 0.9rem; }
 
-      /* Background Stars */
-      .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; background: #000; }
-      .stars::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background-image: radial-gradient(1.5px 1.5px at 20px 30px, #fff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 40px 70px, #fff, rgba(0,0,0,0)); background-size: 150px 150px; opacity: 0.4; }
+      /* Background Stars & Animations */
+      .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; background: var(--primary-color); }
+      .stars::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background-image: radial-gradient(1.5px 1.5px at 20px 30px, rgba(255,255,255,0.8), rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 40px 70px, rgba(255,255,255,0.6), rgba(0,0,0,0)); background-size: 150px 150px; opacity: 0.3; animation: starDrift 100s linear infinite; }
 
-      @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+      @keyframes slideUp { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+      @keyframes float { 0% {transform: translateY(0px);} 50% {transform: translateY(-15px);} 100% {transform: translateY(0px);} }
+      @keyframes starDrift { from {background-position: 0 0;} to {background-position: -1000px 1000px;} }
 
       /* --- RESPONSIVE MOBILE VIEW --- */
-      @media (max-width: 992px) {
-        /* Mobile Navbar Layout */
-        .navbar { grid-template-columns: auto 1fr auto; padding: 0.6rem 1.5rem; }
-        .nav-links, .nav-socials { display: none; }
-        .mobile-toggle { display: block; margin-left: 1rem; }
-        
-        .nav-right { flex-direction: row; gap: 0.8rem; justify-content: flex-end; width: 100%; }
+      @media (max-width: 1024px) {
+        .navbar { width: 92%; padding: 0.7rem 1.2rem; top: 15px; }
+        .nav-links { gap: 1.2rem; }
+        .nav-socials { display: none; } /* Hide socials on tablet to save space */
+      }
 
-        /* Dropdown Menu */
+      @media (max-width: 850px) {
+        /* Mobile Navbar Layout fixed */
+        .navbar { grid-template-columns: auto 1fr auto; width: 95%; top: 10px; border-radius: 20px; }
+        .nav-links { display: none; }
+        .mobile-toggle { display: block; margin-left: 0.5rem; }
+        
+        .nav-right { flex-direction: row; gap: 0.6rem; justify-content: flex-end; width: 100%; }
+
+        /* Dropdown Menu attached nicely under rounded navbar */
         .mobile-dropdown {
           display: none; flex-direction: column; position: absolute;
-          top: 100%; left: 0; width: 100%; background-color: var(--mobile-menu-bg);
-          border-bottom: 1px solid var(--border-color); padding: 1.5rem;
+          top: calc(100% + 10px); left: 0; width: 100%; background-color: var(--mobile-menu-bg);
+          border: 1px solid var(--border-color); padding: 1.5rem;
+          border-radius: 20px;
           box-shadow: var(--card-shadow);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
         }
-        #menu-checkbox:checked ~ .mobile-dropdown { display: flex; }
+        #menu-checkbox:checked ~ .mobile-dropdown { display: flex; animation: slideUp 0.3s ease; }
         
         .mobile-dropdown .nav-links { display: flex; flex-direction: column; gap: 1rem; text-align: center; margin-bottom: 1.5rem; }
-        .mobile-dropdown .nav-socials { display: flex; justify-content: center; border: none; padding: 0; }
-
-        /* Single line mobile hero buttons */
-        .cta-wrapper { flex-wrap: nowrap; gap: 0.8rem; width: 100%; overflow-x: visible; }
-        .pill-btn { padding: 0.7rem 1.2rem; font-size: 0.95rem; white-space: nowrap; flex-shrink: 0; }
-        .social-circle { width: 45px; height: 45px; font-size: 1.4rem; flex-shrink: 0; }
+        .mobile-dropdown .nav-socials { display: flex; justify-content: center; border: none; padding: 0; gap: 1rem; flex-wrap: wrap; }
+        .mobile-dropdown .nav-socials a { font-size: 1.4rem; }
 
         /* Bento Grid Mobile */
-        .bento-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+        .bento-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
         .card-wide, .card-tall { grid-column: span 1; grid-row: span 1; }
-        .bento-content p { display: block; }
+        .bento-content p { display: block; } /* Always show text on mobile */
 
         /* About Us Mobile */
-        .about-glass-box { margin: 1.5rem; padding: 2rem; }
+        .about-glass-box { margin: 1.5rem; padding: 2rem; border-radius: 20px; }
+        .about-modern { min-height: auto; }
       }
 
       @media (max-width: 480px) {
         .nav-logo { font-size: 1.2rem; }
-        .round-icon-btn { width: 35px; height: 35px; font-size: 1rem; }
+        .round-icon-btn { width: 36px; height: 36px; font-size: 1rem; }
+        .cta-wrapper { gap: 0.6rem; }
+        .social-circle { width: 48px; height: 48px; font-size: 1.3rem; }
+        .pill-btn { padding: 0.7rem 1.2rem; }
+        .about-glass-box h3 { font-size: 1.8rem; }
+        .single-line-heading { margin-bottom: 2rem; }
+        section { padding: 4rem 0; }
+      }
+
+      @media (max-width: 350px) {
+        .cta-wrapper { gap: 0.4rem; }
+        .pill-btn { padding: 0.6rem 0.8rem; font-size: 0.85rem; }
+        .social-circle { width: 42px; height: 42px; font-size: 1.2rem; }
       }
     </style>
   </head>
@@ -416,21 +489,25 @@
     <!-- Mobile Menu Checkbox -->
     <input type="checkbox" id="menu-checkbox" />
 
-    <!-- Modern Top Navbar -->
+    <!-- Enhanced Floating Navbar -->
     <nav class="navbar">
-      <!-- 1. Logo (Left) -->
-      <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
+      <!-- 1. Logo -->
+      <a href="#home" class="nav-logo">
+        <img src="/IMG_1726.png" alt="Logo" style="width:30px; height:30px; border-radius:50%; object-fit:cover;" onerror="this.style.display='none'">
+        Kavach<span>Builders</span>
+      </a>
 
-      <!-- 2. Centered Links (Desktop only) -->
+      <!-- 2. Centered Links (Kavach Estate added as requested) -->
       <ul class="nav-links">
-        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="https://www.kavachestate.com" target="_blank" class="nav-item">Kavach Estate</a></li>
+        <li><a href="#home" class="nav-item active">Home</a></li>
         <li><a href="#services" class="nav-item">Service</a></li>
         <li><a href="#about" class="nav-item">About Us</a></li>
         <li><a href="#contact" class="nav-item">Contact Us</a></li>
         <li><a href="#faq" class="nav-item">FAQ</a></li>
       </ul>
 
-      <!-- 3. Right Actions (Call, Theme, Socials, Hamburger) -->
+      <!-- 3. Right Actions (Call, Theme, Mobile Toggle) -->
       <div class="nav-right">
         <a href="tel:+918168759184" class="round-icon-btn call-btn" title="Call Now"><i class="fas fa-phone-alt"></i></a>
         <button class="round-icon-btn theme-btn" title="Toggle Theme">
@@ -450,12 +527,14 @@
           <a href="#" class="color-yt"><i class="fab fa-youtube"></i></a>
         </div>
 
-        <label for="menu-checkbox" class="mobile-toggle"><i class="fas fa-bars"></i></label>
+        <!-- Mobile Menu Icon (Changes to 'X' via JS) -->
+        <label for="menu-checkbox" class="mobile-toggle" id="menu-icon"><i class="fas fa-bars"></i></label>
       </div>
 
       <!-- Mobile Dropdown Menu -->
       <div class="mobile-dropdown">
         <ul class="nav-links">
+          <li><a href="https://www.kavachestate.com" target="_blank" class="nav-item">Kavach Estate</a></li>
           <li><a href="#home" class="nav-item">Home</a></li>
           <li><a href="#services" class="nav-item">Service</a></li>
           <li><a href="#about" class="nav-item">About Us</a></li>
@@ -466,8 +545,11 @@
           <a href="#" class="color-fb"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="color-ig"><i class="fab fa-instagram"></i></a>
           <a href="#" class="color-wa"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="color-yt"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="color-tg"><i class="fab fa-telegram-plane"></i></a>
           <a href="#" class="color-x"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="color-in"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="color-pin"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="color-yt"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </nav>
@@ -482,7 +564,7 @@
         <h1>Kavach Builders</h1>
         <p class="tagline">Leading Architects & Contractors in Delhi NCR</p>
 
-        <!-- Single Line Mobile Buttons -->
+        <!-- Single Line Mobile Buttons (Bug Fixed for Overflow) -->
         <div class="cta-wrapper">
           <a href="https://wa.me/918168759184" class="social-circle wa-bg"><i class="fab fa-whatsapp"></i></a>
           <a href="https://t.me/yourtelegram" class="social-circle tg-bg"><i class="fab fa-telegram-plane"></i></a>
@@ -497,7 +579,7 @@
           <h2 class="single-line-heading">Our Specialized Services</h2>
           
           <div class="bento-grid">
-            <!-- Added Architecture (Wide Card) -->
+            <!-- Architecture (Wide Card) -->
             <div class="bento-card card-wide">
               <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&fit=crop" alt="Architect 2D/3D">
               <div class="bento-content">
@@ -541,7 +623,7 @@
         </div>
       </section>
 
-      <!-- Modern Overlapping About Us -->
+      <!-- Enhanced About Us -->
       <section id="about">
         <div class="container">
           <div class="about-modern">
@@ -558,20 +640,19 @@
       <!-- FAQ Section -->
       <section id="faq">
         <div class="container">
-          <!-- Single Line Heading -->
           <h2 class="single-line-heading">Frequently Asked Questions</h2>
           <div class="faq-wrapper">
             <details>
               <summary>Do you provide 2D/3D Architecture and Interior Design?</summary>
-              <div class="faq-text">Yes, we provide end-to-end architectural planning, 3D modeling, and interior design services before starting the construction.</div>
+              <div class="faq-text">Yes, we provide end-to-end architectural planning, 3D modeling, and interior design services before starting the construction, ensuring you visualize the final outcome accurately.</div>
             </details>
             <details>
               <summary>Which cities do you actively serve?</summary>
-              <div class="faq-text">We primarily operate across the entire Delhi NCR region, with major hubs in Sonipat, Kharkhoda, and Bahadurgarh.</div>
+              <div class="faq-text">We primarily operate across the entire Delhi NCR region, with major specialized hubs in Sonipat, Kharkhoda, and Bahadurgarh for both commercial and agricultural projects.</div>
             </details>
             <details>
               <summary>Why choose Precast Boundary Walls?</summary>
-              <div class="faq-text">They are highly durable, cost-effective, and take significantly less time to install compared to traditional brick-and-mortar walls.</div>
+              <div class="faq-text">Precast boundary walls are highly durable, cost-effective, and take significantly less time to install compared to traditional brick-and-mortar walls. They provide instant security to your plots.</div>
             </details>
           </div>
         </div>
@@ -584,8 +665,8 @@
         <div class="footer-grid">
           <div class="footer-col">
             <h4>Kavach Builders</h4>
-            <p>Your one-stop destination for Architecture, Precast Walls, and Industrial Construction in Delhi NCR.</p>
-            <!-- Full Social Media Re-added in Footer -->
+            <p>Your premium destination for Architecture, Precast Walls, Fencing, and Industrial Construction in Delhi NCR.</p>
+            <!-- Full Social Media in Footer -->
             <div class="footer-social-grid">
               <a href="#" class="color-fb"><i class="fab fa-facebook-f"></i></a>
               <a href="#" class="color-ig"><i class="fab fa-instagram"></i></a>
@@ -601,10 +682,10 @@
           <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="#services"><i class="fas fa-chevron-right"></i> Our Services</a></li>
+              <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQs</a></li>
             </ul>
           </div>
 
@@ -612,10 +693,13 @@
             <h4>Contact Info</h4>
             <ul>
               <li><i class="fas fa-map-marker-alt"></i> Sonipat, Haryana (Delhi NCR)</li>
-              <li><i class="fas fa-envelope"></i> kavachbuilders@gmail.com</li>
-              <li><i class="fas fa-phone"></i> +91 8168759184</li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:kavachbuilders@gmail.com">kavachbuilders@gmail.com</a></li>
+              <li><i class="fas fa-phone-alt"></i> <a href="tel:+918168759184">+91 8168759184</a></li>
             </ul>
           </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2026 Kavach Builders. All Rights Reserved. Designed for premium performance.
         </div>
       </div>
     </footer>
@@ -647,35 +731,59 @@
         });
         applyTheme(localStorage.getItem("theme") || "dark");
 
-        // --- Mobile Menu Auto Close ---
+        // --- Mobile Menu UX Enhancements ---
         const menuCheckbox = document.getElementById("menu-checkbox");
-        document.querySelectorAll(".mobile-dropdown .nav-item").forEach(link => {
-          link.addEventListener("click", () => { menuCheckbox.checked = false; });
+        const menuIcon = document.querySelector("#menu-icon i");
+
+        // Change hamburger to 'X' on toggle
+        menuCheckbox.addEventListener("change", function() {
+          if(this.checked) {
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-times");
+          } else {
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+          }
         });
 
-        // --- Scroll Spy Logic (Orange Underline Shift) ---
-        const sections = document.querySelectorAll("section");
+        // Close menu on link click
+        document.querySelectorAll(".mobile-dropdown .nav-item").forEach(link => {
+          link.addEventListener("click", () => { 
+            menuCheckbox.checked = false; 
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+          });
+        });
+
+        // --- Scroll Spy Logic (Fixed to track all sections including footer) ---
+        const targets = document.querySelectorAll("section, footer");
         const navLinks = document.querySelectorAll(".nav-links .nav-item");
 
         window.addEventListener("scroll", () => {
           let current = "";
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            // Subtract navbar height (90px) + some buffer
-            if (scrollY >= sectionTop - 150) {
-              current = section.getAttribute("id");
+          const scrollPosition = window.scrollY + 150; // Buffer for floating nav
+
+          targets.forEach((target) => {
+            const sectionTop = target.offsetTop;
+            const sectionHeight = target.clientHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+              current = target.getAttribute("id");
             }
           });
 
-          // Fallback to contact if reached absolute bottom
+          // Absolute bottom fallback for Contact
           if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
             current = "contact";
           }
 
           navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-              link.classList.add("active");
+            // Ignore external links in scroll spy
+            if (link.getAttribute("href").startsWith("#")) {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+              }
             }
           });
         });
