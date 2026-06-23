@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6.5.2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <!-- Schema for SEO -->
@@ -103,7 +104,7 @@
         background: var(--glass-bg);
         -webkit-backdrop-filter: var(--nav-blur); backdrop-filter: var(--nav-blur);
         border-bottom: 1px solid var(--glass-border);
-        border-radius: 0 0 16px 16px; /* 16px bottom radius */
+        border-radius: 0 0 16px 16px; 
         padding: 0.6rem 2rem;
         display: flex; justify-content: space-between; align-items: center;
         box-shadow: var(--glass-shadow);
@@ -132,33 +133,30 @@
       .nav-right { display: flex; align-items: center; gap: 1rem; }
       
       .nav-socials { display: flex; align-items: center; gap: 0.8rem; border-left: 1px solid var(--glass-border); padding-left: 1.2rem; }
-      .nav-socials a { font-size: 1.2rem; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: inline-block; }
-      .nav-socials a:hover { transform: scale(1.25); } /* Pure scale hover */
+      .nav-socials a { font-size: 1.2rem; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: inline-block; text-decoration: none; }
+      .nav-socials a:hover { transform: scale(1.25); } 
       
+      /* Social Colors */
       .color-fb { color: #1877F2; }
       .color-ig { background: -webkit-linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-      .color-x { color: var(--heading-color); }
-      .color-in { color: #0077b5; }
       .color-yt { color: #FF0000; }
-      .color-wa { color: #25D366; }
-      .color-tg { color: #0088cc; }
+      .color-x { color: var(--heading-color); }
+      .color-threads { color: var(--heading-color); }
+      .color-in { color: #0077b5; }
+      .color-pi { color: #E60023; }
 
-      .theme-btn {
+      .theme-btn, .call-btn {
         background: transparent; border: 1px solid var(--glass-border); color: var(--heading-color);
         width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center;
-        backdrop-filter: blur(5px); transition: transform 0.3s, background 0.3s;
+        backdrop-filter: blur(5px); transition: transform 0.3s, background 0.3s; text-decoration: none;
       }
-      .theme-btn:hover { background: var(--glass-border); transform: scale(1.1); }
+      .theme-btn:hover, .call-btn:hover { background: var(--glass-border); transform: scale(1.1); }
+      .call-btn { background: var(--accent); color: #fff; border: none; } /* Highlighted call button */
+      .call-btn:hover { background: #e0961f; }
 
-      /* --- HERO SECTION & ANTI-GRAVITY --- */
+      /* --- HERO SECTION --- */
       #home { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
       
-      /* Floating Nodes */
-      .floating-node { position: absolute; color: rgba(255,255,255,0.1); font-size: 3rem; z-index: 2; pointer-events: none; transition: transform 0.1s linear; }
-      body[data-theme="light"] .floating-node { color: rgba(0,0,0,0.05); }
-      .node-1 { top: 20%; left: 15%; border: 2px dashed rgba(255,255,255,0.1); width: 100px; height: 100px; border-radius: 20px; }
-      .node-2 { bottom: 20%; right: 15%; font-size: 5rem; }
-
       .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
       .hero-logo img {
         width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
@@ -212,7 +210,6 @@
         min-width: 350px; height: 420px; border-radius: 20px; position: relative; overflow: hidden;
         border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); cursor: pointer;
         transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
-        /* Prevent vertical clipping on lift */
         transform-style: preserve-3d;
       }
       .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
@@ -244,7 +241,7 @@
       /* --- FAQ ACCORDIONS --- */
       .faq-wrapper { max-width: 800px; margin: 0 auto; }
       details {
-        background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; /* Soft 16px radius */
+        background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px;
         margin-bottom: 1.2rem; overflow: hidden; backdrop-filter: blur(10px);
         transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       }
@@ -276,20 +273,25 @@
       
       .f-socials { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
       .f-socials a {
-        width: 45px; height: 45px; border-radius: 50%; background: var(--grid-color);
-        display: flex; justify-content: center; align-items: center; font-size: 1.3rem;
-        transition: transform 0.3s, background 0.3s;
+        width: 40px; height: 40px; border-radius: 50%; background: var(--grid-color); color: var(--text-color);
+        display: flex; justify-content: center; align-items: center; font-size: 1.2rem;
+        transition: transform 0.3s, background 0.3s, color 0.3s; text-decoration: none;
       }
-      .f-socials a:hover { transform: translateY(-5px); background: #fff; }
+      /* Hover par unke true colors aayenge */
+      .f-socials a.color-fb:hover { background: #1877F2; color: #fff; transform: translateY(-5px); }
+      .f-socials a.color-ig:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; transform: translateY(-5px); }
+      .f-socials a.color-yt:hover { background: #FF0000; color: #fff; transform: translateY(-5px); }
+      .f-socials a.color-x:hover { background: #1da1f2; color: #fff; transform: translateY(-5px); }
+      .f-socials a.color-threads:hover { background: #000000; color: #fff; transform: translateY(-5px); }
+      .f-socials a.color-in:hover { background: #0077b5; color: #fff; transform: translateY(-5px); }
+      .f-socials a.color-pi:hover { background: #E60023; color: #fff; transform: translateY(-5px); }
       
       .footer-bottom { text-align: center; border-top: 1px solid var(--glass-border); padding-top: 2rem; font-size: 0.9rem; }
 
-      /* --- ANIMATIONS (Scroll Reveal & Shooting Stars) --- */
+      /* --- ANIMATIONS --- */
       .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
       .reveal.active { opacity: 1; transform: translateY(0); }
 
-      .shooting-star { position: absolute; width: 2px; height: 80px; background: linear-gradient(to bottom, transparent, #ffea00); border-radius: 50%; filter: drop-shadow(0 0 6px #ffea00); animation: shooting 4s linear infinite; opacity: 0; }
-      @keyframes shooting { 0% { transform: translateY(-100vh) translateX(50vw) rotate(-45deg); opacity: 1; } 100% { transform: translateY(100vh) translateX(-50vw) rotate(-45deg); opacity: 0; } }
       @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.1); } }
 
       /* Mobile Adjustments */
@@ -312,11 +314,6 @@
     <!-- Multi-colored Starfield -->
     <canvas id="starfield" class="starfield"></canvas>
 
-    <!-- Randomized Shooting Stars -->
-    <div class="shooting-star" style="top: 10%; left: 80%; animation-delay: 1s; animation-duration: 3s;"></div>
-    <div class="shooting-star" style="top: 30%; left: 40%; animation-delay: 5s; animation-duration: 4.5s;"></div>
-    <div class="shooting-star" style="top: 5%; left: 20%; animation-delay: 8s; animation-duration: 3.5s;"></div>
-
     <!-- Apple Glass Navbar -->
     <nav class="navbar">
       <a href="#home" class="nav-logo">
@@ -334,29 +331,34 @@
 
       <!-- Right Actions -->
       <div class="nav-right">
-        <button class="theme-btn" id="theme-toggle" title="Toggle Mode">
+        <!-- Social Media Icons (Navbar) -->
+        <div class="nav-socials">
+          <a href="#" class="color-fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="color-ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="color-yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="color-x" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="color-threads" title="Threads"><i class="fab fa-threads"></i></a>
+          <a href="#" class="color-in" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="color-pi" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        
+        <!-- Call Button -->
+        <a href="tel:+918168759184" class="call-btn" title="Call Us">
+          <i class="fas fa-phone-alt"></i>
+        </a>
+
+        <!-- Dark/Light Theme Toggle Button -->
+        <button class="theme-btn" id="theme-toggle" title="Toggle Theme">
           <i class="fas fa-sun" id="sun-icon"></i>
           <i class="fas fa-moon" id="moon-icon" style="display:none;"></i>
         </button>
-        
-        <div class="nav-socials">
-          <a href="#" class="color-fb"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="color-ig"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="color-x"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" class="color-wa"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="color-yt"><i class="fab fa-youtube"></i></a>
-        </div>
+
         <i class="fas fa-bars mobile-menu-btn"></i>
       </div>
     </nav>
 
-    <!-- Hero Section (Anti-Gravity) -->
+    <!-- Hero Section -->
     <section id="home">
-      <!-- Floating Nodes -->
-      <div class="floating-node node-1" data-speed="-2"></div>
-      <i class="fas fa-compass floating-node node-2" data-speed="3"></i>
-      <i class="fas fa-ruler-combined floating-node" style="top: 25%; right: 20%; font-size: 3rem;" data-speed="-1.5"></i>
-
       <div class="hero-content reveal">
         <div class="hero-logo">
           <img src="/IMG_1726.png" alt="Kavach Builders" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&fit=crop'" />
@@ -386,9 +388,7 @@
       </div>
 
       <div class="carousel-container" id="carousel">
-        <!-- Track populated by JS for infinite loop -->
         <div class="carousel-track" id="track">
-          <!-- Cards -->
           <div class="service-card">
             <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&fit=crop" alt="Architecture">
             <div class="card-overlay">
@@ -468,11 +468,16 @@
           <div class="footer-col">
             <a href="#home" class="nav-logo" style="margin-bottom: 1.5rem;">Kavach<span>Builders</span></a>
             <p>Premium architectural and contracting services setting new benchmarks in structural integrity and modern design.</p>
+            
+            <!-- Social Media Icons (Footer) -->
             <div class="f-socials">
-              <a href="#" class="color-fb"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="color-ig"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="color-x"><i class="fab fa-x-twitter"></i></a>
-              <a href="#" class="color-in"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="color-fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="color-ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="color-yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="color-x" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="color-threads" title="Threads"><i class="fab fa-threads"></i></a>
+              <a href="#" class="color-in" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="color-pi" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
             </div>
           </div>
           
@@ -541,18 +546,7 @@
         }, { threshold: 0.1 });
         reveals.forEach(rev => observer.observe(rev));
 
-        // 4. Anti-Gravity Mouse Move (Parallax Nodes)
-        const nodes = document.querySelectorAll('.floating-node');
-        document.addEventListener('mousemove', (e) => {
-          const x = (window.innerWidth / 2 - e.pageX) / 40;
-          const y = (window.innerHeight / 2 - e.pageY) / 40;
-          nodes.forEach(node => {
-            const speed = node.getAttribute('data-speed');
-            node.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-          });
-        });
-
-        // 5. Netflix-Style Infinite Loop Carousel
+        // 4. Netflix-Style Infinite Loop Carousel
         const track = document.getElementById('track');
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
@@ -595,7 +589,7 @@
           track.style.transform = `translateX(-${scrollPos}px)`;
         });
 
-        // 6. Dynamic Colored Starfield Canvas
+        // 5. Dynamic Colored Starfield Canvas (Shooting stars removed)
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
