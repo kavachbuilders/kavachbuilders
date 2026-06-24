@@ -68,12 +68,11 @@
     </script>
 
     <style>
-      /* --- CSS Variables and Global Styles --- */
+      /* --- CSS Variables and Global Styles (Dark Mode Only) --- */
       :root {
         --primary-color: #0d2f4b;
         --accent-color: #ffa500;
         --background-color: #000000;
-        --surface-color: #0a0a0a;
         --text-color: #a8b2d1;
         --heading-color: #e6f1ff;
         --white-color: #ffffff;
@@ -95,50 +94,19 @@
         --scroll-btn-bg: rgba(255, 255, 255, 0.1);
       }
 
-      body[data-theme="light"] {
-        --background-color: #ffffff;
-        --surface-color: #f4f4f4;
-        --text-color: #555555;
-        --heading-color: #0d2f4b;
-        --white-color: #111111;
-
-        --footer-bg: #f9f9f9;
-        --border-color: rgba(0, 0, 0, 0.1);
-        --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        --card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-        --card-gradient: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.85) 0%,
-          rgba(0, 0, 0, 0) 100%
-        );
-        --heading-gradient: linear-gradient(
-          120deg,
-          var(--primary-color),
-          var(--accent-color)
-        );
-        --scroll-btn-bg: rgba(0, 0, 0, 0.05);
-      }
-
-      body[data-theme="light"] .stars,
-      body[data-theme="light"] .shooting-star {
-        display: none;
-      }
-
       html { scroll-behavior: smooth; font-size: 16px; }
 
       body {
         margin: 0; font-family: "Montserrat", sans-serif;
         background-color: var(--background-color); color: var(--text-color);
-        line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease;
+        line-height: 1.6;
       }
 
       * { box-sizing: border-box; }
 
       section { padding: 4rem 0; }
 
-      h1, h2, h3 {
-        color: var(--heading-color); font-weight: 700; transition: color 0.3s ease;
-      }
+      h1, h2, h3 { color: var(--heading-color); font-weight: 700; margin-top: 0; }
 
       h2 {
         text-align: center; font-size: 2.5rem; margin-bottom: 3rem; padding: 0 1rem;
@@ -148,25 +116,26 @@
 
       .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
 
-      /* --- UPDATED NAVBAR: Floating, Round, Transparent --- */
+      /* --- NAVBAR: Glassmorphism, Floating, Round --- */
       .navbar {
         display: flex; 
         justify-content: space-between; 
         align-items: center;
-        background-color: transparent; 
-        border: none;
+        background: rgba(20, 20, 20, 0.4); /* Glass Effect Base */
+        -webkit-backdrop-filter: blur(15px); /* iOS Glass Blur */
+        backdrop-filter: blur(15px); /* Standard Glass Blur */
+        border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle glass edge */
         padding: 0.8rem 2rem; 
-        position: fixed; /* Keep it floating at the top */
+        position: fixed; 
         top: 20px; 
         left: 50%;
         transform: translateX(-50%);
         width: 95%; 
         max-width: 1200px;
-        border-radius: 50px; /* Search bar pill shape */
+        border-radius: 50px; 
         z-index: 1000;
-        transition: all 0.3s ease;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
       }
-      /* Optional: Add slight glass blur on scroll via JS, but strictly transparent base as requested */
 
       .nav-logo { color: var(--white-color); font-weight: 700; font-size: 1.5rem; text-decoration: none; flex-shrink: 0; }
       .nav-logo span { color: var(--accent-color); transition: text-shadow 0.3s ease; }
@@ -178,30 +147,18 @@
       .nav-links a { color: var(--white-color); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
       .nav-links a:hover { color: var(--accent-color); }
 
-      .theme-toggle-btn {
-        background: none; border: none; color: var(--white-color); font-size: 1.2rem;
-        cursor: pointer; transition: all 0.3s ease; padding: 0; line-height: 1; margin-right: 15px;
-      }
-      .theme-toggle-btn:hover { color: var(--accent-color); transform: translateY(-3px); }
-
-      .mobile-controls { display: none; align-items: center; gap: 1rem; }
+      .mobile-controls { display: none; align-items: center; }
 
       #nav-toggle { display: none; }
       .nav-toggle-label { display: none; font-size: 1.5rem; color: var(--white-color); cursor: pointer; z-index: 1001; }
 
-      /* --- UPDATED SOCIAL ICONS: Colorful & Round --- */
+      /* --- SOCIAL ICONS: Colorful & Round --- */
       .nav-social { display: flex; align-items: center; gap: 0.8rem; margin-left: auto; }
       
       .social-round-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        color: #ffffff !important;
-        text-decoration: none;
-        font-size: 1rem;
+        display: flex; justify-content: center; align-items: center;
+        width: 35px; height: 35px; border-radius: 50%;
+        color: #ffffff !important; text-decoration: none; font-size: 1rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
       .social-round-icon:hover {
@@ -209,7 +166,6 @@
         box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
       }
       
-      /* Original Brand Colors */
       .icon-fb { background-color: #1877F2; }
       .icon-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
       .icon-threads { background-color: #000000; border: 1px solid rgba(255,255,255,0.2); }
@@ -217,13 +173,6 @@
       .icon-in { background-color: #0A66C2; }
       .icon-pin { background-color: #E60023; }
       .icon-yt { background-color: #FF0000; }
-
-      body[data-theme="light"] .icon-threads, 
-      body[data-theme="light"] .icon-x {
-        background-color: #ffffff;
-        color: #000000 !important;
-        border: 1px solid #cccccc;
-      }
 
       /* Keyframe Animations */
       @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -251,107 +200,45 @@
       #home {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
         text-align: center; min-height: 80vh; height: auto; background: transparent;
-        padding: 8rem 1rem 2rem 1rem; /* Added top padding since navbar floats */
-        overflow: hidden;
+        padding: 8rem 1rem 2rem 1rem; overflow: hidden;
       }
       .hero-logo { margin-bottom: 1rem; animation: fadeIn 1s ease-out forwards; opacity: 0; }
       .hero-logo img { height: 200px; width: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 25px rgba(255, 255, 255, 0.5); }
       #home h1 { font-size: 3.5rem; color: var(--white-color); margin-bottom: 0.5rem; animation: fadeIn 1s ease-out 0.2s forwards; opacity: 0; }
-      body[data-theme="light"] #home h1 { color: var(--heading-color); }
-      body[data-theme="dark"] #home h1 { color: #ffffff; }
       
       #home .tagline { 
-        font-size: 1.3rem; 
-        font-weight: 400; 
-        color: var(--accent-color); 
-        margin-bottom: 1.5rem; 
-        max-width: 800px;
-        animation: fadeIn 1s ease-out 0.4s forwards; 
-        opacity: 0; 
+        font-size: 1.3rem; font-weight: 400; color: var(--accent-color); 
+        margin-bottom: 1.5rem; max-width: 800px;
+        animation: fadeIn 1s ease-out 0.4s forwards; opacity: 0; 
       }
 
-      .cta-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1.2rem;
-        animation: fadeIn 1s ease-out 0.8s forwards;
-        opacity: 0;
-      }
-      
-      .social-circles {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .btn-circle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        color: #ffffff !important;
-        font-size: 1.5rem;
-        text-decoration: none;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
+      .cta-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.2rem; animation: fadeIn 1s ease-out 0.8s forwards; opacity: 0; }
+      .social-circles { display: flex; gap: 1rem; }
+      .btn-circle { display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; border-radius: 50%; color: #ffffff !important; font-size: 1.5rem; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; }
       .btn-circle.whatsapp { background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
       .btn-circle.telegram { background-color: #0088cc; box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3); }
       .btn-circle:hover { transform: translateY(-5px); }
 
-      /* --- UPDATED HERO BUTTON (Fully Rounded) --- */
       .btn-rect {
-        text-decoration: none;
-        color: var(--white-color);
-        padding: 0.8rem 2.5rem;
-        border-radius: 50px; /* Fully round */
-        font-weight: 600;
-        transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-        background-color: transparent;
-        border: 2px solid var(--accent-color);
-        font-size: 1rem;
-        display: inline-block;
+        text-decoration: none; color: var(--white-color); padding: 0.8rem 2.5rem; border-radius: 50px;
+        font-weight: 600; transition: background-color 0.3s ease, transform 0.3s ease;
+        background-color: transparent; border: 2px solid var(--accent-color); font-size: 1rem; display: inline-block;
       }
-      
-      body[data-theme="light"] .btn-rect { color: var(--accent-color); }
-      body[data-theme="light"] .btn-rect:hover { color: #ffffff; }
+      .btn-rect:hover { background-color: var(--accent-color); transform: translateY(-2px); }
 
-      .btn-rect:hover {
-        background-color: var(--accent-color);
-        transform: translateY(-2px);
-      }
-
-      /* --- UPDATED SERVICES SECTION (Orange Underline) --- */
+      /* Services Section */
       #services { background-color: transparent; padding-left: 0; padding-right: 0; text-align: center; }
-      
-      #services h2 {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 10px;
-      }
-      #services h2::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-      }
+      #services h2 { position: relative; display: inline-block; padding-bottom: 10px; }
+      #services h2::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--accent-color); border-radius: 2px; }
 
       .property-row-wrapper { margin-bottom: 3rem; position: relative; text-align: left; }
       .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding: 0 2rem; }
       .category-title { font-size: 1.8rem; color: var(--heading-color); font-weight: 600; margin: 0; padding: 0; }
+      
       .scroll-arrows { display: flex; gap: 0.5rem; }
       .scroll-btn { background-color: var(--scroll-btn-bg); border: 1px solid var(--border-color); color: var(--white-color); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; display: inline-block; }
       .scroll-btn:hover:not(:disabled) { background-color: var(--accent-color); border-color: var(--accent-color); color: #ffffff; }
       .scroll-btn:disabled { opacity: 0.2; cursor: not-allowed; }
-      body[data-theme="light"] .scroll-btn:disabled { opacity: 0.4; }
       
       .property-scroll-container { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 2rem; padding: 0.5rem 2rem 1.5rem 2rem; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; scroll-snap-type: x mandatory; }
       .property-scroll-container::-webkit-scrollbar { display: none; }
@@ -363,66 +250,76 @@
       .property-card:hover img { transform: scale(1.1); filter: brightness(0.6); }
 
       .card-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: var(--card-gradient); display: flex; flex-direction: column; justify-content: flex-end; text-align: left; height: 100%; z-index: 2; }
-      .card-content h3 { margin-top: 0; font-size: 1.6rem; color: #ffffff; margin-bottom: 0.5rem; }
-      .card-content p { flex-grow: 0; margin-bottom: 1.5rem; opacity: 1; color: #f0f0f0; }
+      .card-content h3 { font-size: 1.6rem; color: #ffffff; margin-bottom: 0.5rem; }
+      .card-content p { flex-grow: 0; margin-bottom: 1.5rem; color: #f0f0f0; }
       
-      /* --- UPDATED CARD BUTTONS (Fully Rounded) --- */
       .card-buttons { display: flex; justify-content: flex-start; gap: 1rem; opacity: 1; }
-      .card-buttons a { 
-        text-decoration: none; 
-        padding: 0.6rem 1rem; 
-        border-radius: 50px; /* Fully Round */
-        font-size: 0.9rem; 
-        font-weight: 600; 
-        transition: background-color 0.3s ease; 
-        text-align: center; 
-        color: #ffffff; 
-        flex-grow: 1; 
-        flex-basis: 0; 
-      }
+      .card-buttons a { text-decoration: none; padding: 0.6rem 1rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; transition: background-color 0.3s ease; text-align: center; color: #ffffff; flex-grow: 1; flex-basis: 0; }
       .card-buttons .btn-call { background-color: var(--primary-color); border: 1px solid rgba(255,255,255,0.2); }
       .card-buttons .btn-call:hover { background-color: #1a4a75; }
       .card-buttons .btn-whatsapp { background-color: #25d366; }
       .card-buttons .btn-whatsapp:hover { background-color: #1ebe5a; }
 
-      /* --- UPDATED ABOUT US SECTION (Glassmorphism Effect) --- */
+      /* --- NEW ABOUT US SECTION (Modern, Reduced Top Space, No Glass) --- */
       #about {
-        background: rgba(17, 34, 64, 0.2); /* Transparent base */
-        -webkit-backdrop-filter: blur(20px); 
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.15); 
-        border-radius: 25px; 
-        margin: 4rem 2rem; 
-        padding: 4rem;
+        padding: 2rem 1rem 6rem 1rem; /* Reduced top padding specifically */
+        margin-top: -2rem; /* Pulls the section up to reduce space */
+        background: transparent;
         position: relative; 
         z-index: 1; 
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
       }
       
-      body[data-theme="light"] #about {
-        background: rgba(255, 255, 255, 0.5);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+      .about-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
       }
 
-      #about h2 { margin-top: 0; margin-bottom: 3rem; padding: 0; text-align: left; background: none; -webkit-text-fill-color: var(--heading-color); color: var(--heading-color); }
-      .about-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; }
-      .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
-      body[data-theme="light"] .about-image img { box-shadow: var(--card-shadow); }
-      .about-text h3 { font-size: 1.8rem; color: var(--accent-color); margin-top: 0; margin-bottom: 1.5rem; }
-      .about-text p { text-align: left; margin-bottom: 1rem; }
+      #about h2 { margin-bottom: 4rem; }
+      
+      .about-content { 
+        display: flex; 
+        gap: 5rem; 
+        align-items: center; 
+      }
+      
+      .about-image { 
+        flex: 1; 
+        position: relative; 
+      }
+      .about-image img { 
+        width: 100%; 
+        border-radius: 10px; 
+        position: relative; 
+        z-index: 2; 
+        box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+      }
+      /* Modern offset border behind the image */
+      .about-image::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 100%;
+        height: 100%;
+        border: 3px solid var(--accent-color);
+        border-radius: 10px;
+        z-index: 1;
+      }
+
+      .about-text { flex: 1.2; text-align: left; }
+      .about-text h3 { font-size: 1.8rem; color: var(--accent-color); margin-bottom: 1.5rem; }
+      .about-text p { margin-bottom: 1.2rem; font-size: 1.05rem; }
       .why-choose-us { list-style: none; padding: 0; margin-top: 2rem; }
-      .why-choose-us li { display: flex; align-items: flex-start; margin-bottom: 1.25rem; font-size: 1rem; }
-      .why-choose-us i { color: var(--accent-color); font-size: 1.2rem; margin-right: 1rem; padding-top: 4px; width: 25px; text-align: center; }
+      .why-choose-us li { display: flex; align-items: flex-start; margin-bottom: 1.5rem; font-size: 1rem; }
+      .why-choose-us i { color: var(--accent-color); font-size: 1.4rem; margin-right: 1.2rem; padding-top: 2px; width: 25px; text-align: center; }
       .why-choose-us li div { flex: 1; }
-      .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.25rem; transition: color 0.3s ease; }
+      .why-choose-us li strong { color: var(--heading-color); display: block; margin-bottom: 0.3rem; font-size: 1.1rem; }
 
       /* Footer / Contact Section */
       #contact {
         background-color: var(--footer-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-        color: var(--text-color); border-top: 1px solid var(--border-color); position: relative; z-index: 1;
-        padding: 4rem 2rem 2rem 2rem; transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+        border-top: 1px solid var(--border-color); position: relative; z-index: 1;
+        padding: 4rem 2rem 2rem 2rem; 
       }
       .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; text-align: left; }
       .footer-column h4 { font-size: 1.2rem; color: var(--heading-color); margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; }
@@ -430,41 +327,31 @@
       .footer-column ul { list-style: none; padding: 0; margin: 0; }
       .footer-column ul li { margin-bottom: 0.8rem; }
       
-      /* Only apply text hover shift to normal links, not social icons */
       .footer-column a.text-link { color: var(--text-color); text-decoration: none; transition: color 0.3s ease, padding-left 0.3s ease; display: inline-block; }
       .footer-column a.text-link:hover { color: var(--accent-color); padding-left: 5px; }
       
       .footer-column .contact-info p { margin-bottom: 0.8rem; }
       
-      /* --- FIX FOOTER HOVER BREAKING LINES --- */
-      .footer-column .social-icons { 
-        display: flex; 
-        flex-wrap: wrap; 
-        gap: 12px; 
-      }
-      /* Inherit .social-round-icon for styles, avoiding line breaks */
-      
-      .footer-bottom { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; transition: border 0.3s ease; }
+      .footer-column .social-icons { display: flex; gap: 12px; }
+      .footer-bottom { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; }
 
       /* Responsive Design */
       @media (min-width: 768px) { #home h1 { font-size: 4.5rem; } }
+      
       @media (max-width: 992px) {
-        #about { margin: 2rem 1rem; padding: 3rem 2rem; }
-        .about-content { grid-template-columns: 1fr; gap: 2rem; }
+        .about-content { flex-direction: column; gap: 4rem; text-align: center; }
+        .about-image::before { top: -15px; left: -15px; }
         .about-text { text-align: center; }
         .about-text p, .about-text .why-choose-us li { text-align: left; }
-        #about h2 { text-align: center; }
       }
 
       /* MOBILE STYLES */
       @media (max-width: 767px) {
-        .navbar { flex-wrap: wrap; padding: 0.8rem 1rem; top: 10px; width: 95%; border-radius: 20px; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
-        .nav-toggle-label { display: block; margin-left: auto;}
+        .navbar { padding: 0.8rem 1.5rem; top: 10px; width: 95%; background: rgba(10, 10, 10, 0.6); backdrop-filter: blur(15px); }
+        .nav-toggle-label { display: block; margin-left: auto; }
         .mobile-controls { display: flex; flex-grow: 1; justify-content: flex-end;}
-        .theme-toggle-btn { margin-right: 15px; }
-        .nav-menu .theme-toggle-btn { display: none; }
         
-        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: rgba(10, 10, 10, 0.95); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); position: absolute; top: 100%; left: 0; padding: 1rem 0; border-radius: 15px; margin-top: 10px; order: 3; }
+        .nav-menu { display: none; flex-direction: column; width: 100%; background: rgba(10, 10, 10, 0.95); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); position: absolute; top: 100%; left: 0; padding: 1rem 0; border-radius: 15px; margin-top: 10px; }
         #nav-toggle:checked ~ .nav-menu { display: flex; }
         .nav-links { flex-direction: column; width: 100%; text-align: center; flex-grow: 0; }
         .nav-links li { margin: 0; width: 100%; }
@@ -480,15 +367,48 @@
         .btn-rect { width: 100%; max-width: 250px; text-align: center; }
 
         section { padding: 2.5rem 0; }
-        #services { padding-top: 1rem; }
-        #about { margin: 1.5rem 1rem; padding: 2.5rem 1.5rem; border-radius: 20px; }
         h2 { font-size: 1.8rem; margin-bottom: 2rem; }
+        
+        #about { padding: 1rem 1.5rem 3rem 1.5rem; margin-top: -1rem; }
+        
         .footer-content { text-align: center; gap: 1.5rem; }
         .footer-column h4::after { left: 50%; transform: translateX(-50%); }
-        .footer-column .social-icons { justify-content: center; }
+        
+        /* 1 LINE MOBILE FIXES */
+        .category-title { 
+          font-size: 1rem; 
+          white-space: nowrap; 
+          overflow-x: auto; 
+          padding-bottom: 5px; 
+          scrollbar-width: none; /* Hide scrollbar for neatness */
+        }
+        .category-title::-webkit-scrollbar { display: none; }
+        
+        .footer-column .social-icons { 
+          flex-wrap: nowrap; 
+          justify-content: center; 
+          gap: 6px; 
+        }
+        .social-round-icon { 
+          width: 32px; 
+          height: 32px; 
+          font-size: 0.9rem; 
+        }
+        
+        .footer-bottom { 
+          font-size: 0.75rem; 
+          white-space: nowrap; 
+        }
+        
+        .footer-column .contact-info p { 
+          font-size: 0.85rem; 
+          white-space: nowrap; 
+        }
+        /* END 1 LINE FIXES */
+
         .scroll-arrows { display: none; }
         .category-header { padding: 0 1rem; margin-bottom: 1rem; }
-        .category-title { font-size: 1.5rem; }
+        
         .property-scroll-container { gap: 1rem; padding: 0.5rem 1rem 1rem 1rem; }
         .property-card { flex-basis: 260px; height: 350px; }
         .card-content { padding: 1.2rem; }
@@ -497,15 +417,15 @@
         .card-buttons { gap: 0.5rem; }
         .card-buttons a { padding: 0.5rem 0.8rem; font-size: 0.85rem; flex-grow: 1; flex-basis: 0; }
       }
+      
       @media (max-width: 380px) {
         .hero-logo img { height: 140px; width: 140px; }
         #home h1 { font-size: 2.2rem; }
         #home .tagline { font-size: 1rem; }
         .property-card { flex-basis: 240px; height: 330px; }
-        .card-content { padding: 1rem; }
-        .card-content h3 { font-size: 1.1rem; }
-        .card-content p { font-size: 0.85rem; margin-bottom: 0.8rem; }
-        .card-buttons a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
+        .social-round-icon { width: 28px; height: 28px; font-size: 0.8rem; } /* Slightly smaller for very small phones */
+        .footer-bottom { font-size: 0.65rem; }
+        .footer-column .contact-info p { font-size: 0.75rem; }
       }
     </style>
   </head>
@@ -518,14 +438,10 @@
       <div class="shooting-star"></div>
     </div>
 
-    <!-- UPDATED NAVBAR -->
+    <!-- GLASS NAVBAR -->
     <nav class="navbar">
       <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
       <div class="mobile-controls">
-        <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
-          <i class="fas fa-sun icon-sun"></i>
-          <i class="fas fa-moon icon-moon" style="display: none"></i>
-        </button>
         <label for="nav-toggle" class="nav-toggle-label">
           <i class="fas fa-bars"></i>
         </label>
@@ -539,10 +455,6 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
         <div class="nav-social">
-          <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
-            <i class="fas fa-sun icon-sun"></i>
-            <i class="fas fa-moon icon-moon" style="display: none"></i>
-          </button>
           <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/kavachbuilders/" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-threads" aria-label="Threads"><i class="fab fa-threads"></i></a>
@@ -567,7 +479,6 @@
             <a href="https://wa.me/918168759184" target="_blank" class="btn-circle whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://t.me/kavachbuilders" target="_blank" class="btn-circle telegram" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
           </div>
-          <!-- FULLY ROUNDED BUTTON -->
           <a href="https://www.kavachestate.com" target="_blank" rel="noopener noreferrer" class="btn-rect">Kavach Estate</a>
         </div>
       </section>
@@ -576,7 +487,8 @@
         <h2>Our Services</h2>
         <div class="property-row-wrapper">
           <div class="category-header">
-            <h3 class="category-title">Professional Contracting Solutions</h3>
+            <!-- UPDATED SERVICES HEADING -->
+            <h3 class="category-title">Professional Contracting Solution, Complete Consulting Service</h3>
             <div class="scroll-arrows">
               <button class="scroll-btn prev" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
               <button class="scroll-btn next" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
@@ -584,7 +496,6 @@
           </div>
           <div class="property-scroll-container">
             
-            <!-- 1. Demarcation Pole -->
             <div class="property-card" data-category="project">
               <img src="demarcation.png" alt="Land Demarcation Pole Setup" loading="lazy" onerror="this.src='6.png';" />
               <div class="card-content">
@@ -597,7 +508,6 @@
               </div>
             </div>
 
-            <!-- 2. Precast Boundary Wall -->
             <div class="property-card" data-category="project">
               <img src="boundary.png" alt="Precast Boundary Wall Installation" loading="lazy" onerror="this.src='4.png';" />
               <div class="card-content">
@@ -610,7 +520,6 @@
               </div>
             </div>
 
-            <!-- 3. Wire Fencing -->
             <div class="property-card" data-category="project">
               <img src="fencing.png" alt="Wire Fencing Security Setup" loading="lazy" onerror="this.src='5.png';" />
               <div class="card-content">
@@ -623,7 +532,6 @@
               </div>
             </div>
 
-            <!-- 4. Architect (Interior/Exterior - 2D 3D) -->
             <div class="property-card" data-category="project">
               <img src="architect.png" alt="2D 3D Architectural Design Interior Exterior" loading="lazy" onerror="this.src='1.png';" />
               <div class="card-content">
@@ -636,7 +544,6 @@
               </div>
             </div>
 
-            <!-- 5. Warehouse -->
             <div class="property-card" data-category="project">
               <img src="warehouse.png" alt="Warehouse Construction" loading="lazy" onerror="this.src='2.png';" />
               <div class="card-content">
@@ -649,7 +556,6 @@
               </div>
             </div>
 
-            <!-- 6. Factory -->
             <div class="property-card" data-category="project">
               <img src="factory.png" alt="Industrial Factory Construction" loading="lazy" onerror="this.src='3.png';" />
               <div class="card-content">
@@ -662,7 +568,6 @@
               </div>
             </div>
 
-            <!-- 7. House -->
             <div class="property-card" data-category="project">
               <img src="house.png" alt="Residential House Builders" loading="lazy" />
               <div class="card-content">
@@ -675,7 +580,6 @@
               </div>
             </div>
 
-            <!-- 8. Floor -->
             <div class="property-card" data-category="project">
               <img src="floor.png" alt="Floor Building Construction" loading="lazy" />
               <div class="card-content">
@@ -688,7 +592,6 @@
               </div>
             </div>
 
-            <!-- 9. Villa -->
             <div class="property-card" data-category="project">
               <img src="villa.png" alt="Luxury Villa Construction" loading="lazy" />
               <div class="card-content">
@@ -701,7 +604,6 @@
               </div>
             </div>
 
-            <!-- 10. Farmhouse -->
             <div class="property-card" data-category="project">
               <img src="farmhouse.png" alt="Farmhouse Setup & Construction" loading="lazy" />
               <div class="card-content">
@@ -718,41 +620,43 @@
         </div>
       </section>
 
-      <!-- GLASSMORPHISM ABOUT SECTION -->
+      <!-- NEW ABOUT US SECTION -->
       <section id="about" class="fade-in-section">
-        <h2>About Kavach Builders</h2>
-        <div class="about-content">
-          <div class="about-image">
-            <img src="7.png" alt="Kavach Builders Team at Work" loading="lazy" />
-          </div>
-          <div class="about-text">
-            <h3>Building Excellence Across The Region</h3>
-            <p><strong>Kavach Builders</strong> is recognized by top industry platforms as a premier construction and architectural firm operating extensively across <strong>Delhi NCR, the main city of Sonipat, Kharkhoda, and Bahadurgarh</strong>.</p>
-            <p>From highly detailed 2D/3D interior and exterior designs to the heavy-duty construction of warehouses, factories, and luxurious residential projects (houses, villas, farmhouses), our team delivers end-to-end solutions. We are also local experts in land security, offering top-tier precast boundary walls, wire fencing, and precise demarcations.</p>
-            
-            <ul class="why-choose-us">
-              <li>
-                <i class="fas fa-check-circle"></i>
-                <div>
-                  <strong>Comprehensive Expertise</strong>
-                  Handling everything from architecture to residential and industrial setups.
-                </div>
-              </li>
-              <li>
-                <i class="fas fa-shield-alt"></i>
-                <div>
-                  <strong>Top-Notch Security Solutions</strong>
-                  Industry leaders in precast boundary walls and wire fencing for any property.
-                </div>
-              </li>
-              <li>
-                <i class="fas fa-map-marked-alt"></i>
-                <div>
-                  <strong>Precision & Accuracy</strong>
-                  Reliable land demarcation pole services for clear property boundaries.
-                </div>
-              </li>
-            </ul>
+        <div class="about-wrapper">
+          <h2>About Us</h2>
+          <div class="about-content">
+            <div class="about-image">
+              <img src="7.png" alt="Kavach Builders Team at Work" loading="lazy" />
+            </div>
+            <div class="about-text">
+              <h3>Building Excellence Across The Region</h3>
+              <p><strong>Kavach Builders</strong> is recognized by top industry platforms as a premier construction and architectural firm operating extensively across <strong>Delhi NCR, the main city of Sonipat, Kharkhoda, and Bahadurgarh</strong>.</p>
+              <p>From highly detailed 2D/3D interior and exterior designs to the heavy-duty construction of warehouses, factories, and luxurious residential projects (houses, villas, farmhouses), our team delivers end-to-end solutions. We are also local experts in land security, offering top-tier precast boundary walls, wire fencing, and precise demarcations.</p>
+              
+              <ul class="why-choose-us">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <div>
+                    <strong>Comprehensive Expertise</strong>
+                    Handling everything from architecture to residential and industrial setups.
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-shield-alt"></i>
+                  <div>
+                    <strong>Top-Notch Security Solutions</strong>
+                    Industry leaders in precast boundary walls and wire fencing for any property.
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-map-marked-alt"></i>
+                  <div>
+                    <strong>Precision & Accuracy</strong>
+                    Reliable land demarcation pole services for clear property boundaries.
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -787,7 +691,7 @@
           </div>
           <div class="footer-column">
             <h4>Follow Us</h4>
-            <!-- FIXED FOOTER HOVER: Using same round, colorful icons as navbar -->
+            <!-- MOBILE FIX: Icons will now show in a single perfect line -->
             <div class="social-icons">
               <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -807,7 +711,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Mobile Menu Auto-Close Fix
+        // Mobile Menu Auto-Close
         const navLinks = document.querySelectorAll(".nav-links a");
         const navToggle = document.getElementById("nav-toggle");
         navLinks.forEach(link => {
@@ -858,37 +762,6 @@
           });
         }, observerOptions);
         sections.forEach((section) => { observer.observe(section); });
-
-        // Dark/Light Mode Toggle
-        const allToggleBtns = document.querySelectorAll(".theme-toggle-btn");
-        const body = document.body;
-        const sunIcons = document.querySelectorAll(".icon-sun");
-        const moonIcons = document.querySelectorAll(".icon-moon");
-
-        function applyTheme(theme) {
-          body.dataset.theme = theme;
-          localStorage.setItem("kavachBuilderTheme", theme); 
-          if (theme === "light") {
-            sunIcons.forEach((i) => (i.style.display = "none"));
-            moonIcons.forEach((i) => (i.style.display = "inline-block"));
-          } else {
-            sunIcons.forEach((i) => (i.style.display = "inline-block"));
-            moonIcons.forEach((i) => (i.style.display = "none"));
-          }
-        }
-
-        allToggleBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            let currentTheme = body.dataset.theme;
-            if (!currentTheme || currentTheme === "dark") { applyTheme("light"); } 
-            else { applyTheme("dark"); }
-          });
-        });
-
-        // On Load Theme
-        const savedTheme = localStorage.getItem("kavachBuilderTheme");
-        if (savedTheme) { applyTheme(savedTheme); } 
-        else { applyTheme("dark"); body.dataset.theme = "dark"; }
       });
     </script>
   </body>
