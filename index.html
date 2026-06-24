@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kavach Builders | Construction, Architect & Boundary Wall Services in Delhi NCR</title>
-    <!-- Optimized Description for AI Context & Locations -->
+    <title>Kavach Builders | Construction, Architect & Boundary Wall Services</title>
+    <!-- Upgraded Description for AI Context, SEO & Locations -->
     <meta
       name="description"
-      content="Kavach Builders is the leading construction company in Delhi NCR, Sonipat, Kharkhoda, and Bahadurgarh. Offering Architectural Design, Warehouse & Factory Construction, Precast Boundary Walls, Wire Fencing, and Demarcation Poles."
+      content="Kavach Builders is a premium construction company in Delhi NCR, Sonipat, Kharkhoda, and Bahadurgarh. Expert services include Land Demarcation, Precast Boundary Walls, Wire Fencing, 2D/3D Architecture & Interior Design, Warehouses, Factories, Houses, Floors, Villas, and Farmhouses."
     />
     <meta
       name="keywords"
-      content="architect sonipat, warehouse construction kharkhoda, factory builders bahadurgarh, precast boundary wall delhi ncr, wire fencing contractors, demarcation pole services, kavach builders, top construction company sonipat, builders in delhi ncr"
+      content="demarcation pole, precast boundary wall delhi ncr, wire fencing contractors, architect 2D 3D design interior exterior, warehouse construction kharkhoda, factory builders bahadurgarh, house construction sonipat, floor builders, luxury villa construction, farmhouse builders delhi ncr, kavach builders"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +26,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-    <!-- ENHANCED AI SCHEMA MARKUP WITH LOCATIONS -->
+    <!-- ENHANCED AI SCHEMA MARKUP FOR ALL NEW SERVICES -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -43,14 +43,18 @@
           "addressRegion": "Haryana",
           "addressCountry": "IN"
         },
-        "description": "Leading construction and architecture firm operating in Delhi NCR, Sonipat, Kharkhoda, and Bahadurgarh. Specializing in industrial and residential projects including warehouses, factories, precast boundary walls, and fencing.",
+        "description": "Leading construction and architecture firm operating in Delhi NCR, Sonipat, Kharkhoda, and Bahadurgarh. Specializing in residential and industrial projects including demarcations, boundary walls, fencing, architecture (2D/3D interior & exterior), warehouses, factories, houses, floors, villas, and farmhouses.",
         "knowsAbout": [
-          "Architectural Design",
-          "Warehouse Construction",
-          "Factory Construction",
+          "Land Demarcation Pole Setup",
           "Precast Boundary Wall Installation",
           "Wire Fencing Services",
-          "Demarcation Pole Setup"
+          "Architectural Design (Interior/Exterior - 2D & 3D)",
+          "Warehouse Construction",
+          "Factory Construction",
+          "Residential House Construction",
+          "Floor Builder Services",
+          "Luxury Villa Construction",
+          "Farmhouse Construction & Setup"
         ],
         "areaServed": [
           { "@type": "City", "name": "Sonipat" },
@@ -73,12 +77,8 @@
         --text-color: #a8b2d1;
         --heading-color: #e6f1ff;
         --white-color: #ffffff;
-        --navbar-height: 50px;
 
-        --navbar-bg: rgba(10, 10, 10, 0.75);
-        --mobile-menu-bg: rgba(10, 10, 10, 0.95);
         --footer-bg: rgba(10, 10, 10, 0.75);
-        --about-bg: rgba(17, 34, 64, 0.6);
         --border-color: rgba(255, 255, 255, 0.1);
         --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
@@ -102,10 +102,7 @@
         --heading-color: #0d2f4b;
         --white-color: #111111;
 
-        --navbar-bg: rgba(255, 255, 255, 0.75);
-        --mobile-menu-bg: rgba(255, 255, 255, 0.95);
         --footer-bg: #f9f9f9;
-        --about-bg: #f0f4f8;
         --border-color: rgba(0, 0, 0, 0.1);
         --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         --card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
@@ -151,14 +148,25 @@
 
       .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
 
-      /* Navigation Bar */
+      /* --- UPDATED NAVBAR: Floating, Round, Transparent --- */
       .navbar {
-        display: flex; justify-content: space-between; align-items: center;
-        background-color: var(--navbar-bg); -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color);
-        padding: 0.8rem 2rem; position: sticky; top: 0; width: 100%; z-index: 1000;
-        min-height: var(--navbar-height); transition: background-color 0.3s ease, border-bottom 0.3s ease;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        background-color: transparent; 
+        border: none;
+        padding: 0.8rem 2rem; 
+        position: fixed; /* Keep it floating at the top */
+        top: 20px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%; 
+        max-width: 1200px;
+        border-radius: 50px; /* Search bar pill shape */
+        z-index: 1000;
+        transition: all 0.3s ease;
       }
+      /* Optional: Add slight glass blur on scroll via JS, but strictly transparent base as requested */
 
       .nav-logo { color: var(--white-color); font-weight: 700; font-size: 1.5rem; text-decoration: none; flex-shrink: 0; }
       .nav-logo span { color: var(--accent-color); transition: text-shadow 0.3s ease; }
@@ -170,22 +178,52 @@
       .nav-links a { color: var(--white-color); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
       .nav-links a:hover { color: var(--accent-color); }
 
-      .nav-social { display: flex; align-items: center; gap: 1rem; margin-left: 1.5rem; }
-      .nav-social a { color: var(--white-color); font-size: 1rem; transition: all 0.3s ease; }
-      .nav-social a:hover { color: var(--accent-color); transform: translateY(-3px); }
-
       .theme-toggle-btn {
-        background: none; border: none; color: var(--white-color); font-size: 1rem;
-        cursor: pointer; transition: all 0.3s ease; padding: 0; line-height: 1;
+        background: none; border: none; color: var(--white-color); font-size: 1.2rem;
+        cursor: pointer; transition: all 0.3s ease; padding: 0; line-height: 1; margin-right: 15px;
       }
       .theme-toggle-btn:hover { color: var(--accent-color); transform: translateY(-3px); }
 
       .mobile-controls { display: none; align-items: center; gap: 1rem; }
-      .mobile-controls .theme-toggle-btn { font-size: 1.2rem; }
-      .mobile-controls .theme-toggle-btn:hover { transform: none; }
 
       #nav-toggle { display: none; }
       .nav-toggle-label { display: none; font-size: 1.5rem; color: var(--white-color); cursor: pointer; z-index: 1001; }
+
+      /* --- UPDATED SOCIAL ICONS: Colorful & Round --- */
+      .nav-social { display: flex; align-items: center; gap: 0.8rem; margin-left: auto; }
+      
+      .social-round-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .social-round-icon:hover {
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+      }
+      
+      /* Original Brand Colors */
+      .icon-fb { background-color: #1877F2; }
+      .icon-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+      .icon-threads { background-color: #000000; border: 1px solid rgba(255,255,255,0.2); }
+      .icon-x { background-color: #000000; border: 1px solid rgba(255,255,255,0.2); }
+      .icon-in { background-color: #0A66C2; }
+      .icon-pin { background-color: #E60023; }
+      .icon-yt { background-color: #FF0000; }
+
+      body[data-theme="light"] .icon-threads, 
+      body[data-theme="light"] .icon-x {
+        background-color: #ffffff;
+        color: #000000 !important;
+        border: 1px solid #cccccc;
+      }
 
       /* Keyframe Animations */
       @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -213,7 +251,8 @@
       #home {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
         text-align: center; min-height: 80vh; height: auto; background: transparent;
-        padding: 4rem 1rem 2rem 1rem; overflow: hidden;
+        padding: 8rem 1rem 2rem 1rem; /* Added top padding since navbar floats */
+        overflow: hidden;
       }
       .hero-logo { margin-bottom: 1rem; animation: fadeIn 1s ease-out forwards; opacity: 0; }
       .hero-logo img { height: 200px; width: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 25px rgba(255, 255, 255, 0.5); }
@@ -231,7 +270,6 @@
         opacity: 0; 
       }
 
-      /* UPDATED HERO BUTTONS (Circles & Rectangular) */
       .cta-container {
         display: flex;
         flex-wrap: wrap;
@@ -260,25 +298,16 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .btn-circle.whatsapp {
-        background-color: #25d366;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-      }
+      .btn-circle.whatsapp { background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+      .btn-circle.telegram { background-color: #0088cc; box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3); }
+      .btn-circle:hover { transform: translateY(-5px); }
 
-      .btn-circle.telegram {
-        background-color: #0088cc;
-        box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
-      }
-
-      .btn-circle:hover {
-        transform: translateY(-5px);
-      }
-
+      /* --- UPDATED HERO BUTTON (Fully Rounded) --- */
       .btn-rect {
         text-decoration: none;
         color: var(--white-color);
-        padding: 0.8rem 2rem;
-        border-radius: 5px;
+        padding: 0.8rem 2.5rem;
+        border-radius: 50px; /* Fully round */
         font-weight: 600;
         transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
         background-color: transparent;
@@ -295,9 +324,27 @@
         transform: translateY(-2px);
       }
 
-      /* Services Section */
-      #services { background-color: transparent; padding-left: 0; padding-right: 0; }
-      .property-row-wrapper { margin-bottom: 3rem; position: relative; }
+      /* --- UPDATED SERVICES SECTION (Orange Underline) --- */
+      #services { background-color: transparent; padding-left: 0; padding-right: 0; text-align: center; }
+      
+      #services h2 {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+      #services h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+      }
+
+      .property-row-wrapper { margin-bottom: 3rem; position: relative; text-align: left; }
       .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding: 0 2rem; }
       .category-title { font-size: 1.8rem; color: var(--heading-color); font-weight: 600; margin: 0; padding: 0; }
       .scroll-arrows { display: flex; gap: 0.5rem; }
@@ -319,22 +366,49 @@
       .card-content h3 { margin-top: 0; font-size: 1.6rem; color: #ffffff; margin-bottom: 0.5rem; }
       .card-content p { flex-grow: 0; margin-bottom: 1.5rem; opacity: 1; color: #f0f0f0; }
       
+      /* --- UPDATED CARD BUTTONS (Fully Rounded) --- */
       .card-buttons { display: flex; justify-content: flex-start; gap: 1rem; opacity: 1; }
-      .card-buttons a { text-decoration: none; padding: 0.6rem 1rem; border-radius: 5px; font-size: 0.9rem; font-weight: 600; transition: background-color 0.3s ease; text-align: center; color: #ffffff; flex-grow: 1; flex-basis: 0; }
-      .card-buttons .btn-call { background-color: var(--primary-color); }
+      .card-buttons a { 
+        text-decoration: none; 
+        padding: 0.6rem 1rem; 
+        border-radius: 50px; /* Fully Round */
+        font-size: 0.9rem; 
+        font-weight: 600; 
+        transition: background-color 0.3s ease; 
+        text-align: center; 
+        color: #ffffff; 
+        flex-grow: 1; 
+        flex-basis: 0; 
+      }
+      .card-buttons .btn-call { background-color: var(--primary-color); border: 1px solid rgba(255,255,255,0.2); }
       .card-buttons .btn-call:hover { background-color: #1a4a75; }
       .card-buttons .btn-whatsapp { background-color: #25d366; }
       .card-buttons .btn-whatsapp:hover { background-color: #1ebe5a; }
 
-      /* About Us Section */
+      /* --- UPDATED ABOUT US SECTION (Glassmorphism Effect) --- */
       #about {
-        background-color: var(--about-bg); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-        border: 1px solid var(--border-color); border-radius: 15px; margin: 4rem 2rem; padding: 4rem;
-        position: relative; z-index: 1; transition: background-color 0.3s ease, border 0.3s ease;
+        background: rgba(17, 34, 64, 0.2); /* Transparent base */
+        -webkit-backdrop-filter: blur(20px); 
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.15); 
+        border-radius: 25px; 
+        margin: 4rem 2rem; 
+        padding: 4rem;
+        position: relative; 
+        z-index: 1; 
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
       }
-      #about h2 { margin-top: 0; margin-bottom: 3rem; padding: 0; }
+      
+      body[data-theme="light"] #about {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      #about h2 { margin-top: 0; margin-bottom: 3rem; padding: 0; text-align: left; background: none; -webkit-text-fill-color: var(--heading-color); color: var(--heading-color); }
       .about-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; }
-      .about-image img { width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
+      .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
       body[data-theme="light"] .about-image img { box-shadow: var(--card-shadow); }
       .about-text h3 { font-size: 1.8rem; color: var(--accent-color); margin-top: 0; margin-bottom: 1.5rem; }
       .about-text p { text-align: left; margin-bottom: 1rem; }
@@ -355,11 +429,21 @@
       .footer-column h4::after { content: ""; position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background-color: var(--accent-color); }
       .footer-column ul { list-style: none; padding: 0; margin: 0; }
       .footer-column ul li { margin-bottom: 0.8rem; }
-      .footer-column a { color: var(--text-color); text-decoration: none; transition: color 0.3s ease, padding-left 0.3s ease; display: inline-block; }
-      .footer-column a:hover { color: var(--accent-color); padding-left: 5px; }
+      
+      /* Only apply text hover shift to normal links, not social icons */
+      .footer-column a.text-link { color: var(--text-color); text-decoration: none; transition: color 0.3s ease, padding-left 0.3s ease; display: inline-block; }
+      .footer-column a.text-link:hover { color: var(--accent-color); padding-left: 5px; }
+      
       .footer-column .contact-info p { margin-bottom: 0.8rem; }
-      .footer-column .social-icons a { font-size: 1.2rem; margin-right: 1rem; display: inline-block; transition: all 0.3s ease; }
-      .footer-column .social-icons a:hover { color: var(--accent-color); transform: translateY(-3px) scale(1.1); }
+      
+      /* --- FIX FOOTER HOVER BREAKING LINES --- */
+      .footer-column .social-icons { 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 12px; 
+      }
+      /* Inherit .social-round-icon for styles, avoiding line breaks */
+      
       .footer-bottom { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; transition: border 0.3s ease; }
 
       /* Responsive Design */
@@ -369,22 +453,25 @@
         .about-content { grid-template-columns: 1fr; gap: 2rem; }
         .about-text { text-align: center; }
         .about-text p, .about-text .why-choose-us li { text-align: left; }
+        #about h2 { text-align: center; }
       }
 
       /* MOBILE STYLES */
       @media (max-width: 767px) {
-        .navbar { flex-wrap: wrap; padding: 0.8rem 1rem; }
-        .nav-toggle-label { display: block; }
-        .mobile-controls { display: flex; }
+        .navbar { flex-wrap: wrap; padding: 0.8rem 1rem; top: 10px; width: 95%; border-radius: 20px; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
+        .nav-toggle-label { display: block; margin-left: auto;}
+        .mobile-controls { display: flex; flex-grow: 1; justify-content: flex-end;}
+        .theme-toggle-btn { margin-right: 15px; }
         .nav-menu .theme-toggle-btn { display: none; }
-        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: var(--mobile-menu-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); position: absolute; top: 100%; left: 0; padding: 1rem 0; border-top: 1px solid var(--border-color); order: 3; transition: background-color 0.3s ease, border 0.3s ease; }
+        
+        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: rgba(10, 10, 10, 0.95); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); position: absolute; top: 100%; left: 0; padding: 1rem 0; border-radius: 15px; margin-top: 10px; order: 3; }
         #nav-toggle:checked ~ .nav-menu { display: flex; }
         .nav-links { flex-direction: column; width: 100%; text-align: center; flex-grow: 0; }
         .nav-links li { margin: 0; width: 100%; }
         .nav-links a { display: block; padding: 1rem 0; width: 100%; }
         .nav-social { justify-content: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); width: 90%; margin-left: auto; margin-right: auto; }
         
-        #home { padding: 3rem 1rem 2rem 1rem; min-height: 70vh; }
+        #home { padding: 8rem 1rem 2rem 1rem; min-height: 70vh; }
         .hero-logo img { height: 160px; width: 160px; }
         #home h1 { font-size: 2.5rem; }
         #home .tagline { font-size: 1.1rem; }
@@ -394,10 +481,11 @@
 
         section { padding: 2.5rem 0; }
         #services { padding-top: 1rem; }
-        #about { margin: 1.5rem 1rem; padding: 2.5rem 1.5rem; }
+        #about { margin: 1.5rem 1rem; padding: 2.5rem 1.5rem; border-radius: 20px; }
         h2 { font-size: 1.8rem; margin-bottom: 2rem; }
         .footer-content { text-align: center; gap: 1.5rem; }
         .footer-column h4::after { left: 50%; transform: translateX(-50%); }
+        .footer-column .social-icons { justify-content: center; }
         .scroll-arrows { display: none; }
         .category-header { padding: 0 1rem; margin-bottom: 1rem; }
         .category-title { font-size: 1.5rem; }
@@ -430,6 +518,7 @@
       <div class="shooting-star"></div>
     </div>
 
+    <!-- UPDATED NAVBAR -->
     <nav class="navbar">
       <a href="#home" class="nav-logo">Kavach<span>Builders</span></a>
       <div class="mobile-controls">
@@ -454,13 +543,13 @@
             <i class="fas fa-sun icon-sun"></i>
             <i class="fas fa-moon icon-moon" style="display: none"></i>
           </button>
-          <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/kavachbuilders/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
-          <a href="https://www.x.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-          <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kavachbuilders/" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-threads" aria-label="Threads"><i class="fab fa-threads"></i></a>
+          <a href="https://www.x.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-x" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-in" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-pin" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </nav>
@@ -468,23 +557,19 @@
     <main>
       <section id="home">
         <div class="hero-logo">
-          <!-- Logo image ka path theek rakhna -->
           <img src="/IMG_1726.png" alt="Kavach Builders Logo" />
         </div>
         <h1>Kavach Builders</h1>
-        <!-- Locations mentioned for AI contextual learning -->
-        <p class="tagline">Experts in Construction, Architecture & Industrial Setups across Delhi NCR, Sonipat, Kharkhoda & Bahadurgarh</p>
+        <p class="tagline">Experts in Residential & Industrial Construction across Delhi NCR, Sonipat, Kharkhoda & Bahadurgarh</p>
         
-        <!-- NEW CTA BUTTONS LAYOUT -->
         <div class="cta-container">
           <div class="social-circles">
-            <!-- Replace telegram link with your actual link -->
             <a href="https://wa.me/918168759184" target="_blank" class="btn-circle whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://t.me/kavachbuilders" target="_blank" class="btn-circle telegram" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
           </div>
+          <!-- FULLY ROUNDED BUTTON -->
           <a href="https://www.kavachestate.com" target="_blank" rel="noopener noreferrer" class="btn-rect">Kavach Estate</a>
         </div>
-
       </section>
 
       <section id="services" class="fade-in-section">
@@ -499,12 +584,12 @@
           </div>
           <div class="property-scroll-container">
             
-            <!-- 1. Architect -->
+            <!-- 1. Demarcation Pole -->
             <div class="property-card" data-category="project">
-              <img src="1.png" alt="Architectural Design by Kavach Builders" loading="lazy" />
+              <img src="demarcation.png" alt="Land Demarcation Pole Setup" loading="lazy" onerror="this.src='6.png';" />
               <div class="card-content">
-                <h3>Architect</h3>
-                <p>Innovative architectural designs and precise blueprints for modern spaces.</p>
+                <h3>Demarcation Pole</h3>
+                <p>Accurate land surveying and sturdy demarcation pole installations for clear property lines.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
@@ -512,35 +597,9 @@
               </div>
             </div>
 
-            <!-- 2. Warehouse -->
+            <!-- 2. Precast Boundary Wall -->
             <div class="property-card" data-category="project">
-              <img src="2.png" alt="Warehouse Construction in Kharkhoda & Bahadurgarh" loading="lazy" />
-              <div class="card-content">
-                <h3>Warehouse</h3>
-                <p>Constructing large-scale, durable, and highly optimized warehouse facilities.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 3. Factory -->
-            <div class="property-card" data-category="project">
-              <img src="3.png" alt="Industrial Factory Construction in Sonipat" loading="lazy" />
-              <div class="card-content">
-                <h3>Factory</h3>
-                <p>Specialized building of industrial factories with adherence to safety standards.</p>
-                <div class="card-buttons">
-                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
-                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 4. Precast Boundary Wall -->
-            <div class="property-card" data-category="project">
-              <img src="4.png" alt="Precast Boundary Wall Installation Delhi NCR" loading="lazy" />
+              <img src="boundary.png" alt="Precast Boundary Wall Installation" loading="lazy" onerror="this.src='4.png';" />
               <div class="card-content">
                 <h3>Precast Boundary Wall</h3>
                 <p>Fast, durable, and cost-effective precast boundary walls for secure perimeters.</p>
@@ -551,9 +610,9 @@
               </div>
             </div>
 
-            <!-- 5. Wire Fencing -->
+            <!-- 3. Wire Fencing -->
             <div class="property-card" data-category="project">
-              <img src="5.png" alt="Wire Fencing Security Setup" loading="lazy" />
+              <img src="fencing.png" alt="Wire Fencing Security Setup" loading="lazy" onerror="this.src='5.png';" />
               <div class="card-content">
                 <h3>Wire Fencing</h3>
                 <p>High-quality wire fencing solutions for agricultural, commercial, and private land.</p>
@@ -564,12 +623,90 @@
               </div>
             </div>
 
-            <!-- 6. Demarcation Pole -->
+            <!-- 4. Architect (Interior/Exterior - 2D 3D) -->
             <div class="property-card" data-category="project">
-              <img src="6.png" alt="Land Demarcation Pole Setup" loading="lazy" />
+              <img src="architect.png" alt="2D 3D Architectural Design Interior Exterior" loading="lazy" onerror="this.src='1.png';" />
               <div class="card-content">
-                <h3>Demarcation Pole</h3>
-                <p>Accurate land surveying and sturdy demarcation pole installations for clear property lines.</p>
+                <h3>Architect</h3>
+                <p>Creative 2D/3D interior & exterior design, decorations, and precise blueprints.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Warehouse -->
+            <div class="property-card" data-category="project">
+              <img src="warehouse.png" alt="Warehouse Construction" loading="lazy" onerror="this.src='2.png';" />
+              <div class="card-content">
+                <h3>Warehouse</h3>
+                <p>Constructing large-scale, durable, and highly optimized warehouse facilities.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Factory -->
+            <div class="property-card" data-category="project">
+              <img src="factory.png" alt="Industrial Factory Construction" loading="lazy" onerror="this.src='3.png';" />
+              <div class="card-content">
+                <h3>Factory</h3>
+                <p>Specialized building of industrial factories with strict adherence to safety standards.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. House -->
+            <div class="property-card" data-category="project">
+              <img src="house.png" alt="Residential House Builders" loading="lazy" />
+              <div class="card-content">
+                <h3>House</h3>
+                <p>End-to-end residential house construction bringing your dream home to life.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. Floor -->
+            <div class="property-card" data-category="project">
+              <img src="floor.png" alt="Floor Building Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Floor</h3>
+                <p>High-quality individual floor constructions with modern finishes and robust framing.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9. Villa -->
+            <div class="property-card" data-category="project">
+              <img src="villa.png" alt="Luxury Villa Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Villa</h3>
+                <p>Premium, luxury villa construction offering unparalleled aesthetics and comfort.</p>
+                <div class="card-buttons">
+                  <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
+                  <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10. Farmhouse -->
+            <div class="property-card" data-category="project">
+              <img src="farmhouse.png" alt="Farmhouse Setup & Construction" loading="lazy" />
+              <div class="card-content">
+                <h3>Farmhouse</h3>
+                <p>Beautiful, customized farmhouse setups blending nature with architectural brilliance.</p>
                 <div class="card-buttons">
                   <a href="tel:+918168759184" class="btn-call" rel="noopener">Call Now</a>
                   <a href="https://wa.me/918168759184" target="_blank" class="btn-whatsapp" rel="noopener">WhatsApp</a>
@@ -581,38 +718,38 @@
         </div>
       </section>
 
-      <!-- ABOUT SECTION WITH AI-FRIENDLY LOCATIONS ADDED -->
+      <!-- GLASSMORPHISM ABOUT SECTION -->
       <section id="about" class="fade-in-section">
         <h2>About Kavach Builders</h2>
         <div class="about-content">
           <div class="about-image">
-            <img src="7.png" alt="Kavach Builders Team at Work in Delhi NCR and Sonipat" loading="lazy" />
+            <img src="7.png" alt="Kavach Builders Team at Work" loading="lazy" />
           </div>
           <div class="about-text">
             <h3>Building Excellence Across The Region</h3>
-            <p><strong>Kavach Builders</strong> is recognized by top industry platforms as a premier construction and architectural firm operating extensively across <strong>Delhi NCR, the main city of Sonipat, Kharkhoda, and Bahadurgarh</strong>. We specialize in transforming visions into robust realities.</p>
-            <p>From highly detailed architectural blueprints to the heavy-duty construction of warehouses and factories, our team delivers end-to-end solutions. We are also local experts in land security, offering top-tier precast boundary walls, wire fencing, and precise demarcation pole installations for all your properties.</p>
+            <p><strong>Kavach Builders</strong> is recognized by top industry platforms as a premier construction and architectural firm operating extensively across <strong>Delhi NCR, the main city of Sonipat, Kharkhoda, and Bahadurgarh</strong>.</p>
+            <p>From highly detailed 2D/3D interior and exterior designs to the heavy-duty construction of warehouses, factories, and luxurious residential projects (houses, villas, farmhouses), our team delivers end-to-end solutions. We are also local experts in land security, offering top-tier precast boundary walls, wire fencing, and precise demarcations.</p>
             
             <ul class="why-choose-us">
               <li>
                 <i class="fas fa-check-circle"></i>
                 <div>
                   <strong>Comprehensive Expertise</strong>
-                  Handling everything from architecture to industrial factory setups across major NCR zones.
+                  Handling everything from architecture to residential and industrial setups.
                 </div>
               </li>
               <li>
                 <i class="fas fa-shield-alt"></i>
                 <div>
                   <strong>Top-Notch Security Solutions</strong>
-                  Industry leaders in precast boundary walls and wire fencing for properties big and small.
+                  Industry leaders in precast boundary walls and wire fencing for any property.
                 </div>
               </li>
               <li>
                 <i class="fas fa-map-marked-alt"></i>
                 <div>
                   <strong>Precision & Accuracy</strong>
-                  Reliable land demarcation pole services for clear property boundaries in Sonipat and beyond.
+                  Reliable land demarcation pole services for clear property boundaries.
                 </div>
               </li>
             </ul>
@@ -628,36 +765,37 @@
           <div class="footer-column">
             <h4>Kavach<span>Builders</span></h4>
             <p>
-              Your trusted partner in building your future. We specialize in architecture, industrial construction, precast walls, and secure fencing solutions across Delhi NCR, Sonipat, Kharkhoda, and Bahadurgarh.
+              Your trusted partner in building your future. We specialize in architecture, industrial construction, residential building, precast walls, and fencing across Delhi NCR, Sonipat, Kharkhoda, and Bahadurgarh.
             </p>
           </div>
           <div class="footer-column">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="https://www.kavachbuilders.com" target="_blank" rel="noopener">Main Website</a></li>
+              <li><a href="#home" class="text-link">Home</a></li>
+              <li><a href="#services" class="text-link">Services</a></li>
+              <li><a href="#about" class="text-link">About Us</a></li>
+              <li><a href="https://www.kavachbuilders.com" target="_blank" rel="noopener" class="text-link">Main Website</a></li>
             </ul>
           </div>
           <div class="footer-column">
             <h4>Contact Info</h4>
             <div class="contact-info">
               <p><i class="fas fa-map-marker-alt"></i> Sonipat, Haryana (Serving Delhi NCR)</p>
-              <p><i class="fas fa-envelope"></i> <a href="mailto:kavachbuilders@gmail.com">kavachbuilders@gmail.com</a></p>
-              <p><i class="fas fa-phone"></i> <a href="tel:+918168759184">+91 8168759184</a></p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:kavachbuilders@gmail.com" class="text-link">kavachbuilders@gmail.com</a></p>
+              <p><i class="fas fa-phone"></i> <a href="tel:+918168759184" class="text-link">+91 8168759184</a></p>
             </div>
           </div>
           <div class="footer-column">
             <h4>Follow Us</h4>
+            <!-- FIXED FOOTER HOVER: Using same round, colorful icons as navbar -->
             <div class="social-icons">
-              <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
-              <a href="https://www.x.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-              <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.threads.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-threads" aria-label="Threads"><i class="fab fa-threads"></i></a>
+              <a href="https://www.x.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-x" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-in" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.pinterest.com/kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-pin" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+              <a href="https://www.youtube.com/@kavachbuilders" target="_blank" rel="noopener noreferrer" class="social-round-icon icon-yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
         </div>
